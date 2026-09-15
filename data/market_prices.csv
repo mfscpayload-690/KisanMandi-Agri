@@ -1,0 +1,781 @@
+date,crop_name,mandi_name,state,district,price_per_unit,quantity,unit
+2026-08-01,Potato,Agra Mandi,Uttar Pradesh,Agra,1475.18,189.9,Quintal
+2026-08-01,Onion,Agra Mandi,Uttar Pradesh,Agra,2371.14,911.5,Quintal
+2026-08-01,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2288.01,359.6,Quintal
+2026-08-01,Maize,Meerut Mandi,Uttar Pradesh,Meerut,2130.61,288.1,Quintal
+2026-08-01,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5127.04,390.7,Quintal
+2026-08-01,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2410.86,223.1,Quintal
+2026-08-01,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4929.98,745.8,Quintal
+2026-08-01,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2644.53,829.8,Quintal
+2026-08-01,Wheat,Nagpur APMC,Maharashtra,Nagpur,2409.63,383.2,Quintal
+2026-08-01,Soybean,Nagpur APMC,Maharashtra,Nagpur,4720.83,238.6,Quintal
+2026-08-01,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4572.07,270.3,Quintal
+2026-08-01,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2320.93,466.0,Quintal
+2026-08-01,Mustard,Bathinda APMC,Punjab,Bathinda,5397.65,748.4,Quintal
+2026-08-01,Wheat,Bathinda APMC,Punjab,Bathinda,2248.29,256.1,Quintal
+2026-08-01,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5753.36,871.8,Quintal
+2026-08-01,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5936.34,499.3,Quintal
+2026-08-01,Soybean,Rajkot APMC,Gujarat,Rajkot,4855.53,178.6,Quintal
+2026-08-01,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2333.89,720.5,Quintal
+2026-08-02,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2342.79,92.4,Quintal
+2026-08-02,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2328.22,148.7,Quintal
+2026-08-02,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5682.96,586.3,Quintal
+2026-08-02,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5599.07,824.7,Quintal
+2026-08-02,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5617.75,663.5,Quintal
+2026-08-02,Mustard,Bathinda APMC,Punjab,Bathinda,5501.86,150.4,Quintal
+2026-08-02,Cotton,Bathinda APMC,Punjab,Bathinda,6922.37,908.4,Quintal
+2026-08-02,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2045.24,506.9,Quintal
+2026-08-02,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2566.48,807.5,Quintal
+2026-08-02,Tomato,Kolar APMC,Karnataka,Kolar,2116.85,386.5,Quintal
+2026-08-03,Onion,Lasalgaon APMC,Maharashtra,Nashik,2607.94,930.2,Quintal
+2026-08-03,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2242.27,643.8,Quintal
+2026-08-03,Potato,Amritsar APMC,Punjab,Amritsar,1395.4,917.9,Quintal
+2026-08-03,Wheat,Agra Mandi,Uttar Pradesh,Agra,2317.73,409.1,Quintal
+2026-08-03,Mustard,Rajkot APMC,Gujarat,Rajkot,5569.39,107.6,Quintal
+2026-08-03,Soybean,Rajkot APMC,Gujarat,Rajkot,4782.31,68.9,Quintal
+2026-08-03,Tomato,Vashi APMC,Maharashtra,Thane,1942.44,618.0,Quintal
+2026-08-03,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2569.22,864.9,Quintal
+2026-08-03,Wheat,Khanna APMC,Punjab,Ludhiana,2362.1,242.8,Quintal
+2026-08-03,Maize,Khanna APMC,Punjab,Ludhiana,2206.1,169.1,Quintal
+2026-08-03,Soybean,Nagpur APMC,Maharashtra,Nagpur,4829.98,137.2,Quintal
+2026-08-03,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5875.53,437.9,Quintal
+2026-08-03,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5807.51,638.1,Quintal
+2026-08-03,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5514.72,631.6,Quintal
+2026-08-03,Potato,Indore APMC,Madhya Pradesh,Indore,1518.57,148.3,Quintal
+2026-08-04,Mustard,Bathinda APMC,Punjab,Bathinda,5279.76,95.5,Quintal
+2026-08-04,Wheat,Bathinda APMC,Punjab,Bathinda,2469.09,922.1,Quintal
+2026-08-04,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2366.08,415.8,Quintal
+2026-08-04,Mustard,Agra Mandi,Uttar Pradesh,Agra,5490.06,51.9,Quintal
+2026-08-04,Onion,Agra Mandi,Uttar Pradesh,Agra,2453.57,401.4,Quintal
+2026-08-04,Potato,Pune APMC,Maharashtra,Pune,1539.48,755.0,Quintal
+2026-08-04,Soybean,Pune APMC,Maharashtra,Pune,4656.86,645.7,Quintal
+2026-08-04,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5792.11,571.3,Quintal
+2026-08-04,Cotton,Rajkot APMC,Gujarat,Rajkot,7642.96,538.0,Quintal
+2026-08-04,Tomato,Kolar APMC,Karnataka,Kolar,1795.12,817.4,Quintal
+2026-08-04,Maize,Kolar APMC,Karnataka,Kolar,2182.54,191.7,Quintal
+2026-08-04,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2415.13,825.6,Quintal
+2026-08-04,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2549.2,571.0,Quintal
+2026-08-04,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2526.61,641.6,Quintal
+2026-08-04,Wheat,Nagpur APMC,Maharashtra,Nagpur,2459.75,652.8,Quintal
+2026-08-04,Cotton,Nagpur APMC,Maharashtra,Nagpur,7314.78,167.8,Quintal
+2026-08-04,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5865.49,886.1,Quintal
+2026-08-04,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5559.92,609.0,Quintal
+2026-08-04,Onion,Lasalgaon APMC,Maharashtra,Nashik,2633.53,533.9,Quintal
+2026-08-05,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2323.87,718.2,Quintal
+2026-08-05,Maize,Meerut Mandi,Uttar Pradesh,Meerut,2220.62,189.9,Quintal
+2026-08-05,Gram (Chana),Pune APMC,Maharashtra,Pune,5925.03,620.8,Quintal
+2026-08-05,Tomato,Pune APMC,Maharashtra,Pune,1815.73,287.6,Quintal
+2026-08-05,Potato,Amritsar APMC,Punjab,Amritsar,1621.54,299.0,Quintal
+2026-08-05,Wheat,Amritsar APMC,Punjab,Amritsar,2392.86,53.2,Quintal
+2026-08-05,Onion,Vashi APMC,Maharashtra,Thane,2745.1,685.1,Quintal
+2026-08-05,Cotton,Nagpur APMC,Maharashtra,Nagpur,7494.78,117.7,Quintal
+2026-08-05,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2116.96,547.3,Quintal
+2026-08-05,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2402.97,327.4,Quintal
+2026-08-05,Wheat,Khanna APMC,Punjab,Ludhiana,2443.48,824.6,Quintal
+2026-08-05,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2501.99,650.2,Quintal
+2026-08-05,Mustard,Azadpur Mandi,Delhi,North Delhi,5838.58,837.2,Quintal
+2026-08-05,Mustard,Agra Mandi,Uttar Pradesh,Agra,5551.87,828.1,Quintal
+2026-08-05,Cotton,Bathinda APMC,Punjab,Bathinda,7296.37,349.0,Quintal
+2026-08-05,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2381.1,193.3,Quintal
+2026-08-05,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5398.83,84.9,Quintal
+2026-08-05,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5763.52,784.9,Quintal
+2026-08-05,Cotton,Rajkot APMC,Gujarat,Rajkot,7174.63,765.8,Quintal
+2026-08-05,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1957.95,71.3,Quintal
+2026-08-05,Potato,Indore APMC,Madhya Pradesh,Indore,1457.72,920.2,Quintal
+2026-08-06,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4857.89,586.9,Quintal
+2026-08-06,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5636.23,442.8,Quintal
+2026-08-06,Potato,Indore APMC,Madhya Pradesh,Indore,1698.77,859.6,Quintal
+2026-08-06,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1623.71,517.9,Quintal
+2026-08-06,Cotton,Bathinda APMC,Punjab,Bathinda,7120.15,438.2,Quintal
+2026-08-06,Potato,Azadpur Mandi,Delhi,North Delhi,1636.98,860.0,Quintal
+2026-08-06,Onion,Azadpur Mandi,Delhi,North Delhi,2656.87,506.4,Quintal
+2026-08-06,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2611.87,222.7,Quintal
+2026-08-06,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1508.84,648.4,Quintal
+2026-08-06,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2319.12,800.4,Quintal
+2026-08-06,Potato,Amritsar APMC,Punjab,Amritsar,1497.52,323.5,Quintal
+2026-08-06,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4856.42,340.0,Quintal
+2026-08-06,Potato,Vashi APMC,Maharashtra,Thane,1466.61,510.1,Quintal
+2026-08-06,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2532.32,712.4,Quintal
+2026-08-06,Potato,Pune APMC,Maharashtra,Pune,1353.52,513.9,Quintal
+2026-08-06,Potato,Agra Mandi,Uttar Pradesh,Agra,1491.63,229.2,Quintal
+2026-08-06,Onion,Agra Mandi,Uttar Pradesh,Agra,2398.18,72.0,Quintal
+2026-08-06,Mustard,Khanna APMC,Punjab,Ludhiana,5335.64,459.9,Quintal
+2026-08-07,Wheat,Bathinda APMC,Punjab,Bathinda,2297.83,875.7,Quintal
+2026-08-07,Mustard,Bathinda APMC,Punjab,Bathinda,5535.43,468.2,Quintal
+2026-08-07,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5803.14,783.5,Quintal
+2026-08-07,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2435.45,866.2,Quintal
+2026-08-07,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2525.01,455.1,Quintal
+2026-08-07,Tomato,Azadpur Mandi,Delhi,North Delhi,1995.14,299.6,Quintal
+2026-08-07,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5625.18,445.9,Quintal
+2026-08-07,Mustard,Rajkot APMC,Gujarat,Rajkot,5637.87,352.3,Quintal
+2026-08-07,Mustard,Agra Mandi,Uttar Pradesh,Agra,5351.04,185.7,Quintal
+2026-08-07,Maize,Kolar APMC,Karnataka,Kolar,2211.04,416.8,Quintal
+2026-08-07,Tomato,Kolar APMC,Karnataka,Kolar,1895.56,538.4,Quintal
+2026-08-07,Cotton,Nagpur APMC,Maharashtra,Nagpur,7444.22,742.8,Quintal
+2026-08-07,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5818.25,901.5,Quintal
+2026-08-07,Gram (Chana),Pune APMC,Maharashtra,Pune,5920.38,366.6,Quintal
+2026-08-07,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4839.23,722.8,Quintal
+2026-08-07,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2379.24,248.5,Quintal
+2026-08-07,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5707.07,442.3,Quintal
+2026-08-07,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1557.46,413.9,Quintal
+2026-08-07,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5584.34,877.6,Quintal
+2026-08-07,Potato,Vashi APMC,Maharashtra,Thane,1480.69,125.6,Quintal
+2026-08-07,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2324.35,213.6,Quintal
+2026-08-07,Maize,Amritsar APMC,Punjab,Amritsar,2086.43,459.2,Quintal
+2026-08-08,Tomato,Kolar APMC,Karnataka,Kolar,2098.14,904.7,Quintal
+2026-08-08,Wheat,Khanna APMC,Punjab,Ludhiana,2332.92,476.2,Quintal
+2026-08-08,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5800.71,468.5,Quintal
+2026-08-08,Cotton,Bathinda APMC,Punjab,Bathinda,6811.22,696.5,Quintal
+2026-08-08,Wheat,Bathinda APMC,Punjab,Bathinda,2270.83,750.0,Quintal
+2026-08-08,Onion,Azadpur Mandi,Delhi,North Delhi,2769.0,330.8,Quintal
+2026-08-08,Potato,Vashi APMC,Maharashtra,Thane,1625.65,118.4,Quintal
+2026-08-08,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2437.29,141.7,Quintal
+2026-08-08,Potato,Agra Mandi,Uttar Pradesh,Agra,1405.16,754.4,Quintal
+2026-08-08,Wheat,Agra Mandi,Uttar Pradesh,Agra,2304.89,383.5,Quintal
+2026-08-08,Onion,Lasalgaon APMC,Maharashtra,Nashik,2791.0,790.1,Quintal
+2026-08-08,Tomato,Lasalgaon APMC,Maharashtra,Nashik,2240.09,622.0,Quintal
+2026-08-08,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2463.0,208.5,Quintal
+2026-08-08,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1966.05,604.3,Quintal
+2026-08-08,Soybean,Pune APMC,Maharashtra,Pune,4817.78,793.2,Quintal
+2026-08-08,Gram (Chana),Pune APMC,Maharashtra,Pune,5828.44,270.9,Quintal
+2026-08-08,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5689.1,843.5,Quintal
+2026-08-08,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5277.72,352.8,Quintal
+2026-08-09,Soybean,Rajkot APMC,Gujarat,Rajkot,4732.96,301.7,Quintal
+2026-08-09,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5641.5,550.2,Quintal
+2026-08-09,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2432.31,267.2,Quintal
+2026-08-09,Maize,Amritsar APMC,Punjab,Amritsar,2090.45,631.3,Quintal
+2026-08-09,Potato,Amritsar APMC,Punjab,Amritsar,1402.06,491.7,Quintal
+2026-08-09,Onion,Pune APMC,Maharashtra,Pune,2577.77,269.0,Quintal
+2026-08-09,Onion,Agra Mandi,Uttar Pradesh,Agra,2671.11,527.8,Quintal
+2026-08-09,Wheat,Agra Mandi,Uttar Pradesh,Agra,2255.95,347.7,Quintal
+2026-08-09,Wheat,Nagpur APMC,Maharashtra,Nagpur,2508.36,276.3,Quintal
+2026-08-09,Soybean,Nagpur APMC,Maharashtra,Nagpur,4892.65,157.6,Quintal
+2026-08-10,Potato,Amritsar APMC,Punjab,Amritsar,1600.17,62.7,Quintal
+2026-08-10,Wheat,Nagpur APMC,Maharashtra,Nagpur,2484.15,312.9,Quintal
+2026-08-10,Mustard,Azadpur Mandi,Delhi,North Delhi,5951.15,831.6,Quintal
+2026-08-10,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4608.21,446.4,Quintal
+2026-08-10,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5674.7,215.9,Quintal
+2026-08-10,Wheat,Agra Mandi,Uttar Pradesh,Agra,2405.52,789.9,Quintal
+2026-08-10,Mustard,Khanna APMC,Punjab,Ludhiana,5442.39,569.3,Quintal
+2026-08-10,Wheat,Khanna APMC,Punjab,Ludhiana,2354.72,780.0,Quintal
+2026-08-10,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2312.91,156.6,Quintal
+2026-08-10,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5449.27,761.7,Quintal
+2026-08-10,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1965.93,455.5,Quintal
+2026-08-10,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5678.53,598.7,Quintal
+2026-08-10,Potato,Indore APMC,Madhya Pradesh,Indore,1701.62,716.1,Quintal
+2026-08-10,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1899.37,265.9,Quintal
+2026-08-10,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2498.11,52.4,Quintal
+2026-08-10,Gram (Chana),Pune APMC,Maharashtra,Pune,5888.34,686.3,Quintal
+2026-08-10,Soybean,Pune APMC,Maharashtra,Pune,4922.02,682.7,Quintal
+2026-08-10,Cotton,Rajkot APMC,Gujarat,Rajkot,7327.54,762.1,Quintal
+2026-08-10,Soybean,Rajkot APMC,Gujarat,Rajkot,4881.67,580.8,Quintal
+2026-08-10,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1707.11,184.1,Quintal
+2026-08-11,Maize,Khanna APMC,Punjab,Ludhiana,2112.64,536.0,Quintal
+2026-08-11,Mustard,Khanna APMC,Punjab,Ludhiana,5344.44,850.5,Quintal
+2026-08-11,Tomato,Vashi APMC,Maharashtra,Thane,1985.92,73.3,Quintal
+2026-08-11,Onion,Vashi APMC,Maharashtra,Thane,2659.63,824.5,Quintal
+2026-08-11,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2557.18,568.6,Quintal
+2026-08-11,Soybean,Pune APMC,Maharashtra,Pune,4747.32,300.3,Quintal
+2026-08-11,Mustard,Rajkot APMC,Gujarat,Rajkot,5643.75,473.0,Quintal
+2026-08-11,Cotton,Rajkot APMC,Gujarat,Rajkot,7216.54,144.1,Quintal
+2026-08-11,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5676.55,420.5,Quintal
+2026-08-11,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5795.14,459.3,Quintal
+2026-08-11,Potato,Indore APMC,Madhya Pradesh,Indore,1460.86,333.1,Quintal
+2026-08-11,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4836.05,51.0,Quintal
+2026-08-11,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5380.81,832.4,Quintal
+2026-08-11,Onion,Agra Mandi,Uttar Pradesh,Agra,2557.97,730.8,Quintal
+2026-08-11,Potato,Agra Mandi,Uttar Pradesh,Agra,1629.25,612.9,Quintal
+2026-08-11,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2511.14,309.2,Quintal
+2026-08-11,Cotton,Nagpur APMC,Maharashtra,Nagpur,7468.63,925.8,Quintal
+2026-08-11,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5831.74,192.5,Quintal
+2026-08-11,Maize,Kolar APMC,Karnataka,Kolar,2171.7,417.2,Quintal
+2026-08-12,Soybean,Nagpur APMC,Maharashtra,Nagpur,4767.85,879.7,Quintal
+2026-08-12,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5859.88,507.4,Quintal
+2026-08-12,Potato,Agra Mandi,Uttar Pradesh,Agra,1520.24,423.4,Quintal
+2026-08-12,Wheat,Vashi APMC,Maharashtra,Thane,2574.8,703.4,Quintal
+2026-08-12,Onion,Vashi APMC,Maharashtra,Thane,2746.77,643.9,Quintal
+2026-08-12,Potato,Indore APMC,Madhya Pradesh,Indore,1469.12,534.7,Quintal
+2026-08-12,Potato,Pune APMC,Maharashtra,Pune,1541.82,219.8,Quintal
+2026-08-12,Soybean,Pune APMC,Maharashtra,Pune,4887.92,677.7,Quintal
+2026-08-12,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2679.05,684.7,Quintal
+2026-08-12,Tomato,Azadpur Mandi,Delhi,North Delhi,2048.67,780.3,Quintal
+2026-08-12,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2400.39,918.8,Quintal
+2026-08-12,Mustard,Khanna APMC,Punjab,Ludhiana,5478.15,348.8,Quintal
+2026-08-12,Maize,Meerut Mandi,Uttar Pradesh,Meerut,2179.72,63.8,Quintal
+2026-08-12,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5585.43,833.8,Quintal
+2026-08-12,Cotton,Rajkot APMC,Gujarat,Rajkot,6959.57,354.7,Quintal
+2026-08-12,Mustard,Bathinda APMC,Punjab,Bathinda,5550.66,816.6,Quintal
+2026-08-12,Wheat,Bathinda APMC,Punjab,Bathinda,2441.19,392.0,Quintal
+2026-08-13,Cotton,Rajkot APMC,Gujarat,Rajkot,7106.56,449.3,Quintal
+2026-08-13,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2494.42,372.6,Quintal
+2026-08-13,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1982.36,437.6,Quintal
+2026-08-13,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1939.32,203.0,Quintal
+2026-08-13,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4796.49,607.7,Quintal
+2026-08-13,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5491.06,465.0,Quintal
+2026-08-13,Potato,Vashi APMC,Maharashtra,Thane,1602.96,650.2,Quintal
+2026-08-13,Onion,Vashi APMC,Maharashtra,Thane,2782.95,308.9,Quintal
+2026-08-13,Cotton,Nagpur APMC,Maharashtra,Nagpur,7308.47,447.6,Quintal
+2026-08-13,Maize,Khanna APMC,Punjab,Ludhiana,2178.84,461.2,Quintal
+2026-08-13,Mustard,Khanna APMC,Punjab,Ludhiana,5449.31,321.9,Quintal
+2026-08-13,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5734.39,567.3,Quintal
+2026-08-13,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4854.63,943.4,Quintal
+2026-08-13,Wheat,Amritsar APMC,Punjab,Amritsar,2367.17,828.6,Quintal
+2026-08-13,Potato,Amritsar APMC,Punjab,Amritsar,1576.07,750.5,Quintal
+2026-08-13,Maize,Kolar APMC,Karnataka,Kolar,2196.54,862.6,Quintal
+2026-08-13,Wheat,Agra Mandi,Uttar Pradesh,Agra,2238.87,247.1,Quintal
+2026-08-14,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1551.87,315.6,Quintal
+2026-08-14,Wheat,Indore APMC,Madhya Pradesh,Indore,2373.45,168.9,Quintal
+2026-08-14,Onion,Indore APMC,Madhya Pradesh,Indore,2076.98,527.8,Quintal
+2026-08-14,Tomato,Kolar APMC,Karnataka,Kolar,1819.41,872.6,Quintal
+2026-08-14,Potato,Kolar APMC,Karnataka,Kolar,1924.42,315.6,Quintal
+2026-08-14,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4643.19,916.6,Quintal
+2026-08-14,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5744.45,824.1,Quintal
+2026-08-14,Potato,Azadpur Mandi,Delhi,North Delhi,1914.65,131.3,Quintal
+2026-08-14,Onion,Azadpur Mandi,Delhi,North Delhi,2599.34,161.2,Quintal
+2026-08-14,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2756.22,790.2,Quintal
+2026-08-14,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1715.21,260.4,Quintal
+2026-08-14,Gram (Chana),Pune APMC,Maharashtra,Pune,5865.55,845.8,Quintal
+2026-08-14,Tomato,Vashi APMC,Maharashtra,Thane,1752.1,467.8,Quintal
+2026-08-14,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2370.76,681.0,Quintal
+2026-08-14,Onion,Lasalgaon APMC,Maharashtra,Nashik,2663.24,946.3,Quintal
+2026-08-14,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4883.47,154.5,Quintal
+2026-08-14,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2282.49,904.4,Quintal
+2026-08-14,Soybean,Nagpur APMC,Maharashtra,Nagpur,4938.83,639.4,Quintal
+2026-08-14,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5979.09,895.1,Quintal
+2026-08-15,Wheat,Vashi APMC,Maharashtra,Thane,2400.44,298.3,Quintal
+2026-08-15,Potato,Vashi APMC,Maharashtra,Thane,1884.96,791.8,Quintal
+2026-08-15,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5491.04,627.5,Quintal
+2026-08-15,Wheat,Amritsar APMC,Punjab,Amritsar,2386.7,163.3,Quintal
+2026-08-15,Cotton,Nagpur APMC,Maharashtra,Nagpur,7309.29,796.8,Quintal
+2026-08-15,Mustard,Agra Mandi,Uttar Pradesh,Agra,5469.18,746.9,Quintal
+2026-08-15,Onion,Azadpur Mandi,Delhi,North Delhi,2586.06,822.6,Quintal
+2026-08-15,Tomato,Kolar APMC,Karnataka,Kolar,1636.12,148.9,Quintal
+2026-08-15,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2494.22,63.4,Quintal
+2026-08-15,Soybean,Rajkot APMC,Gujarat,Rajkot,4912.92,164.1,Quintal
+2026-08-15,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2356.91,107.2,Quintal
+2026-08-15,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1473.46,584.3,Quintal
+2026-08-15,Gram (Chana),Pune APMC,Maharashtra,Pune,5921.94,900.9,Quintal
+2026-08-15,Tomato,Pune APMC,Maharashtra,Pune,2162.36,830.3,Quintal
+2026-08-15,Mustard,Khanna APMC,Punjab,Ludhiana,5547.85,917.6,Quintal
+2026-08-15,Maize,Khanna APMC,Punjab,Ludhiana,2143.1,411.5,Quintal
+2026-08-16,Soybean,Nagpur APMC,Maharashtra,Nagpur,4931.57,163.6,Quintal
+2026-08-16,Cotton,Nagpur APMC,Maharashtra,Nagpur,7283.53,690.9,Quintal
+2026-08-16,Wheat,Agra Mandi,Uttar Pradesh,Agra,2299.75,505.0,Quintal
+2026-08-16,Mustard,Agra Mandi,Uttar Pradesh,Agra,5249.72,153.0,Quintal
+2026-08-16,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5799.06,456.4,Quintal
+2026-08-16,Tomato,Azadpur Mandi,Delhi,North Delhi,1858.94,424.4,Quintal
+2026-08-16,Onion,Vashi APMC,Maharashtra,Thane,2780.11,434.1,Quintal
+2026-08-16,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2578.06,132.1,Quintal
+2026-08-16,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2458.75,126.8,Quintal
+2026-08-17,Cotton,Nagpur APMC,Maharashtra,Nagpur,7315.68,570.1,Quintal
+2026-08-17,Soybean,Nagpur APMC,Maharashtra,Nagpur,4838.39,241.5,Quintal
+2026-08-17,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5460.1,153.4,Quintal
+2026-08-17,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4852.5,300.7,Quintal
+2026-08-17,Tomato,Azadpur Mandi,Delhi,North Delhi,2212.71,786.6,Quintal
+2026-08-17,Potato,Amritsar APMC,Punjab,Amritsar,1365.47,76.1,Quintal
+2026-08-17,Potato,Pune APMC,Maharashtra,Pune,1611.37,178.9,Quintal
+2026-08-17,Gram (Chana),Pune APMC,Maharashtra,Pune,5936.85,641.6,Quintal
+2026-08-17,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2313.54,132.6,Quintal
+2026-08-17,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4622.34,427.8,Quintal
+2026-08-17,Wheat,Indore APMC,Madhya Pradesh,Indore,2384.58,897.3,Quintal
+2026-08-17,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5801.59,586.6,Quintal
+2026-08-17,Tomato,Kolar APMC,Karnataka,Kolar,2043.99,656.6,Quintal
+2026-08-17,Onion,Agra Mandi,Uttar Pradesh,Agra,2680.7,431.6,Quintal
+2026-08-17,Wheat,Agra Mandi,Uttar Pradesh,Agra,2308.8,244.0,Quintal
+2026-08-17,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5502.56,436.9,Quintal
+2026-08-17,Mustard,Rajkot APMC,Gujarat,Rajkot,5642.93,405.7,Quintal
+2026-08-17,Soybean,Rajkot APMC,Gujarat,Rajkot,4819.71,589.4,Quintal
+2026-08-17,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2512.23,173.5,Quintal
+2026-08-18,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2395.63,825.6,Quintal
+2026-08-18,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2333.96,879.0,Quintal
+2026-08-18,Maize,Amritsar APMC,Punjab,Amritsar,2063.66,414.0,Quintal
+2026-08-18,Potato,Amritsar APMC,Punjab,Amritsar,1537.48,414.5,Quintal
+2026-08-18,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2393.66,798.8,Quintal
+2026-08-18,Potato,Vashi APMC,Maharashtra,Thane,1692.29,810.0,Quintal
+2026-08-18,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4879.52,580.0,Quintal
+2026-08-18,Onion,Agra Mandi,Uttar Pradesh,Agra,2674.14,249.4,Quintal
+2026-08-18,Wheat,Bathinda APMC,Punjab,Bathinda,2311.19,509.4,Quintal
+2026-08-18,Gram (Chana),Pune APMC,Maharashtra,Pune,5580.98,364.4,Quintal
+2026-08-18,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5789.23,142.5,Quintal
+2026-08-18,Wheat,Indore APMC,Madhya Pradesh,Indore,2325.91,640.0,Quintal
+2026-08-18,Onion,Indore APMC,Madhya Pradesh,Indore,2346.01,209.4,Quintal
+2026-08-18,Mustard,Khanna APMC,Punjab,Ludhiana,5501.44,881.7,Quintal
+2026-08-18,Maize,Khanna APMC,Punjab,Ludhiana,1983.18,558.0,Quintal
+2026-08-18,Mustard,Azadpur Mandi,Delhi,North Delhi,5969.81,448.0,Quintal
+2026-08-18,Onion,Azadpur Mandi,Delhi,North Delhi,2763.64,322.5,Quintal
+2026-08-18,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1874.44,465.6,Quintal
+2026-08-18,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2511.91,83.8,Quintal
+2026-08-19,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2252.47,912.0,Quintal
+2026-08-19,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5353.57,455.5,Quintal
+2026-08-19,Wheat,Vashi APMC,Maharashtra,Thane,2574.06,941.9,Quintal
+2026-08-19,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2465.08,521.7,Quintal
+2026-08-19,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5613.87,417.9,Quintal
+2026-08-19,Mustard,Azadpur Mandi,Delhi,North Delhi,6016.61,97.1,Quintal
+2026-08-19,Potato,Azadpur Mandi,Delhi,North Delhi,1658.14,346.7,Quintal
+2026-08-19,Soybean,Rajkot APMC,Gujarat,Rajkot,4792.04,701.4,Quintal
+2026-08-19,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5644.97,836.0,Quintal
+2026-08-19,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4583.25,647.3,Quintal
+2026-08-19,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2452.35,640.4,Quintal
+2026-08-19,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2287.5,688.0,Quintal
+2026-08-19,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1683.87,629.1,Quintal
+2026-08-19,Wheat,Bathinda APMC,Punjab,Bathinda,2421.86,631.4,Quintal
+2026-08-19,Mustard,Bathinda APMC,Punjab,Bathinda,5395.0,376.3,Quintal
+2026-08-19,Mustard,Agra Mandi,Uttar Pradesh,Agra,5488.81,357.6,Quintal
+2026-08-19,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2382.41,316.2,Quintal
+2026-08-19,Wheat,Khanna APMC,Punjab,Ludhiana,2383.67,759.3,Quintal
+2026-08-19,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2836.61,587.5,Quintal
+2026-08-19,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1714.39,212.8,Quintal
+2026-08-20,Potato,Amritsar APMC,Punjab,Amritsar,1764.98,863.6,Quintal
+2026-08-20,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2387.46,660.5,Quintal
+2026-08-20,Onion,Agra Mandi,Uttar Pradesh,Agra,2506.47,426.8,Quintal
+2026-08-20,Mustard,Agra Mandi,Uttar Pradesh,Agra,5302.58,195.9,Quintal
+2026-08-20,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1906.78,482.5,Quintal
+2026-08-20,Mustard,Bathinda APMC,Punjab,Bathinda,5466.56,690.3,Quintal
+2026-08-20,Wheat,Bathinda APMC,Punjab,Bathinda,2355.24,125.5,Quintal
+2026-08-20,Soybean,Rajkot APMC,Gujarat,Rajkot,4859.86,454.4,Quintal
+2026-08-20,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,6092.73,785.0,Quintal
+2026-08-20,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2570.95,97.9,Quintal
+2026-08-20,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1618.85,945.1,Quintal
+2026-08-20,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2337.51,336.8,Quintal
+2026-08-20,Wheat,Khanna APMC,Punjab,Ludhiana,2461.09,351.8,Quintal
+2026-08-20,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2599.51,84.5,Quintal
+2026-08-20,Wheat,Indore APMC,Madhya Pradesh,Indore,2404.0,121.3,Quintal
+2026-08-20,Potato,Indore APMC,Madhya Pradesh,Indore,1616.84,280.3,Quintal
+2026-08-20,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5511.54,321.0,Quintal
+2026-08-20,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2472.53,427.8,Quintal
+2026-08-20,Onion,Pune APMC,Maharashtra,Pune,2709.49,532.4,Quintal
+2026-08-20,Gram (Chana),Pune APMC,Maharashtra,Pune,5720.76,618.8,Quintal
+2026-08-21,Potato,Agra Mandi,Uttar Pradesh,Agra,1421.15,506.9,Quintal
+2026-08-21,Wheat,Agra Mandi,Uttar Pradesh,Agra,2334.87,68.3,Quintal
+2026-08-21,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4702.28,722.6,Quintal
+2026-08-21,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2449.02,371.4,Quintal
+2026-08-21,Potato,Pune APMC,Maharashtra,Pune,1675.12,143.3,Quintal
+2026-08-21,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2437.93,367.1,Quintal
+2026-08-21,Wheat,Khanna APMC,Punjab,Ludhiana,2342.64,797.3,Quintal
+2026-08-21,Mustard,Bathinda APMC,Punjab,Bathinda,5637.74,618.6,Quintal
+2026-08-21,Cotton,Bathinda APMC,Punjab,Bathinda,7169.58,748.6,Quintal
+2026-08-21,Onion,Lasalgaon APMC,Maharashtra,Nashik,2533.24,231.4,Quintal
+2026-08-21,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1952.71,334.0,Quintal
+2026-08-21,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5203.95,476.1,Quintal
+2026-08-21,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5734.02,307.5,Quintal
+2026-08-21,Potato,Amritsar APMC,Punjab,Amritsar,1633.69,295.9,Quintal
+2026-08-21,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5834.52,398.0,Quintal
+2026-08-21,Soybean,Nagpur APMC,Maharashtra,Nagpur,4703.31,926.4,Quintal
+2026-08-21,Maize,Kolar APMC,Karnataka,Kolar,2087.45,290.0,Quintal
+2026-08-21,Potato,Kolar APMC,Karnataka,Kolar,1837.03,124.4,Quintal
+2026-08-21,Cotton,Rajkot APMC,Gujarat,Rajkot,7159.56,540.9,Quintal
+2026-08-21,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5644.61,339.1,Quintal
+2026-08-21,Onion,Vashi APMC,Maharashtra,Thane,2511.24,592.4,Quintal
+2026-08-21,Wheat,Indore APMC,Madhya Pradesh,Indore,2368.49,366.4,Quintal
+2026-08-21,Potato,Indore APMC,Madhya Pradesh,Indore,1810.73,367.3,Quintal
+2026-08-21,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2744.97,117.5,Quintal
+2026-08-21,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2431.6,771.0,Quintal
+2026-08-22,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2442.24,904.5,Quintal
+2026-08-22,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1954.52,454.9,Quintal
+2026-08-22,Potato,Pune APMC,Maharashtra,Pune,1682.99,736.8,Quintal
+2026-08-22,Soybean,Pune APMC,Maharashtra,Pune,4813.8,408.2,Quintal
+2026-08-22,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2500.9,73.3,Quintal
+2026-08-22,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2509.66,872.2,Quintal
+2026-08-22,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5691.85,747.5,Quintal
+2026-08-22,Wheat,Indore APMC,Madhya Pradesh,Indore,2338.97,230.2,Quintal
+2026-08-22,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5236.44,172.2,Quintal
+2026-08-22,Onion,Agra Mandi,Uttar Pradesh,Agra,2593.64,947.5,Quintal
+2026-08-22,Soybean,Rajkot APMC,Gujarat,Rajkot,5018.67,108.4,Quintal
+2026-08-22,Mustard,Rajkot APMC,Gujarat,Rajkot,5416.53,816.2,Quintal
+2026-08-22,Onion,Azadpur Mandi,Delhi,North Delhi,2588.13,507.9,Quintal
+2026-08-22,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2440.81,494.6,Quintal
+2026-08-22,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2371.19,773.3,Quintal
+2026-08-22,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5395.91,127.6,Quintal
+2026-08-22,Maize,Amritsar APMC,Punjab,Amritsar,2018.06,697.0,Quintal
+2026-08-22,Potato,Amritsar APMC,Punjab,Amritsar,1439.93,791.0,Quintal
+2026-08-23,Gram (Chana),Pune APMC,Maharashtra,Pune,5798.14,165.5,Quintal
+2026-08-23,Potato,Pune APMC,Maharashtra,Pune,1736.92,579.0,Quintal
+2026-08-23,Mustard,Rajkot APMC,Gujarat,Rajkot,5528.41,502.6,Quintal
+2026-08-23,Wheat,Amritsar APMC,Punjab,Amritsar,2340.97,195.8,Quintal
+2026-08-23,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5650.24,902.7,Quintal
+2026-08-23,Wheat,Vashi APMC,Maharashtra,Thane,2539.0,297.0,Quintal
+2026-08-23,Onion,Vashi APMC,Maharashtra,Thane,3022.48,612.5,Quintal
+2026-08-23,Mustard,Agra Mandi,Uttar Pradesh,Agra,5310.39,204.1,Quintal
+2026-08-24,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5565.51,270.4,Quintal
+2026-08-24,Potato,Indore APMC,Madhya Pradesh,Indore,1665.9,458.2,Quintal
+2026-08-24,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2479.35,445.6,Quintal
+2026-08-24,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5404.53,825.3,Quintal
+2026-08-24,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2395.41,337.4,Quintal
+2026-08-24,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4946.55,145.6,Quintal
+2026-08-24,Onion,Lasalgaon APMC,Maharashtra,Nashik,2365.67,267.6,Quintal
+2026-08-24,Potato,Kolar APMC,Karnataka,Kolar,1658.14,95.5,Quintal
+2026-08-24,Tomato,Vashi APMC,Maharashtra,Thane,1883.06,273.4,Quintal
+2026-08-24,Potato,Vashi APMC,Maharashtra,Thane,1719.55,344.7,Quintal
+2026-08-24,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5499.01,498.4,Quintal
+2026-08-24,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4677.23,327.7,Quintal
+2026-08-24,Wheat,Khanna APMC,Punjab,Ludhiana,2386.09,900.7,Quintal
+2026-08-24,Soybean,Nagpur APMC,Maharashtra,Nagpur,4910.43,303.2,Quintal
+2026-08-24,Cotton,Nagpur APMC,Maharashtra,Nagpur,7435.04,587.8,Quintal
+2026-08-24,Cotton,Bathinda APMC,Punjab,Bathinda,7248.67,844.2,Quintal
+2026-08-24,Wheat,Bathinda APMC,Punjab,Bathinda,2341.32,704.8,Quintal
+2026-08-24,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1495.07,225.2,Quintal
+2026-08-24,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2412.3,547.9,Quintal
+2026-08-24,Onion,Agra Mandi,Uttar Pradesh,Agra,2162.49,301.7,Quintal
+2026-08-24,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2511.25,927.6,Quintal
+2026-08-24,Soybean,Rajkot APMC,Gujarat,Rajkot,4799.85,179.8,Quintal
+2026-08-24,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5727.07,592.2,Quintal
+2026-08-25,Tomato,Vashi APMC,Maharashtra,Thane,2112.01,715.4,Quintal
+2026-08-25,Onion,Vashi APMC,Maharashtra,Thane,3061.53,319.3,Quintal
+2026-08-25,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4837.76,65.0,Quintal
+2026-08-25,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2465.2,348.1,Quintal
+2026-08-25,Tomato,Azadpur Mandi,Delhi,North Delhi,1662.21,702.8,Quintal
+2026-08-25,Gram (Chana),Pune APMC,Maharashtra,Pune,5705.0,477.1,Quintal
+2026-08-25,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4746.79,616.1,Quintal
+2026-08-25,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2300.01,268.0,Quintal
+2026-08-25,Potato,Amritsar APMC,Punjab,Amritsar,1481.29,221.7,Quintal
+2026-08-25,Wheat,Agra Mandi,Uttar Pradesh,Agra,2330.01,186.3,Quintal
+2026-08-25,Mustard,Agra Mandi,Uttar Pradesh,Agra,5395.96,747.5,Quintal
+2026-08-25,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2314.11,174.3,Quintal
+2026-08-25,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1624.19,646.0,Quintal
+2026-08-25,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5642.77,463.7,Quintal
+2026-08-25,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2298.21,658.3,Quintal
+2026-08-25,Mustard,Rajkot APMC,Gujarat,Rajkot,5632.48,911.6,Quintal
+2026-08-25,Cotton,Rajkot APMC,Gujarat,Rajkot,7367.8,897.3,Quintal
+2026-08-25,Maize,Khanna APMC,Punjab,Ludhiana,2099.16,236.6,Quintal
+2026-08-25,Mustard,Khanna APMC,Punjab,Ludhiana,5467.07,363.9,Quintal
+2026-08-25,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5544.5,566.1,Quintal
+2026-08-25,Soybean,Indore APMC,Madhya Pradesh,Indore,4596.36,405.1,Quintal
+2026-08-25,Wheat,Bathinda APMC,Punjab,Bathinda,2360.72,87.9,Quintal
+2026-08-25,Cotton,Bathinda APMC,Punjab,Bathinda,7223.38,881.6,Quintal
+2026-08-26,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5744.4,95.7,Quintal
+2026-08-26,Soybean,Nagpur APMC,Maharashtra,Nagpur,5050.54,695.6,Quintal
+2026-08-26,Mustard,Azadpur Mandi,Delhi,North Delhi,5987.26,743.7,Quintal
+2026-08-26,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2158.5,840.6,Quintal
+2026-08-26,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2409.41,339.1,Quintal
+2026-08-26,Mustard,Khanna APMC,Punjab,Ludhiana,5339.77,130.5,Quintal
+2026-08-26,Maize,Kolar APMC,Karnataka,Kolar,2032.95,714.8,Quintal
+2026-08-26,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5355.11,890.5,Quintal
+2026-08-26,Soybean,Pune APMC,Maharashtra,Pune,5046.83,759.2,Quintal
+2026-08-26,Onion,Vashi APMC,Maharashtra,Thane,2598.21,561.2,Quintal
+2026-08-26,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5519.01,306.1,Quintal
+2026-08-26,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2273.06,151.4,Quintal
+2026-08-26,Potato,Amritsar APMC,Punjab,Amritsar,1634.85,196.2,Quintal
+2026-08-26,Mustard,Bathinda APMC,Punjab,Bathinda,5492.17,353.4,Quintal
+2026-08-26,Cotton,Bathinda APMC,Punjab,Bathinda,7151.97,315.5,Quintal
+2026-08-27,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2394.87,892.2,Quintal
+2026-08-27,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5508.87,395.2,Quintal
+2026-08-27,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2531.81,60.3,Quintal
+2026-08-27,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2132.9,638.3,Quintal
+2026-08-27,Soybean,Indore APMC,Madhya Pradesh,Indore,4756.64,193.7,Quintal
+2026-08-27,Mustard,Bathinda APMC,Punjab,Bathinda,5381.94,624.8,Quintal
+2026-08-27,Wheat,Bathinda APMC,Punjab,Bathinda,2450.17,248.8,Quintal
+2026-08-27,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5594.83,187.9,Quintal
+2026-08-27,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1939.39,533.8,Quintal
+2026-08-27,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1576.26,647.7,Quintal
+2026-08-27,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5679.2,758.6,Quintal
+2026-08-27,Tomato,Vashi APMC,Maharashtra,Thane,1645.27,120.3,Quintal
+2026-08-27,Onion,Vashi APMC,Maharashtra,Thane,2517.13,542.9,Quintal
+2026-08-27,Soybean,Nagpur APMC,Maharashtra,Nagpur,4942.87,198.1,Quintal
+2026-08-27,Wheat,Azadpur Mandi,Delhi,North Delhi,2578.28,859.0,Quintal
+2026-08-27,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2417.47,450.9,Quintal
+2026-08-28,Mustard,Azadpur Mandi,Delhi,North Delhi,5759.49,721.2,Quintal
+2026-08-28,Wheat,Azadpur Mandi,Delhi,North Delhi,2666.62,570.5,Quintal
+2026-08-28,Soybean,Pune APMC,Maharashtra,Pune,4942.71,944.7,Quintal
+2026-08-28,Maize,Meerut Mandi,Uttar Pradesh,Meerut,2032.72,78.6,Quintal
+2026-08-28,Wheat,Bathinda APMC,Punjab,Bathinda,2415.68,631.3,Quintal
+2026-08-28,Mustard,Bathinda APMC,Punjab,Bathinda,5172.75,428.3,Quintal
+2026-08-28,Onion,Agra Mandi,Uttar Pradesh,Agra,2260.53,645.6,Quintal
+2026-08-28,Mustard,Agra Mandi,Uttar Pradesh,Agra,5564.82,535.4,Quintal
+2026-08-28,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2433.13,164.6,Quintal
+2026-08-28,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5435.39,930.9,Quintal
+2026-08-28,Onion,Lasalgaon APMC,Maharashtra,Nashik,2777.43,697.2,Quintal
+2026-08-28,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1851.71,791.0,Quintal
+2026-08-28,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1731.6,298.1,Quintal
+2026-08-28,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4908.7,778.5,Quintal
+2026-08-28,Wheat,Amritsar APMC,Punjab,Amritsar,2406.9,80.2,Quintal
+2026-08-28,Maize,Amritsar APMC,Punjab,Amritsar,2063.76,588.0,Quintal
+2026-08-29,Mustard,Agra Mandi,Uttar Pradesh,Agra,5305.28,745.3,Quintal
+2026-08-29,Wheat,Agra Mandi,Uttar Pradesh,Agra,2341.61,786.5,Quintal
+2026-08-29,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2549.16,519.1,Quintal
+2026-08-29,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2374.16,104.9,Quintal
+2026-08-29,Tomato,Lasalgaon APMC,Maharashtra,Nashik,2155.48,870.4,Quintal
+2026-08-29,Mustard,Bathinda APMC,Punjab,Bathinda,5420.09,92.2,Quintal
+2026-08-29,Cotton,Bathinda APMC,Punjab,Bathinda,7078.74,393.0,Quintal
+2026-08-29,Mustard,Rajkot APMC,Gujarat,Rajkot,5809.6,184.3,Quintal
+2026-08-29,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5586.4,476.2,Quintal
+2026-08-29,Wheat,Nagpur APMC,Maharashtra,Nagpur,2571.14,821.8,Quintal
+2026-08-29,Maize,Meerut Mandi,Uttar Pradesh,Meerut,2086.19,921.0,Quintal
+2026-08-29,Potato,Indore APMC,Madhya Pradesh,Indore,1586.12,268.6,Quintal
+2026-08-29,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2366.41,812.4,Quintal
+2026-08-29,Tomato,Vashi APMC,Maharashtra,Thane,1543.17,702.1,Quintal
+2026-08-30,Wheat,Bathinda APMC,Punjab,Bathinda,2440.76,701.9,Quintal
+2026-08-30,Soybean,Lasalgaon APMC,Maharashtra,Nashik,5135.86,238.0,Quintal
+2026-08-30,Maize,Khanna APMC,Punjab,Ludhiana,2037.81,717.3,Quintal
+2026-08-30,Wheat,Khanna APMC,Punjab,Ludhiana,2440.11,722.2,Quintal
+2026-08-30,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5665.71,873.6,Quintal
+2026-08-30,Soybean,Rajkot APMC,Gujarat,Rajkot,4885.53,546.9,Quintal
+2026-08-30,Potato,Indore APMC,Madhya Pradesh,Indore,1563.92,285.4,Quintal
+2026-08-30,Onion,Indore APMC,Madhya Pradesh,Indore,2457.99,511.5,Quintal
+2026-08-30,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5501.97,735.5,Quintal
+2026-08-30,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2290.42,338.2,Quintal
+2026-08-31,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2443.58,562.8,Quintal
+2026-08-31,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4903.25,271.2,Quintal
+2026-08-31,Potato,Amritsar APMC,Punjab,Amritsar,1779.96,491.5,Quintal
+2026-08-31,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2280.66,201.4,Quintal
+2026-08-31,Wheat,Bathinda APMC,Punjab,Bathinda,2392.17,875.2,Quintal
+2026-08-31,Mustard,Bathinda APMC,Punjab,Bathinda,5363.89,537.9,Quintal
+2026-08-31,Onion,Lasalgaon APMC,Maharashtra,Nashik,2604.27,786.2,Quintal
+2026-08-31,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2360.87,421.2,Quintal
+2026-08-31,Cotton,Nagpur APMC,Maharashtra,Nagpur,7487.03,505.2,Quintal
+2026-08-31,Onion,Pune APMC,Maharashtra,Pune,2541.97,643.4,Quintal
+2026-08-31,Soybean,Pune APMC,Maharashtra,Pune,5107.38,420.2,Quintal
+2026-08-31,Maize,Kolar APMC,Karnataka,Kolar,2157.2,700.0,Quintal
+2026-08-31,Wheat,Khanna APMC,Punjab,Ludhiana,2438.82,775.6,Quintal
+2026-08-31,Maize,Khanna APMC,Punjab,Ludhiana,1926.72,868.8,Quintal
+2026-08-31,Potato,Agra Mandi,Uttar Pradesh,Agra,1554.7,607.8,Quintal
+2026-08-31,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2595.05,765.4,Quintal
+2026-08-31,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2235.9,463.1,Quintal
+2026-09-01,Potato,Agra Mandi,Uttar Pradesh,Agra,1746.89,58.5,Quintal
+2026-09-01,Wheat,Agra Mandi,Uttar Pradesh,Agra,2414.48,440.5,Quintal
+2026-09-01,Wheat,Khanna APMC,Punjab,Ludhiana,2467.5,877.2,Quintal
+2026-09-01,Maize,Khanna APMC,Punjab,Ludhiana,2040.65,673.1,Quintal
+2026-09-01,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5880.21,881.7,Quintal
+2026-09-01,Soybean,Indore APMC,Madhya Pradesh,Indore,4809.65,538.7,Quintal
+2026-09-01,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2337.7,885.9,Quintal
+2026-09-01,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2332.35,691.4,Quintal
+2026-09-01,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2499.69,408.5,Quintal
+2026-09-01,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2454.14,801.2,Quintal
+2026-09-01,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2543.48,730.0,Quintal
+2026-09-01,Tomato,Lasalgaon APMC,Maharashtra,Nashik,2137.13,701.7,Quintal
+2026-09-01,Tomato,Kolar APMC,Karnataka,Kolar,2244.98,443.4,Quintal
+2026-09-01,Maize,Kolar APMC,Karnataka,Kolar,2181.3,742.1,Quintal
+2026-09-01,Cotton,Bathinda APMC,Punjab,Bathinda,7096.84,620.7,Quintal
+2026-09-01,Wheat,Bathinda APMC,Punjab,Bathinda,2420.02,255.3,Quintal
+2026-09-01,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5639.99,661.7,Quintal
+2026-09-01,Cotton,Nagpur APMC,Maharashtra,Nagpur,7464.94,606.8,Quintal
+2026-09-01,Cotton,Rajkot APMC,Gujarat,Rajkot,7372.94,123.8,Quintal
+2026-09-02,Potato,Kolar APMC,Karnataka,Kolar,1755.41,128.6,Quintal
+2026-09-02,Maize,Kolar APMC,Karnataka,Kolar,2107.54,437.9,Quintal
+2026-09-02,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4954.32,587.2,Quintal
+2026-09-02,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5689.84,756.0,Quintal
+2026-09-02,Cotton,Rajkot APMC,Gujarat,Rajkot,7217.91,702.4,Quintal
+2026-09-02,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5832.88,553.6,Quintal
+2026-09-02,Onion,Indore APMC,Madhya Pradesh,Indore,2216.32,202.6,Quintal
+2026-09-02,Potato,Pune APMC,Maharashtra,Pune,1697.77,493.8,Quintal
+2026-09-02,Gram (Chana),Pune APMC,Maharashtra,Pune,5902.24,429.0,Quintal
+2026-09-02,Wheat,Bathinda APMC,Punjab,Bathinda,2432.63,276.5,Quintal
+2026-09-02,Cotton,Bathinda APMC,Punjab,Bathinda,7211.97,584.4,Quintal
+2026-09-02,Maize,Amritsar APMC,Punjab,Amritsar,2117.45,146.3,Quintal
+2026-09-02,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2343.74,773.7,Quintal
+2026-09-02,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2356.24,346.6,Quintal
+2026-09-02,Potato,Vashi APMC,Maharashtra,Thane,1675.06,675.8,Quintal
+2026-09-02,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2483.73,481.1,Quintal
+2026-09-02,Soybean,Lasalgaon APMC,Maharashtra,Nashik,5077.85,675.5,Quintal
+2026-09-02,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1831.36,343.3,Quintal
+2026-09-02,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2535.03,378.5,Quintal
+2026-09-03,Wheat,Bathinda APMC,Punjab,Bathinda,2511.44,267.8,Quintal
+2026-09-03,Cotton,Bathinda APMC,Punjab,Bathinda,7094.54,760.2,Quintal
+2026-09-03,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5287.59,941.6,Quintal
+2026-09-03,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1838.32,672.5,Quintal
+2026-09-03,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1629.07,539.3,Quintal
+2026-09-03,Gram (Chana),Pune APMC,Maharashtra,Pune,5843.87,648.2,Quintal
+2026-09-03,Onion,Pune APMC,Maharashtra,Pune,2645.34,199.7,Quintal
+2026-09-03,Onion,Indore APMC,Madhya Pradesh,Indore,2748.8,409.7,Quintal
+2026-09-03,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1740.26,59.5,Quintal
+2026-09-03,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2427.26,516.9,Quintal
+2026-09-03,Soybean,Lasalgaon APMC,Maharashtra,Nashik,5122.85,386.7,Quintal
+2026-09-03,Mustard,Agra Mandi,Uttar Pradesh,Agra,5576.17,315.9,Quintal
+2026-09-03,Onion,Agra Mandi,Uttar Pradesh,Agra,2429.1,878.5,Quintal
+2026-09-03,Cotton,Nagpur APMC,Maharashtra,Nagpur,7620.01,363.5,Quintal
+2026-09-03,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5419.08,519.0,Quintal
+2026-09-03,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4828.01,699.8,Quintal
+2026-09-03,Potato,Kolar APMC,Karnataka,Kolar,1794.78,320.2,Quintal
+2026-09-03,Tomato,Kolar APMC,Karnataka,Kolar,1885.03,814.3,Quintal
+2026-09-03,Mustard,Azadpur Mandi,Delhi,North Delhi,5889.05,770.0,Quintal
+2026-09-03,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5601.28,433.7,Quintal
+2026-09-03,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2271.58,616.8,Quintal
+2026-09-03,Maize,Amritsar APMC,Punjab,Amritsar,2056.06,406.0,Quintal
+2026-09-04,Cotton,Bathinda APMC,Punjab,Bathinda,7402.31,343.4,Quintal
+2026-09-04,Potato,Agra Mandi,Uttar Pradesh,Agra,1588.46,919.3,Quintal
+2026-09-04,Mustard,Agra Mandi,Uttar Pradesh,Agra,5324.28,332.1,Quintal
+2026-09-04,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5524.52,462.1,Quintal
+2026-09-04,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5555.22,205.3,Quintal
+2026-09-04,Cotton,Rajkot APMC,Gujarat,Rajkot,7485.46,324.8,Quintal
+2026-09-04,Soybean,Rajkot APMC,Gujarat,Rajkot,4995.99,214.7,Quintal
+2026-09-04,Maize,Kolar APMC,Karnataka,Kolar,2059.27,567.3,Quintal
+2026-09-04,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1957.15,622.0,Quintal
+2026-09-04,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4956.26,949.9,Quintal
+2026-09-04,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5585.36,310.0,Quintal
+2026-09-04,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2746.73,829.0,Quintal
+2026-09-04,Mustard,Khanna APMC,Punjab,Ludhiana,5362.04,172.9,Quintal
+2026-09-04,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5539.73,805.9,Quintal
+2026-09-04,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5442.15,489.8,Quintal
+2026-09-04,Wheat,Amritsar APMC,Punjab,Amritsar,2423.63,79.4,Quintal
+2026-09-04,Onion,Indore APMC,Madhya Pradesh,Indore,2358.75,309.8,Quintal
+2026-09-04,Potato,Azadpur Mandi,Delhi,North Delhi,1745.13,152.8,Quintal
+2026-09-04,Tomato,Azadpur Mandi,Delhi,North Delhi,1861.02,747.6,Quintal
+2026-09-04,Gram (Chana),Pune APMC,Maharashtra,Pune,5770.43,246.7,Quintal
+2026-09-04,Onion,Pune APMC,Maharashtra,Pune,2356.75,432.6,Quintal
+2026-09-05,Gram (Chana),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5582.92,435.4,Quintal
+2026-09-05,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2495.72,782.2,Quintal
+2026-09-05,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2431.3,201.5,Quintal
+2026-09-05,Wheat,Agra Mandi,Uttar Pradesh,Agra,2373.16,290.6,Quintal
+2026-09-05,Onion,Agra Mandi,Uttar Pradesh,Agra,2745.45,661.4,Quintal
+2026-09-05,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2125.44,916.5,Quintal
+2026-09-05,Wheat,Amritsar APMC,Punjab,Amritsar,2434.14,829.5,Quintal
+2026-09-05,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2257.98,274.7,Quintal
+2026-09-05,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2282.33,291.8,Quintal
+2026-09-05,Potato,Vashi APMC,Maharashtra,Thane,1740.01,422.8,Quintal
+2026-09-05,Tomato,Kolar APMC,Karnataka,Kolar,1620.32,675.2,Quintal
+2026-09-05,Maize,Kolar APMC,Karnataka,Kolar,2204.89,839.6,Quintal
+2026-09-05,Mustard,Rajkot APMC,Gujarat,Rajkot,5454.98,812.5,Quintal
+2026-09-05,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5570.77,133.8,Quintal
+2026-09-05,Mustard,Bathinda APMC,Punjab,Bathinda,5622.58,407.9,Quintal
+2026-09-05,Cotton,Bathinda APMC,Punjab,Bathinda,7024.37,921.3,Quintal
+2026-09-05,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1974.61,354.0,Quintal
+2026-09-06,Wheat,Khanna APMC,Punjab,Ludhiana,2524.99,139.6,Quintal
+2026-09-06,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2421.54,460.9,Quintal
+2026-09-06,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5414.2,942.7,Quintal
+2026-09-06,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2602.28,837.0,Quintal
+2026-09-06,Tomato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1748.45,838.9,Quintal
+2026-09-06,Wheat,Agra Mandi,Uttar Pradesh,Agra,2390.57,863.4,Quintal
+2026-09-06,Wheat,Amritsar APMC,Punjab,Amritsar,2472.05,406.7,Quintal
+2026-09-06,Wheat,Indore APMC,Madhya Pradesh,Indore,2388.16,51.0,Quintal
+2026-09-06,Potato,Indore APMC,Madhya Pradesh,Indore,1556.42,479.1,Quintal
+2026-09-07,Potato,Agra Mandi,Uttar Pradesh,Agra,1537.85,142.2,Quintal
+2026-09-07,Onion,Agra Mandi,Uttar Pradesh,Agra,2610.69,332.0,Quintal
+2026-09-07,Rice (Paddy),Meerut Mandi,Uttar Pradesh,Meerut,2272.53,169.8,Quintal
+2026-09-07,Maize,Meerut Mandi,Uttar Pradesh,Meerut,1868.82,943.6,Quintal
+2026-09-07,Soybean,Indore APMC,Madhya Pradesh,Indore,4865.68,635.0,Quintal
+2026-09-07,Soybean,Rajkot APMC,Gujarat,Rajkot,4974.4,241.7,Quintal
+2026-09-07,Mustard,Rajkot APMC,Gujarat,Rajkot,5665.33,604.5,Quintal
+2026-09-07,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1437.88,856.9,Quintal
+2026-09-07,Onion,Lasalgaon APMC,Maharashtra,Nashik,2605.88,707.0,Quintal
+2026-09-07,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5624.59,762.0,Quintal
+2026-09-07,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5558.42,273.4,Quintal
+2026-09-07,Wheat,Amritsar APMC,Punjab,Amritsar,2501.68,838.2,Quintal
+2026-09-07,Potato,Amritsar APMC,Punjab,Amritsar,1708.51,219.8,Quintal
+2026-09-07,Onion,Vashi APMC,Maharashtra,Thane,2787.02,755.4,Quintal
+2026-09-07,Wheat,Vashi APMC,Maharashtra,Thane,2528.07,397.3,Quintal
+2026-09-07,Cotton,Bathinda APMC,Punjab,Bathinda,7133.91,624.3,Quintal
+2026-09-07,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2527.66,168.8,Quintal
+2026-09-07,Onion,Azadpur Mandi,Delhi,North Delhi,2609.1,664.6,Quintal
+2026-09-07,Potato,Azadpur Mandi,Delhi,North Delhi,1829.0,743.3,Quintal
+2026-09-08,Soybean,Pune APMC,Maharashtra,Pune,4779.74,124.2,Quintal
+2026-09-08,Gram (Chana),Pune APMC,Maharashtra,Pune,5561.51,299.7,Quintal
+2026-09-08,Onion,Lasalgaon APMC,Maharashtra,Nashik,2485.16,878.8,Quintal
+2026-09-08,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2552.71,344.1,Quintal
+2026-09-08,Maize,Khanna APMC,Punjab,Ludhiana,1995.49,678.8,Quintal
+2026-09-08,Cotton,Nagpur APMC,Maharashtra,Nagpur,7542.95,154.4,Quintal
+2026-09-08,Onion,Azadpur Mandi,Delhi,North Delhi,3076.34,649.5,Quintal
+2026-09-08,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4938.06,60.2,Quintal
+2026-09-08,Cotton,Bathinda APMC,Punjab,Bathinda,7242.25,200.3,Quintal
+2026-09-08,Mustard,Bathinda APMC,Punjab,Bathinda,5643.43,291.9,Quintal
+2026-09-08,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2466.79,351.5,Quintal
+2026-09-08,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2551.54,614.8,Quintal
+2026-09-08,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2617.4,496.5,Quintal
+2026-09-08,Wheat,Amritsar APMC,Punjab,Amritsar,2441.41,191.6,Quintal
+2026-09-08,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2242.36,746.0,Quintal
+2026-09-09,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5747.1,874.3,Quintal
+2026-09-09,Soybean,Rajkot APMC,Gujarat,Rajkot,5064.66,564.4,Quintal
+2026-09-09,Cotton,Rajkot APMC,Gujarat,Rajkot,7617.47,97.4,Quintal
+2026-09-09,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4991.51,908.7,Quintal
+2026-09-09,Maize,Meerut Mandi,Uttar Pradesh,Meerut,2059.1,329.6,Quintal
+2026-09-09,Soybean,Lasalgaon APMC,Maharashtra,Nashik,4907.63,57.2,Quintal
+2026-09-09,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2443.24,610.4,Quintal
+2026-09-09,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5520.71,948.0,Quintal
+2026-09-09,Potato,Indore APMC,Madhya Pradesh,Indore,1722.92,541.9,Quintal
+2026-09-09,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2335.18,55.7,Quintal
+2026-09-09,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2316.0,674.1,Quintal
+2026-09-09,Mustard,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,5401.73,58.6,Quintal
+2026-09-09,Tomato,Kolar APMC,Karnataka,Kolar,1988.88,143.6,Quintal
+2026-09-09,Potato,Kolar APMC,Karnataka,Kolar,1646.36,526.8,Quintal
+2026-09-09,Soybean,Pune APMC,Maharashtra,Pune,5002.93,947.3,Quintal
+2026-09-09,Wheat,Bathinda APMC,Punjab,Bathinda,2421.67,879.1,Quintal
+2026-09-09,Mustard,Bathinda APMC,Punjab,Bathinda,5614.36,680.8,Quintal
+2026-09-09,Potato,Vashi APMC,Maharashtra,Thane,1674.0,572.7,Quintal
+2026-09-09,Wheat,Vashi APMC,Maharashtra,Thane,2432.33,404.9,Quintal
+2026-09-09,Onion,Agra Mandi,Uttar Pradesh,Agra,2407.15,646.2,Quintal
+2026-09-10,Mustard,Agra Mandi,Uttar Pradesh,Agra,5473.61,189.9,Quintal
+2026-09-10,Mustard,Khanna APMC,Punjab,Ludhiana,5347.73,469.4,Quintal
+2026-09-10,Wheat,Azadpur Mandi,Delhi,North Delhi,2551.51,456.7,Quintal
+2026-09-10,Potato,Azadpur Mandi,Delhi,North Delhi,1962.67,467.0,Quintal
+2026-09-10,Wheat,Amritsar APMC,Punjab,Amritsar,2471.48,793.7,Quintal
+2026-09-10,Wheat,Bathinda APMC,Punjab,Bathinda,2497.24,802.3,Quintal
+2026-09-10,Tomato,Kolar APMC,Karnataka,Kolar,1723.22,406.6,Quintal
+2026-09-10,Maize,Kolar APMC,Karnataka,Kolar,1927.8,94.1,Quintal
+2026-09-10,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5683.49,457.0,Quintal
+2026-09-10,Wheat,Indore APMC,Madhya Pradesh,Indore,2458.84,723.3,Quintal
+2026-09-10,Cotton,Rajkot APMC,Gujarat,Rajkot,7219.62,175.8,Quintal
+2026-09-10,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2439.53,797.3,Quintal
+2026-09-10,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2385.09,667.7,Quintal
+2026-09-10,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2579.92,875.7,Quintal
+2026-09-11,Onion,Lasalgaon APMC,Maharashtra,Nashik,2708.23,702.0,Quintal
+2026-09-11,Soybean,Lasalgaon APMC,Maharashtra,Nashik,5001.42,496.5,Quintal
+2026-09-11,Potato,Vashi APMC,Maharashtra,Thane,1621.4,297.5,Quintal
+2026-09-11,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2485.36,451.4,Quintal
+2026-09-11,Cotton,Nagpur APMC,Maharashtra,Nagpur,7397.37,632.6,Quintal
+2026-09-11,Potato,Indore APMC,Madhya Pradesh,Indore,1615.09,104.9,Quintal
+2026-09-11,Onion,Indore APMC,Madhya Pradesh,Indore,2441.86,229.5,Quintal
+2026-09-11,Potato,Agra Mandi,Uttar Pradesh,Agra,1722.55,940.5,Quintal
+2026-09-11,Soybean,Pune APMC,Maharashtra,Pune,4977.91,339.4,Quintal
+2026-09-11,Gram (Chana),Pune APMC,Maharashtra,Pune,5859.32,293.4,Quintal
+2026-09-11,Onion,Azadpur Mandi,Delhi,North Delhi,2595.66,779.6,Quintal
+2026-09-11,Wheat,Amritsar APMC,Punjab,Amritsar,2415.93,526.5,Quintal
+2026-09-11,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2294.91,926.6,Quintal
+2026-09-11,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,1967.3,641.2,Quintal
+2026-09-11,Cotton,Rajkot APMC,Gujarat,Rajkot,7114.52,399.6,Quintal
+2026-09-11,Mustard,Rajkot APMC,Gujarat,Rajkot,5511.58,891.7,Quintal
+2026-09-12,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2328.77,923.3,Quintal
+2026-09-12,Soybean,Nagpur APMC,Maharashtra,Nagpur,4898.47,84.2,Quintal
+2026-09-12,Gram (Chana),Nagpur APMC,Maharashtra,Nagpur,5879.47,67.9,Quintal
+2026-09-12,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2428.45,876.1,Quintal
+2026-09-12,Rice (Paddy),Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2250.1,695.2,Quintal
+2026-09-12,Cotton,Rajkot APMC,Gujarat,Rajkot,7548.73,182.9,Quintal
+2026-09-12,Mustard,Rajkot APMC,Gujarat,Rajkot,5651.14,149.8,Quintal
+2026-09-12,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4856.29,684.1,Quintal
+2026-09-12,Mustard,Neemuch APMC,Madhya Pradesh,Neemuch,5474.93,352.9,Quintal
+2026-09-12,Tomato,Kolar APMC,Karnataka,Kolar,1633.39,709.1,Quintal
+2026-09-12,Maize,Kolar APMC,Karnataka,Kolar,2014.3,488.5,Quintal
+2026-09-12,Wheat,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2608.86,250.9,Quintal
+2026-09-12,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2482.62,326.1,Quintal
+2026-09-12,Tomato,Lasalgaon APMC,Maharashtra,Nashik,1732.79,705.9,Quintal
+2026-09-12,Onion,Lasalgaon APMC,Maharashtra,Nashik,2956.05,402.4,Quintal
+2026-09-12,Wheat,Indore APMC,Madhya Pradesh,Indore,2404.88,592.1,Quintal
+2026-09-12,Wheat,Khanna APMC,Punjab,Ludhiana,2455.76,720.8,Quintal
+2026-09-12,Cotton,Bathinda APMC,Punjab,Bathinda,7226.04,934.1,Quintal
+2026-09-13,Maize,Amritsar APMC,Punjab,Amritsar,1983.17,111.0,Quintal
+2026-09-13,Wheat,Amritsar APMC,Punjab,Amritsar,2472.02,281.0,Quintal
+2026-09-13,Soybean,Indore APMC,Madhya Pradesh,Indore,5016.39,427.7,Quintal
+2026-09-13,Potato,Vashi APMC,Maharashtra,Thane,1798.1,493.8,Quintal
+2026-09-13,Wheat,Neemuch APMC,Madhya Pradesh,Neemuch,2373.36,759.9,Quintal
+2026-09-13,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5707.33,570.2,Quintal
+2026-09-13,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2312.77,80.1,Quintal
+2026-09-13,Potato,Kolar APMC,Karnataka,Kolar,1856.24,285.0,Quintal
+2026-09-14,Onion,Pune APMC,Maharashtra,Pune,2628.93,850.8,Quintal
+2026-09-14,Soybean,Pune APMC,Maharashtra,Pune,5048.44,191.4,Quintal
+2026-09-14,Potato,Amritsar APMC,Punjab,Amritsar,1717.9,677.5,Quintal
+2026-09-14,Soybean,Rajkot APMC,Gujarat,Rajkot,5083.43,263.8,Quintal
+2026-09-14,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5805.52,805.9,Quintal
+2026-09-14,Wheat,Bathinda APMC,Punjab,Bathinda,2452.93,374.7,Quintal
+2026-09-14,Rice (Paddy),Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2440.53,482.3,Quintal
+2026-09-14,Onion,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,2340.87,137.3,Quintal
+2026-09-14,Rice (Paddy),Vashi APMC,Maharashtra,Thane,2217.15,476.2,Quintal
+2026-09-14,Potato,Meerut Mandi,Uttar Pradesh,Meerut,1479.59,756.4,Quintal
+2026-09-14,Potato,Indore APMC,Madhya Pradesh,Indore,1822.0,216.4,Quintal
+2026-09-14,Gram (Chana),Indore APMC,Madhya Pradesh,Indore,5619.55,846.9,Quintal
+2026-09-14,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2518.54,287.1,Quintal
+2026-09-14,Tomato,Azadpur Mandi,Delhi,North Delhi,1899.6,803.4,Quintal
+2026-09-14,Rice (Paddy),Khanna APMC,Punjab,Ludhiana,2256.94,127.1,Quintal
+2026-09-15,Potato,Yeshwanthpur APMC,Karnataka,Bengaluru Urban,1654.52,319.0,Quintal
+2026-09-15,Maize,Kolar APMC,Karnataka,Kolar,1943.3,770.4,Quintal
+2026-09-15,Tomato,Kolar APMC,Karnataka,Kolar,1805.81,659.8,Quintal
+2026-09-15,Wheat,Kanpur Mandi,Uttar Pradesh,Kanpur Nagar,2466.73,904.2,Quintal
+2026-09-15,Soybean,Nagpur APMC,Maharashtra,Nagpur,5041.48,777.6,Quintal
+2026-09-15,Wheat,Meerut Mandi,Uttar Pradesh,Meerut,2252.55,441.9,Quintal
+2026-09-15,Wheat,Lasalgaon APMC,Maharashtra,Nashik,2614.93,337.8,Quintal
+2026-09-15,Wheat,Bathinda APMC,Punjab,Bathinda,2386.05,343.5,Quintal
+2026-09-15,Gram (Chana),Neemuch APMC,Madhya Pradesh,Neemuch,5610.08,757.9,Quintal
+2026-09-15,Soybean,Neemuch APMC,Madhya Pradesh,Neemuch,4840.93,427.6,Quintal
+2026-09-15,Gram (Chana),Rajkot APMC,Gujarat,Rajkot,5529.49,559.9,Quintal
+2026-09-15,Cotton,Rajkot APMC,Gujarat,Rajkot,7174.47,140.2,Quintal
+2026-09-15,Wheat,Khanna APMC,Punjab,Ludhiana,2355.66,757.2,Quintal
+2026-09-15,Maize,Amritsar APMC,Punjab,Amritsar,1922.39,598.1,Quintal
+2026-09-15,Rice (Paddy),Amritsar APMC,Punjab,Amritsar,2306.72,83.7,Quintal
+2026-09-15,Tomato,Azadpur Mandi,Delhi,North Delhi,1656.58,411.5,Quintal
+2026-09-15,Rice (Paddy),Azadpur Mandi,Delhi,North Delhi,2357.99,406.2,Quintal
