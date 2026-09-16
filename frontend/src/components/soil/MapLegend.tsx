@@ -18,7 +18,12 @@ const LEGEND_ITEMS: LegendItem[] = [
 ];
 
 export const MapLegend: React.FC = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 640;
+    }
+    return false;
+  });
   const { activeCategories, toggleCategory } = useMapStore();
 
   return (

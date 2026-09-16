@@ -93,14 +93,14 @@ export const TopSearchBar: React.FC<TopSearchBarProps> = ({ districts, taluks })
   return (
     <div className="flex flex-col gap-2.5 max-w-2xl w-full" ref={dropdownRef}>
       {/* Search Input Row */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1.5 sm:gap-2">
         {/* Autocomplete Input */}
-        <div className="relative flex-1">
-          <div className="flex items-center bg-[#17201C]/95 backdrop-blur-md border border-[#2C3E36] rounded-2xl shadow-xl px-3 py-2 text-slate-200 focus-within:border-emerald-500 transition-colors">
-            <Search className="w-4 h-4 text-slate-400 mr-2 flex-shrink-0" />
+        <div className="relative flex-1 min-w-0">
+          <div className="flex items-center bg-[#17201C]/95 backdrop-blur-md border border-[#2C3E36] rounded-2xl shadow-xl px-2.5 sm:px-3 py-1.5 sm:py-2 text-slate-200 focus-within:border-emerald-500 transition-colors">
+            <Search className="w-3.5 h-3.5 text-slate-400 mr-1.5 sm:mr-2 flex-shrink-0" />
             <input
               type="text"
-              placeholder="Search 61 taluks or 14 districts in Kerala..."
+              placeholder="Search taluks or districts..."
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -121,7 +121,7 @@ export const TopSearchBar: React.FC<TopSearchBarProps> = ({ districts, taluks })
 
           {/* Dropdown Results */}
           {isDropdownOpen && query && (
-            <div className="absolute top-full left-0 right-0 mt-1.5 bg-[#17201C] border border-[#2C3E36] rounded-xl shadow-2xl overflow-hidden z-50 text-xs divide-y divide-[#2C3E36]">
+            <div className="absolute top-full left-0 right-0 mt-1.5 bg-[#17201C] border border-[#2C3E36] rounded-xl shadow-2xl overflow-hidden z-50 text-xs divide-y divide-[#2C3E36] max-h-80 overflow-y-auto">
               {matchedDistricts.length === 0 && matchedTaluks.length === 0 ? (
                 <div className="p-3 text-slate-400 text-center">No regions matching "{query}"</div>
               ) : (
@@ -195,18 +195,19 @@ export const TopSearchBar: React.FC<TopSearchBarProps> = ({ districts, taluks })
         {/* Select Region Modal Trigger Button */}
         <button
           onClick={() => setRegionModalOpen(true)}
-          className="flex items-center gap-1.5 px-3 py-2 rounded-2xl text-xs font-semibold
+          className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-2xl text-xs font-semibold
             bg-[#17201C]/95 backdrop-blur-md border border-[#2C3E36] text-slate-200
-            hover:text-white hover:border-slate-500 shadow-xl transition-all cursor-pointer whitespace-nowrap"
+            hover:text-white hover:border-slate-500 shadow-xl transition-all cursor-pointer whitespace-nowrap shrink-0"
         >
-          <span>Select Region</span>
-          <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+          <span className="hidden sm:inline">Select Region</span>
+          <span className="sm:hidden">Region</span>
+          <ChevronDown className="w-3 h-3 text-slate-400" />
         </button>
 
         {/* Custom ROI Toggle Button */}
         <button
           onClick={() => setRoiActive(!isRoiToolActive)}
-          className={`flex items-center gap-1.5 px-3 py-2 rounded-2xl text-xs font-semibold backdrop-blur-md shadow-xl transition-all cursor-pointer whitespace-nowrap ${
+          className={`flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-2xl text-xs font-semibold backdrop-blur-md shadow-xl transition-all cursor-pointer whitespace-nowrap shrink-0 ${
             isRoiToolActive
               ? 'bg-amber-600/90 text-white border-2 border-amber-300 ring-4 ring-amber-500/30 animate-pulse'
               : 'bg-[#17201C]/95 border border-[#2C3E36] text-slate-200 hover:text-white hover:border-slate-500'
@@ -214,7 +215,7 @@ export const TopSearchBar: React.FC<TopSearchBarProps> = ({ districts, taluks })
           title="Inspect custom circular area of interest"
         >
           <span>📐 ROI</span>
-          {isRoiToolActive && <span className="w-2 h-2 rounded-full bg-white animate-ping" />}
+          {isRoiToolActive && <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />}
         </button>
 
         {/* Layers Switcher Button */}
@@ -222,19 +223,19 @@ export const TopSearchBar: React.FC<TopSearchBarProps> = ({ districts, taluks })
           onClick={() => setLayerSwitcherOpen(!isLayerSwitcherOpen)}
           className="flex items-center justify-center p-2 rounded-2xl text-xs font-semibold
             bg-[#17201C]/95 backdrop-blur-md border border-[#2C3E36] text-slate-200
-            hover:text-white hover:border-slate-500 shadow-xl transition-all cursor-pointer"
+            hover:text-white hover:border-slate-500 shadow-xl transition-all cursor-pointer shrink-0"
           title="Map Basemaps & Layers"
         >
-          <Layers className="w-4 h-4 text-emerald-400" />
+          <Layers className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400" />
         </button>
       </div>
 
-      {/* Granularity Chips & Selection Indicator */}
-      <div className="flex items-center justify-between gap-2 overflow-x-auto py-0.5">
-        <div className="flex items-center gap-2">
+        {/* Granularity Chips & Selection Indicator */}
+      <div className="flex items-center justify-between gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+        <div className="flex items-center gap-1.5 shrink-0">
           <button
             onClick={() => setGranularity('district')}
-            className={`px-3 py-1 rounded-xl text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
+            className={`px-2.5 py-1 rounded-xl text-xs font-semibold transition-all cursor-pointer flex items-center gap-1 ${
               granularity === 'district'
                 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-700/40'
                 : 'bg-[#17201C]/80 border border-[#2C3E36] text-slate-300 hover:text-white'
@@ -245,27 +246,29 @@ export const TopSearchBar: React.FC<TopSearchBarProps> = ({ districts, taluks })
 
           <button
             onClick={() => setGranularity('taluk')}
-            className={`px-3 py-1 rounded-xl text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5 ${
+            className={`px-2.5 py-1 rounded-xl text-xs font-semibold transition-all cursor-pointer flex items-center gap-1 ${
               granularity === 'taluk'
                 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-700/40'
                 : 'bg-[#17201C]/80 border border-[#2C3E36] text-slate-300 hover:text-white'
             }`}
           >
             <Sparkles className="w-3 h-3 text-amber-300" />
-            <span>Taluk Precision ({taluks.length || 61})</span>
+            <span className="hidden sm:inline">Taluk Precision</span>
+            <span className="sm:hidden">Taluks</span>
+            <span>({taluks.length || 76})</span>
           </button>
         </div>
 
         {/* Selected badge */}
         {activeSelectionName && (
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-200 text-xs animate-in fade-in">
-            <span className="font-semibold truncate max-w-[180px]">{activeSelectionName}</span>
+          <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-200 text-xs shrink-0 animate-in fade-in">
+            <span className="font-semibold truncate max-w-[120px] sm:max-w-[180px]">{activeSelectionName}</span>
             <button
               onClick={() => {
                 selectDistrict(null);
                 selectTaluk(null);
               }}
-              className="p-0.5 hover:text-white rounded-full hover:bg-emerald-800/60"
+              className="p-0.5 hover:text-white rounded-full hover:bg-emerald-800/60 cursor-pointer"
             >
               <X className="w-3 h-3" />
             </button>

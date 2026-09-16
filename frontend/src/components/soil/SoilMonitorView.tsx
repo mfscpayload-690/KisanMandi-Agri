@@ -123,7 +123,7 @@ export const SoilMonitorView: React.FC = () => {
       </div>
 
       {/* Floating Left Column: Custom ROI Card & Map Legend */}
-      <div className="absolute left-4 bottom-24 z-30 flex flex-col gap-3 pointer-events-none max-w-sm">
+      <div className="absolute left-3 sm:left-4 bottom-28 sm:bottom-24 z-30 flex flex-col gap-2.5 pointer-events-none max-w-[200px] sm:max-w-sm">
         <div className="pointer-events-auto">
           <RoiStatsCard />
         </div>
@@ -133,15 +133,15 @@ export const SoilMonitorView: React.FC = () => {
       </div>
 
       {/* Floating Bottom Timeline Slider */}
-      <div className="absolute bottom-4 left-4 right-4 lg:left-88 lg:right-98 z-30 pointer-events-none">
+      <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 lg:left-88 lg:right-98 z-30 pointer-events-none">
         <div className="pointer-events-auto max-w-xl mx-auto">
           <TimeSlider />
         </div>
       </div>
 
       {/* Floating Right Detail Panel (District or Taluk) */}
-      <div className="absolute top-16 right-4 bottom-4 z-30 pointer-events-none flex items-start">
-        <div className="pointer-events-auto">
+      <div className="absolute top-14 sm:top-16 right-2 sm:right-4 bottom-2 sm:bottom-4 z-30 pointer-events-none flex items-start">
+        <div className="pointer-events-auto max-h-[85vh] overflow-y-auto">
           {selectedDistrict && <DistrictDetailPanel taluks={taluks} />}
           {selectedTaluk && <TalukDetailPanel />}
         </div>
