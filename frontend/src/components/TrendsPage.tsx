@@ -11,6 +11,7 @@ import {
 import { TrendingUp, ArrowUpRight, ArrowDownRight, AlertCircle } from 'lucide-react';
 import { api, type TrendResponse } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
+import { CustomSelect } from './CustomSelect';
 
 interface TrendsPageProps {
   initialCrop?: string;
@@ -82,34 +83,31 @@ export const TrendsPage: React.FC<TrendsPageProps> = ({
           {/* Crop Selector */}
           <div>
             <label className="block text-xs font-semibold text-slate-600 mb-1.5">{t('selectCrop')}</label>
-            <select
+            <CustomSelect
               value={crop}
-              onChange={(e) => setCrop(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 bg-white focus:ring-2 focus:ring-emerald-500"
-            >
-              {cropsList.map((c) => (
-                <option key={c} value={c}>
-                  {translateCrop(c)} ({c})
-                </option>
-              ))}
-            </select>
+              onChange={(val) => setCrop(val)}
+              options={cropsList.map((c) => ({
+                value: c,
+                label: translateCrop(c),
+                sublabel: c,
+              }))}
+              placeholder={t('selectCrop')}
+            />
           </div>
 
-          {/* State Selector */}
+          {/* State Selector with Search */}
           <div>
             <label className="block text-xs font-semibold text-slate-600 mb-1.5">{t('selectState')}</label>
-            <select
+            <CustomSelect
               value={state}
-              onChange={(e) => setState(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 bg-white focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">{t('filterAllStates')}</option>
-              {statesList.map((st) => (
-                <option key={st} value={st}>
-                  {st}
-                </option>
-              ))}
-            </select>
+              onChange={(val) => setState(val)}
+              options={[
+                { value: '', label: t('filterAllStates') },
+                ...statesList.map((st) => ({ value: st, label: st })),
+              ]}
+              placeholder={t('filterAllStates')}
+              searchable={true}
+            />
           </div>
 
           {/* Days Filter */}
