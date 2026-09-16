@@ -133,7 +133,17 @@ export function buildDeepLinkUrl(params: DeepLinkParams): string {
   }
 
   const queryString = searchParams.toString();
-  return `${window.location.origin}${window.location.pathname}${queryString ? `?${queryString}` : ''}`;
+  const origin = (typeof window !== 'undefined' && 
+                  window.location.hostname !== 'localhost' && 
+                  window.location.hostname !== '127.0.0.1')
+    ? window.location.origin
+    : 'https://kisanmandi.in';
+
+  const pathname = typeof window !== 'undefined' && origin === window.location.origin 
+    ? window.location.pathname 
+    : '/';
+
+  return `${origin}${pathname}${queryString ? `?${queryString}` : ''}`;
 }
 
 /**
