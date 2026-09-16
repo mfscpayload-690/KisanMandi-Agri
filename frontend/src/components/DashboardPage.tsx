@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { api, type PriceRecord } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
+import { CustomSelect } from './CustomSelect';
 
 interface DashboardPageProps {
   selectedCrop: string;
@@ -141,37 +142,33 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             />
           </div>
 
-          {/* State Dropdown */}
+          {/* State Dropdown with Search */}
           <div className="md:col-span-3">
-            <select
+            <CustomSelect
               value={selectedState}
-              onChange={(e) => setSelectedState(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">{t('filterAllStates')}</option>
-              {statesList.map((st) => (
-                <option key={st} value={st}>
-                  {st}
-                </option>
-              ))}
-            </select>
+              onChange={(val) => setSelectedState(val)}
+              options={[
+                { value: '', label: t('filterAllStates') },
+                ...statesList.map((st) => ({ value: st, label: st })),
+              ]}
+              placeholder={t('filterAllStates')}
+              searchable={true}
+            />
           </div>
 
           {/* Time Filter */}
           <div className="md:col-span-2">
-            <select
-              value={selectedDays ?? ''}
-              onChange={(e) => {
-                const val = e.target.value;
-                setSelectedDays(val ? parseInt(val) : undefined);
-              }}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
-            >
-              <option value="">{t('daysAll')}</option>
-              <option value="7">{t('days7')}</option>
-              <option value="30">{t('days30')}</option>
-              <option value="90">{t('days90')}</option>
-            </select>
+            <CustomSelect
+              value={selectedDays ? String(selectedDays) : ''}
+              onChange={(val) => setSelectedDays(val ? parseInt(val) : undefined)}
+              options={[
+                { value: '', label: t('daysAll') },
+                { value: '7', label: t('days7') },
+                { value: '30', label: t('days30') },
+                { value: '90', label: t('days90') },
+              ]}
+              placeholder={t('dateRangeLabel') || t('daysAll')}
+            />
           </div>
 
           {/* Sort Order */}
