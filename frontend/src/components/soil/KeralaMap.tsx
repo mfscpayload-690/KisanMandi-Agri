@@ -40,6 +40,7 @@ export const KeralaMap: React.FC<KeralaMapProps> = ({ districts, taluks }) => {
   const mapInstanceRef = useRef<L.Map | null>(null);
   const tileLayerRef = useRef<L.TileLayer | null>(null);
   const geojsonLayerRef = useRef<L.GeoJSON | null>(null);
+  const districtBoundaryLayerRef = useRef<L.GeoJSON | null>(null);
   const markersLayerRef = useRef<L.LayerGroup | null>(null);
   const roiCircleRef = useRef<L.Circle | null>(null);
 
@@ -50,6 +51,7 @@ export const KeralaMap: React.FC<KeralaMapProps> = ({ districts, taluks }) => {
     basemap,
     overlayOpacity,
     showHotspotMarkers,
+    showDistrictBoundaries,
     selectedDistrict,
     selectedTaluk,
     selectDistrict,
@@ -332,6 +334,35 @@ export const KeralaMap: React.FC<KeralaMapProps> = ({ districts, taluks }) => {
     selectDistrict,
     selectTaluk
   ]);
+
+  // 6. Prominent District Jurisdiction Boundaries Overlay
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (districtBoundaryLayerRef.current) {
+      districtBoundaryLayerRef.current.remove();
+      districtBoundaryLayerRef.current = null;
+    }
+
+    // Render district jurisdiction borders whenever enabled (or in taluk mode to clearly delineate taluk groupings)
+    if ((showDistrictBoundaries || granularity === 'taluk') && districts && districts.length > 0) {
+      const boundaryLayer = L.geoJSON(districts as any, {
+        style: {
+          fill: false,
+          color: '#FFFFFF',
+          weight: 2.2,
+          opacity: 0.9,
+          dashArray: granularity === 'taluk' ? '6, 4' : undefined,
+          lineJoin: 'round',
+          lineCap: 'round',
+          interactive: false
+        }
+      }).addTo(map);
+
+      districtBoundaryLayerRef.current = boundaryLayer;
+    }
+  }, [showDistrictBoundaries, granularity, districts]);
 
   // 7. Handle fly-to targets
   useEffect(() => {
