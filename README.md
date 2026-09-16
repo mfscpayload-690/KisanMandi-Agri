@@ -320,10 +320,70 @@ cd frontend && npm run build
 
 ---
 
+## Kerala Soil Erosion Monitor (Soil & Ecology Module)
+
+The **Kerala Soil Erosion Monitor** is a full-stack geospatial module integrated into KisanMandi. It visualizes satellite-derived soil loss vulnerability across the **14 districts and 61+ taluks of Kerala** using the **Revised Universal Soil Loss Equation (RUSLE)**.
+
+### Scientific Model: RUSLE Equation
+$$A = R \times K \times LS \times C \times P$$
+
+| Factor | Description | Standard Unit | Primary Data Source |
+|---|---|---|---|
+| **A** | Annual Soil Loss | t/ha/yr | Calculated Model Output |
+| **R** | Rainfall Erosivity | MJ·mm/ha·h·yr | IMD / NASA GPM IMERG / CHIRPS Daily |
+| **K** | Soil Erodibility | t·ha·h / ha·MJ·mm | OpenLandMap Soil Clay Content & Texture |
+| **LS** | Slope Length & Steepness | Dimensionless | NASA SRTM 30m Digital Elevation Model |
+| **C** | Cover-Management | 0.0 – 1.0 | Copernicus Sentinel-2 NDVI Index |
+| **P** | Support Conservation Practice | 0.0 – 1.0 | Land use management & contour bunding policy |
+
+### ICAR / NBSS&LUP Soil Degradation Classification
+```
+Low Risk:          A < 5     t/ha/yr  (#2ECC71 Green)
+Moderate Risk:   5 ≤ A < 10  t/ha/yr  (#F1C40F Yellow)
+High Risk:      10 ≤ A < 20 t/ha/yr  (#E67E22 Orange)
+Severe Risk:    20 ≤ A < 40 t/ha/yr  (#E74C3C Red)
+Very Severe:       A ≥ 40    t/ha/yr  (#8E44AD Purple)
+```
+
+### Geospatial Features & Interactive Capabilities
+- **Multi-Basemap Leaflet Engine**: High-performance canvas choropleth with ESRI Satellite, Carto Dark Matter, OpenTopoMap, and OpenStreetMap basemaps.
+- **Micro-Topographic Taluk Precision**: Seamlessly switch from 14 districts to 61+ revenue taluks with mean elevation, slope gradient, and localized soil series.
+- **P-Factor Conservation Practice Simulator**: Interactive range slider ($P \in [0.35, 1.0]$) to simulate immediate topsoil loss reduction with contour terracing and vegetative hedgerows.
+- **Custom Area of Interest (ROI) Circle Tool**: Tap anywhere on Kerala's topography to compute real-time zonal statistics (total survey area, mean/min/max loss, annual mass loss in metric tons, and prioritized conservation directives).
+- **2018–2024 Climate Pulse Timeline**: 1400ms cyclic auto-playback slider annotated with Kerala historical extreme weather cycles (e.g. 2018 Centenary Floods, 2024 Western Ghats Surge).
+- **Recharts Analytical Profiles**: Dynamic historical time-series curves and micro-watershed bar charts.
+- **Swappable Satellite Gateway**: Offline Bundled GeoJSON (default with persistent Demo Badge), Google Earth Engine (GEE Proxy), and ISRO Bhuvan WMS.
+
+### Soil & Ecology REST Endpoints
+```bash
+# 1. Soil Health & Dataset Availability
+curl -s http://localhost:8000/api/v1/soil/health
+
+# 2. Retrieve 14 Districts FeatureCollection (2024 active year)
+curl -s "http://localhost:8000/api/v1/districts?year=2024"
+
+# 3. Retrieve Taluks with Micro-Topography
+curl -s "http://localhost:8000/api/v1/taluks?year=2024&district=wayanad"
+
+# 4. Compute Custom Circle ROI Zonal Statistics (10km radius around Idukki)
+curl -s -X POST http://localhost:8000/api/v1/roi/calculate \
+  -H "Content-Type: application/json" \
+  -d '{"lat": 10.06, "lng": 77.10, "radius_km": 10.0, "year": "2024"}'
+
+# 5. Simulate Conservation Practice Benefit (Contour Bunding P = 0.45)
+curl -s "http://localhost:8000/api/v1/rusle/simulate?p_factor=0.45&baseline_loss=58.0"
+```
+
+---
+
 ## Data Attribution & Governance
 
 - **Government AgMarkNet Portal**: Directorate of Marketing & Inspection (DMI), Ministry of Agriculture and Farmers Welfare, Government of India ([agmarknet.gov.in](https://agmarknet.gov.in)).
 - **Historical Market Dataset**: 2-year cleaned and standardized AgMarkNet dataset via Kaggle open agricultural data repository.
+- **IMD & NASA GPM IMERG**: Precipitation erosivity measurements for rainfall R-factor estimation.
+- **USGS SRTM**: NASA Shuttle Radar Topography Mission 30m global digital elevation model for LS topographic calculation.
+- **Copernicus Sentinel-2**: European Space Agency 10m multispectral surface reflectance for NDVI C-factor monitoring.
+- **ICAR / NBSS&LUP**: Indian Council of Agricultural Research & National Bureau of Soil Survey and Land Use Planning soil loss severity benchmarks.
 
 ---
 

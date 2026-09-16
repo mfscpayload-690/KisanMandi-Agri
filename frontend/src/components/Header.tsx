@@ -1,13 +1,13 @@
 import React from 'react';
-import { Sprout, Globe, TrendingUp, LineChart, Users, Bell } from 'lucide-react';
+import { Sprout, Globe, TrendingUp, LineChart, Users, Bell, Mountain } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import type { SupportedLanguage } from '../i18n/translations';
 
 import { CustomSelect } from './CustomSelect';
 
 interface HeaderProps {
-  activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts';
-  setActiveTab: (tab: 'dashboard' | 'trends' | 'buyers' | 'alerts') => void;
+  activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts' | 'soil';
+  setActiveTab: (tab: 'dashboard' | 'trends' | 'buyers' | 'alerts' | 'soil') => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -93,6 +93,17 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <Bell className="w-4 h-4 text-emerald-600" />
               {t('alertsNav')}
+            </button>
+            <button
+              onClick={() => setActiveTab('soil')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                activeTab === 'soil'
+                  ? 'bg-emerald-900 text-white shadow-xs font-semibold'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
+              }`}
+            >
+              <Mountain className="w-4 h-4 text-emerald-500" />
+              Soil & Ecology
             </button>
           </nav>
 

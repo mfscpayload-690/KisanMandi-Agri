@@ -1,0 +1,2295 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "kasaragod",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.19537,
+              12.5102
+            ],
+            [
+              75.23788,
+              12.5701
+            ],
+            [
+              75.23808,
+              12.63938
+            ],
+            [
+              75.14204,
+              12.64018
+            ],
+            [
+              75.14204,
+              12.73534
+            ],
+            [
+              75.06284,
+              12.70674
+            ],
+            [
+              75.0089,
+              12.76816
+            ],
+            [
+              74.9623,
+              12.67997
+            ],
+            [
+              74.8617,
+              12.7591
+            ],
+            [
+              74.87502,
+              12.64091
+            ],
+            [
+              74.80618,
+              12.62446
+            ],
+            [
+              74.74962,
+              12.57803
+            ],
+            [
+              74.8251,
+              12.5102
+            ],
+            [
+              74.74792,
+              12.44193
+            ],
+            [
+              74.82988,
+              12.4093
+            ],
+            [
+              74.82282,
+              12.32854
+            ],
+            [
+              74.91738,
+              12.35544
+            ],
+            [
+              74.9336,
+              12.23586
+            ],
+            [
+              75.0089,
+              12.32234
+            ],
+            [
+              75.0687,
+              12.2923
+            ],
+            [
+              75.14494,
+              12.28017
+            ],
+            [
+              75.13587,
+              12.38624
+            ],
+            [
+              75.24601,
+              12.37656
+            ],
+            [
+              75.2072,
+              12.45833
+            ],
+            [
+              75.19537,
+              12.5102
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kasaragod",
+        "district_name": "Kasaragod",
+        "malayalam_name": "കാസർഗോഡ്",
+        "headquarters": "Kasaragod",
+        "area_sq_km": 1992,
+        "centroid": {
+          "lat": 12.5102,
+          "lng": 75.0089
+        },
+        "bbox": [
+          74.85,
+          12.2,
+          75.4,
+          12.8
+        ],
+        "dominant_land_use": "Arecanut, Coconut & Rubber Plantations",
+        "soil_type": "Coastal Alluvium & Red Laterite",
+        "terrain_category": "Coastal Plain & Undulating Midlands",
+        "taluks": [
+          "Kasaragod",
+          "Hosdurg",
+          "Manjeshwaram",
+          "Vellarikundu"
+        ],
+        "rusle": {
+          "R": 3400,
+          "K": 0.024,
+          "LS": 3.8,
+          "C": 0.18,
+          "P": 0.72,
+          "A": 13.0
+        },
+        "risk_category": "High",
+        "time_series": {
+          "2018": 16.5,
+          "2019": 14.8,
+          "2020": 12.2,
+          "2021": 13.4,
+          "2022": 11.9,
+          "2023": 10.5,
+          "2024": 13.0
+        },
+        "conservation": [
+          "Terrace bunding for arecanut slopes > 10°",
+          "Cover cropping with Mucuna bracteata in rubber estates",
+          "Laterite quarry rehabilitation"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kannur",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.64625,
+              11.8745
+            ],
+            [
+              75.65261,
+              11.9485
+            ],
+            [
+              75.60059,
+              12.00456
+            ],
+            [
+              75.57294,
+              12.07271
+            ],
+            [
+              75.53,
+              12.14501
+            ],
+            [
+              75.42324,
+              12.06748
+            ],
+            [
+              75.3704,
+              12.24166
+            ],
+            [
+              75.31482,
+              12.07747
+            ],
+            [
+              75.21509,
+              12.13775
+            ],
+            [
+              75.172,
+              12.06865
+            ],
+            [
+              75.12309,
+              12.01423
+            ],
+            [
+              75.10755,
+              11.94342
+            ],
+            [
+              75.08823,
+              11.8745
+            ],
+            [
+              75.06016,
+              11.79315
+            ],
+            [
+              75.19425,
+              11.77498
+            ],
+            [
+              75.10481,
+              11.61459
+            ],
+            [
+              75.2629,
+              11.69229
+            ],
+            [
+              75.29058,
+              11.58297
+            ],
+            [
+              75.3704,
+              11.59515
+            ],
+            [
+              75.44259,
+              11.61086
+            ],
+            [
+              75.50961,
+              11.63853
+            ],
+            [
+              75.56701,
+              11.6821
+            ],
+            [
+              75.65,
+              11.71653
+            ],
+            [
+              75.5666,
+              11.82305
+            ],
+            [
+              75.64625,
+              11.8745
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kannur",
+        "district_name": "Kannur",
+        "malayalam_name": "കണ്ണൂർ",
+        "headquarters": "Kannur",
+        "area_sq_km": 2966,
+        "centroid": {
+          "lat": 11.8745,
+          "lng": 75.3704
+        },
+        "bbox": [
+          75.1,
+          11.6,
+          75.9,
+          12.25
+        ],
+        "dominant_land_use": "Cashew, Rubber & Spice Gardens",
+        "soil_type": "Red Lateritic Soil & Coastal Sands",
+        "terrain_category": "Midland Hills to Western Ghat Foothills",
+        "taluks": [
+          "Kannur",
+          "Thalassery",
+          "Taliparamba",
+          "Iritty",
+          "Payyannur"
+        ],
+        "rusle": {
+          "R": 3600,
+          "K": 0.025,
+          "LS": 4.5,
+          "C": 0.17,
+          "P": 0.7,
+          "A": 13.5
+        },
+        "risk_category": "High",
+        "time_series": {
+          "2018": 17.2,
+          "2019": 15.6,
+          "2020": 13.0,
+          "2021": 14.2,
+          "2022": 12.8,
+          "2023": 11.1,
+          "2024": 13.5
+        },
+        "conservation": [
+          "Contour stone walls along foothills of Aralam",
+          "Riparian vegetation buffer along Valapattanam river basin",
+          "Mulching in upland cashew groves"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wayanad",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.35419,
+              11.6854
+            ],
+            [
+              76.38008,
+              11.7505
+            ],
+            [
+              76.30693,
+              11.7843
+            ],
+            [
+              76.34736,
+              11.89629
+            ],
+            [
+              76.21523,
+              11.82656
+            ],
+            [
+              76.20677,
+              11.95868
+            ],
+            [
+              76.132,
+              11.91305
+            ],
+            [
+              76.07656,
+              11.88802
+            ],
+            [
+              75.99622,
+              11.91571
+            ],
+            [
+              75.97819,
+              11.83602
+            ],
+            [
+              75.90751,
+              11.81232
+            ],
+            [
+              75.93665,
+              11.73666
+            ],
+            [
+              75.82934,
+              11.6854
+            ],
+            [
+              75.96902,
+              11.64264
+            ],
+            [
+              75.88379,
+              11.54507
+            ],
+            [
+              75.9655,
+              11.52235
+            ],
+            [
+              76.02706,
+              11.50741
+            ],
+            [
+              76.06037,
+              11.4236
+            ],
+            [
+              76.132,
+              11.47677
+            ],
+            [
+              76.19964,
+              11.43819
+            ],
+            [
+              76.23341,
+              11.51339
+            ],
+            [
+              76.3444,
+              11.4774
+            ],
+            [
+              76.28042,
+              11.60149
+            ],
+            [
+              76.40636,
+              11.61341
+            ],
+            [
+              76.35419,
+              11.6854
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "wayanad",
+        "district_name": "Wayanad",
+        "malayalam_name": "വയനാട്",
+        "headquarters": "Kalpetta",
+        "area_sq_km": 2131,
+        "centroid": {
+          "lat": 11.6854,
+          "lng": 76.132
+        },
+        "bbox": [
+          75.8,
+          11.45,
+          76.45,
+          11.95
+        ],
+        "dominant_land_use": "Coffee, Cardamom, Tea & Teak Forests",
+        "soil_type": "Forest Loam & Red Acidic Laterite",
+        "terrain_category": "High Altitude Plateau & Fragile Escarpments",
+        "taluks": [
+          "Vythiri",
+          "Sulthanbathery",
+          "Mananthavady"
+        ],
+        "rusle": {
+          "R": 5200,
+          "K": 0.031,
+          "LS": 14.2,
+          "C": 0.22,
+          "P": 0.68,
+          "A": 49.3
+        },
+        "risk_category": "Very Severe",
+        "time_series": {
+          "2018": 52.1,
+          "2019": 47.8,
+          "2020": 44.0,
+          "2021": 46.5,
+          "2022": 43.1,
+          "2023": 38.4,
+          "2024": 49.3
+        },
+        "conservation": [
+          "Strict moratorium on slope modifications > 25°",
+          "Deep-root vetiver hedgerows along high-risk tea terraces",
+          "Agroforestry buffer strips on tea/coffee transition zones",
+          "Debris catchment basins along vulnerable drainage gulleys"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kozhikode",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.98294,
+              11.2588
+            ],
+            [
+              76.05572,
+              11.33115
+            ],
+            [
+              76.00355,
+              11.38516
+            ],
+            [
+              75.92193,
+              11.3976
+            ],
+            [
+              75.94087,
+              11.5314
+            ],
+            [
+              75.83033,
+              11.44156
+            ],
+            [
+              75.7804,
+              11.53843
+            ],
+            [
+              75.72169,
+              11.47369
+            ],
+            [
+              75.63822,
+              11.50032
+            ],
+            [
+              75.63362,
+              11.40276
+            ],
+            [
+              75.53715,
+              11.39653
+            ],
+            [
+              75.52848,
+              11.325
+            ],
+            [
+              75.58314,
+              11.2588
+            ],
+            [
+              75.46742,
+              11.17655
+            ],
+            [
+              75.61548,
+              11.16542
+            ],
+            [
+              75.5785,
+              11.06078
+            ],
+            [
+              75.66572,
+              11.06399
+            ],
+            [
+              75.70804,
+              10.99395
+            ],
+            [
+              75.7804,
+              11.05006
+            ],
+            [
+              75.852,
+              10.99674
+            ],
+            [
+              75.91232,
+              11.03471
+            ],
+            [
+              75.91805,
+              11.1238
+            ],
+            [
+              76.06333,
+              11.09859
+            ],
+            [
+              75.96232,
+              11.21099
+            ],
+            [
+              75.98294,
+              11.2588
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kozhikode",
+        "district_name": "Kozhikode",
+        "malayalam_name": "കോഴിക്കോട്",
+        "headquarters": "Kozhikode",
+        "area_sq_km": 2344,
+        "centroid": {
+          "lat": 11.2588,
+          "lng": 75.7804
+        },
+        "bbox": [
+          75.5,
+          11.1,
+          76.1,
+          11.65
+        ],
+        "dominant_land_use": "Coconut, Homestead Farming & Rubber",
+        "soil_type": "Laterite Loam & River Alluvium",
+        "terrain_category": "Lowland Coastal to High Ghat Ridges",
+        "taluks": [
+          "Kozhikode",
+          "Vatakara",
+          "Koyilandy",
+          "Thamarassery"
+        ],
+        "rusle": {
+          "R": 3800,
+          "K": 0.026,
+          "LS": 5.2,
+          "C": 0.19,
+          "P": 0.72,
+          "A": 15.0
+        },
+        "risk_category": "High",
+        "time_series": {
+          "2018": 19.4,
+          "2019": 17.5,
+          "2020": 14.1,
+          "2021": 15.8,
+          "2022": 13.9,
+          "2023": 12.0,
+          "2024": 15.0
+        },
+        "conservation": [
+          "Contour bunding in Thamarassery ghat slopes",
+          "Bio-engineering on road cuts and vulnerable embankment zones",
+          "Soil organic carbon enrichment in homestead farming"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "malappuram",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.36522,
+              11.0732
+            ],
+            [
+              76.40385,
+              11.15994
+            ],
+            [
+              76.28152,
+              11.19078
+            ],
+            [
+              76.35949,
+              11.35338
+            ],
+            [
+              76.18658,
+              11.26457
+            ],
+            [
+              76.16321,
+              11.39995
+            ],
+            [
+              76.074,
+              11.39094
+            ],
+            [
+              76.00421,
+              11.32881
+            ],
+            [
+              75.90345,
+              11.36311
+            ],
+            [
+              75.87142,
+              11.27201
+            ],
+            [
+              75.77713,
+              11.24141
+            ],
+            [
+              75.84109,
+              11.13445
+            ],
+            [
+              75.67291,
+              11.0732
+            ],
+            [
+              75.85387,
+              11.01531
+            ],
+            [
+              75.77826,
+              10.90563
+            ],
+            [
+              75.8417,
+              10.84523
+            ],
+            [
+              75.9424,
+              10.8495
+            ],
+            [
+              75.98401,
+              10.7436
+            ],
+            [
+              76.074,
+              10.79639
+            ],
+            [
+              76.16296,
+              10.74736
+            ],
+            [
+              76.19556,
+              10.86658
+            ],
+            [
+              76.35537,
+              10.79707
+            ],
+            [
+              76.27411,
+              10.95982
+            ],
+            [
+              76.40054,
+              10.98733
+            ],
+            [
+              76.36522,
+              11.0732
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "malappuram",
+        "district_name": "Malappuram",
+        "malayalam_name": "മലപ്പുറം",
+        "headquarters": "Malappuram",
+        "area_sq_km": 3550,
+        "centroid": {
+          "lat": 11.0732,
+          "lng": 76.074
+        },
+        "bbox": [
+          75.75,
+          10.7,
+          76.55,
+          11.45
+        ],
+        "dominant_land_use": "Rubber, Teak, Coconut & Mixed Cropping",
+        "soil_type": "Red Gravelly Laterite & Valley Alluvium",
+        "terrain_category": "Gently Rolling Midlands to Nilambur Forest Slopes",
+        "taluks": [
+          "Ernad",
+          "Perinthalmanna",
+          "Tirur",
+          "Ponnani",
+          "Nilambur",
+          "Tirurangadi",
+          "Kondotty"
+        ],
+        "rusle": {
+          "R": 4100,
+          "K": 0.027,
+          "LS": 6.1,
+          "C": 0.2,
+          "P": 0.71,
+          "A": 19.0
+        },
+        "risk_category": "High",
+        "time_series": {
+          "2018": 24.2,
+          "2019": 22.8,
+          "2020": 17.6,
+          "2021": 19.8,
+          "2022": 18.0,
+          "2023": 15.4,
+          "2024": 19.0
+        },
+        "conservation": [
+          "Check dams and gully plugging in Chaliyar tributaries",
+          "Slope stabilization in Nilambur teak plantation fringes",
+          "Tirur and Ponnani coastal dune protection"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "palakkad",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.10542,
+              10.7867
+            ],
+            [
+              76.89811,
+              10.85074
+            ],
+            [
+              77.00322,
+              10.9843
+            ],
+            [
+              76.8809,
+              11.0088
+            ],
+            [
+              76.84129,
+              11.104
+            ],
+            [
+              76.73398,
+              11.07697
+            ],
+            [
+              76.6548,
+              11.15969
+            ],
+            [
+              76.56238,
+              11.12553
+            ],
+            [
+              76.51717,
+              11.02086
+            ],
+            [
+              76.33412,
+              11.10171
+            ],
+            [
+              76.43872,
+              10.90925
+            ],
+            [
+              76.26603,
+              10.88903
+            ],
+            [
+              76.33152,
+              10.7867
+            ],
+            [
+              76.30115,
+              10.69361
+            ],
+            [
+              76.38302,
+              10.63256
+            ],
+            [
+              76.39089,
+              10.52746
+            ],
+            [
+              76.47419,
+              10.4794
+            ],
+            [
+              76.58424,
+              10.52803
+            ],
+            [
+              76.6548,
+              10.33895
+            ],
+            [
+              76.71891,
+              10.55166
+            ],
+            [
+              76.85589,
+              10.44455
+            ],
+            [
+              76.88613,
+              10.55946
+            ],
+            [
+              76.96573,
+              10.61035
+            ],
+            [
+              76.96572,
+              10.70486
+            ],
+            [
+              77.10542,
+              10.7867
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "palakkad",
+        "district_name": "Palakkad",
+        "malayalam_name": "പാലക്കാട്",
+        "headquarters": "Palakkad",
+        "area_sq_km": 4480,
+        "centroid": {
+          "lat": 10.7867,
+          "lng": 76.6548
+        },
+        "bbox": [
+          76.2,
+          10.35,
+          77.1,
+          11.2
+        ],
+        "dominant_land_use": "Paddy Fields, Sugarcane, Coconut & Palmyra",
+        "soil_type": "Black Cotton Soil, Red Loam & Laterite",
+        "terrain_category": "Palakkad Gap Trough & Mountain Flanks",
+        "taluks": [
+          "Palakkad",
+          "Alathur",
+          "Chittur",
+          "Ottappalam",
+          "Mannarkkad",
+          "Pattambi"
+        ],
+        "rusle": {
+          "R": 2400,
+          "K": 0.022,
+          "LS": 2.8,
+          "C": 0.16,
+          "P": 0.74,
+          "A": 7.0
+        },
+        "risk_category": "Moderate",
+        "time_series": {
+          "2018": 9.8,
+          "2019": 8.5,
+          "2020": 6.8,
+          "2021": 7.5,
+          "2022": 6.4,
+          "2023": 5.2,
+          "2024": 7.0
+        },
+        "conservation": [
+          "Sub-surface moisture conservation in rain-shadow Chittur belt",
+          "Paddy bund reinforcement against peak monsoon overland flow",
+          "Windbreak vegetative barriers in the Palakkad Gap pass"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "thrissur",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.42699,
+              10.5276
+            ],
+            [
+              76.52504,
+              10.60943
+            ],
+            [
+              76.44778,
+              10.66007
+            ],
+            [
+              76.42841,
+              10.738
+            ],
+            [
+              76.34318,
+              10.7469
+            ],
+            [
+              76.29197,
+              10.81222
+            ],
+            [
+              76.2144,
+              10.83256
+            ],
+            [
+              76.15932,
+              10.7297
+            ],
+            [
+              76.02623,
+              10.84803
+            ],
+            [
+              76.06485,
+              10.67463
+            ],
+            [
+              75.93676,
+              10.6852
+            ],
+            [
+              75.95021,
+              10.5972
+            ],
+            [
+              75.91804,
+              10.5276
+            ],
+            [
+              75.95937,
+              10.46041
+            ],
+            [
+              75.95899,
+              10.38262
+            ],
+            [
+              75.99316,
+              10.31008
+            ],
+            [
+              76.10877,
+              10.34773
+            ],
+            [
+              76.11667,
+              10.169
+            ],
+            [
+              76.2144,
+              10.32029
+            ],
+            [
+              76.29702,
+              10.22443
+            ],
+            [
+              76.35328,
+              10.29111
+            ],
+            [
+              76.41942,
+              10.32603
+            ],
+            [
+              76.44871,
+              10.3946
+            ],
+            [
+              76.49472,
+              10.45375
+            ],
+            [
+              76.42699,
+              10.5276
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "thrissur",
+        "district_name": "Thrissur",
+        "malayalam_name": "തൃശ്ശൂർ",
+        "headquarters": "Thrissur",
+        "area_sq_km": 3032,
+        "centroid": {
+          "lat": 10.5276,
+          "lng": 76.2144
+        },
+        "bbox": [
+          75.95,
+          10.15,
+          76.65,
+          10.85
+        ],
+        "dominant_land_use": "Paddy (Kole lands), Coconut, Rubber & Nutmeg",
+        "soil_type": "Hydromorphic & Laterite Alluvial Soils",
+        "terrain_category": "Coastal Kole Basin to Sholayar Ghat Ranges",
+        "taluks": [
+          "Thrissur",
+          "Mukundapuram",
+          "Kodungallur",
+          "Chavakkad",
+          "Thalapilly",
+          "Chalakudy"
+        ],
+        "rusle": {
+          "R": 3200,
+          "K": 0.024,
+          "LS": 3.6,
+          "C": 0.17,
+          "P": 0.73,
+          "A": 10.0
+        },
+        "risk_category": "High",
+        "time_series": {
+          "2018": 14.5,
+          "2019": 12.1,
+          "2020": 9.5,
+          "2021": 10.8,
+          "2022": 9.2,
+          "2023": 7.9,
+          "2024": 10.0
+        },
+        "conservation": [
+          "Kole wetlands drainage channel desiltation",
+          "Chalakudy riverbank bio-shielding with native bamboo species",
+          "Terrace farming in high-elevation rubber belts"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ernakulam",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.57272,
+              10.0
+            ],
+            [
+              76.65427,
+              10.08029
+            ],
+            [
+              76.61873,
+              10.15279
+            ],
+            [
+              76.50702,
+              10.15463
+            ],
+            [
+              76.527,
+              10.30192
+            ],
+            [
+              76.41168,
+              10.22668
+            ],
+            [
+              76.35,
+              10.31268
+            ],
+            [
+              76.28599,
+              10.23524
+            ],
+            [
+              76.17847,
+              10.29258
+            ],
+            [
+              76.18908,
+              10.15847
+            ],
+            [
+              76.08064,
+              10.15315
+            ],
+            [
+              76.04671,
+              10.08003
+            ],
+            [
+              76.13214,
+              10.0
+            ],
+            [
+              76.00386,
+              9.90866
+            ],
+            [
+              76.14612,
+              9.88408
+            ],
+            [
+              76.12566,
+              9.77907
+            ],
+            [
+              76.22459,
+              9.78608
+            ],
+            [
+              76.26258,
+              9.67871
+            ],
+            [
+              76.35,
+              9.77084
+            ],
+            [
+              76.42945,
+              9.708
+            ],
+            [
+              76.50876,
+              9.72919
+            ],
+            [
+              76.50133,
+              9.85097
+            ],
+            [
+              76.66374,
+              9.82162
+            ],
+            [
+              76.57502,
+              9.94062
+            ],
+            [
+              76.57272,
+              10.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "ernakulam",
+        "district_name": "Ernakulam",
+        "malayalam_name": "എറണാകുളം",
+        "headquarters": "Kakkanad",
+        "area_sq_km": 3068,
+        "centroid": {
+          "lat": 10.0,
+          "lng": 76.35
+        },
+        "bbox": [
+          76.1,
+          9.75,
+          76.85,
+          10.3
+        ],
+        "dominant_land_use": "Pokkali Rice, Aquaculture, Rubber & Pineapple",
+        "soil_type": "Acid Saline Coastal Alluvium & Midland Laterite",
+        "terrain_category": "Vembanad Estuary to Kothamangalam Uplands",
+        "taluks": [
+          "Kanayannur",
+          "Kochi",
+          "Aluva",
+          "Paravur",
+          "Kunnathunad",
+          "Muvattupuzha",
+          "Kothamangalam"
+        ],
+        "rusle": {
+          "R": 2900,
+          "K": 0.021,
+          "LS": 2.9,
+          "C": 0.16,
+          "P": 0.72,
+          "A": 7.0
+        },
+        "risk_category": "Moderate",
+        "time_series": {
+          "2018": 11.2,
+          "2019": 9.0,
+          "2020": 6.8,
+          "2021": 7.6,
+          "2022": 6.5,
+          "2023": 5.4,
+          "2024": 7.0
+        },
+        "conservation": [
+          "Pokkali saline-resistant bund reinforcement",
+          "Periyar river buffer zone stabilization",
+          "Pineapple terrace contouring in Vazhakulam belt"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "idukki",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2162,
+              9.85
+            ],
+            [
+              77.40253,
+              9.96155
+            ],
+            [
+              77.22489,
+              9.9893
+            ],
+            [
+              77.23781,
+              10.10401
+            ],
+            [
+              77.14063,
+              10.12412
+            ],
+            [
+              77.07638,
+              10.2044
+            ],
+            [
+              76.98,
+              10.15781
+            ],
+            [
+              76.89473,
+              10.16353
+            ],
+            [
+              76.77516,
+              10.19956
+            ],
+            [
+              76.81461,
+              10.01295
+            ],
+            [
+              76.59955,
+              10.06641
+            ],
+            [
+              76.70677,
+              9.92213
+            ],
+            [
+              76.61897,
+              9.85
+            ],
+            [
+              76.66309,
+              9.76634
+            ],
+            [
+              76.66438,
+              9.67046
+            ],
+            [
+              76.75447,
+              9.62779
+            ],
+            [
+              76.81729,
+              9.57233
+            ],
+            [
+              76.87339,
+              9.45798
+            ],
+            [
+              76.98,
+              9.62125
+            ],
+            [
+              77.09403,
+              9.43071
+            ],
+            [
+              77.12171,
+              9.60816
+            ],
+            [
+              77.23255,
+              9.60117
+            ],
+            [
+              77.27021,
+              9.68492
+            ],
+            [
+              77.32424,
+              9.75912
+            ],
+            [
+              77.2162,
+              9.85
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "idukki",
+        "district_name": "Idukki",
+        "malayalam_name": "ഇടുക്കി",
+        "headquarters": "Painavu",
+        "area_sq_km": 4358,
+        "centroid": {
+          "lat": 9.85,
+          "lng": 76.98
+        },
+        "bbox": [
+          76.6,
+          9.4,
+          77.4,
+          10.35
+        ],
+        "dominant_land_use": "Tea, Cardamom, Pepper & Protected Mountain Forests",
+        "soil_type": "Forest Brown Loams & Deep Mountain Clay",
+        "terrain_category": "Cardamom Hills, Anamudi Peaks & Deep Gorges",
+        "taluks": [
+          "Devikulam",
+          "Udumbanchola",
+          "Thodupuzha",
+          "Peerumade",
+          "Idukki"
+        ],
+        "rusle": {
+          "R": 5800,
+          "K": 0.033,
+          "LS": 16.8,
+          "C": 0.24,
+          "P": 0.65,
+          "A": 58.0
+        },
+        "risk_category": "Very Severe",
+        "time_series": {
+          "2018": 68.5,
+          "2019": 61.2,
+          "2020": 53.0,
+          "2021": 56.4,
+          "2022": 51.5,
+          "2023": 44.8,
+          "2024": 58.0
+        },
+        "conservation": [
+          "Contour stone-pitched terracing on steep slopes > 20°",
+          "Catchment forest restoration around Idukki & Mullaperiyar reservoirs",
+          "Ban on uncontrolled land leveling on vulnerable Cardamom ridges",
+          "Perennial groundcover management under shaded spices"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kottayam",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8239,
+              9.5916
+            ],
+            [
+              76.72837,
+              9.64607
+            ],
+            [
+              76.7414,
+              9.71639
+            ],
+            [
+              76.68373,
+              9.75087
+            ],
+            [
+              76.65375,
+              9.81626
+            ],
+            [
+              76.58253,
+              9.81362
+            ],
+            [
+              76.5222,
+              9.80472
+            ],
+            [
+              76.44288,
+              9.8835
+            ],
+            [
+              76.44027,
+              9.73152
+            ],
+            [
+              76.30839,
+              9.80242
+            ],
+            [
+              76.33634,
+              9.69741
+            ],
+            [
+              76.28129,
+              9.65525
+            ],
+            [
+              76.28828,
+              9.5916
+            ],
+            [
+              76.27335,
+              9.52585
+            ],
+            [
+              76.31695,
+              9.47476
+            ],
+            [
+              76.37084,
+              9.44235
+            ],
+            [
+              76.36839,
+              9.32892
+            ],
+            [
+              76.48002,
+              9.43638
+            ],
+            [
+              76.5222,
+              9.29317
+            ],
+            [
+              76.57812,
+              9.38581
+            ],
+            [
+              76.64496,
+              9.38194
+            ],
+            [
+              76.69156,
+              9.42461
+            ],
+            [
+              76.74057,
+              9.46729
+            ],
+            [
+              76.7548,
+              9.53015
+            ],
+            [
+              76.8239,
+              9.5916
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kottayam",
+        "district_name": "Kottayam",
+        "malayalam_name": "കോട്ടയം",
+        "headquarters": "Kottayam",
+        "area_sq_km": 2208,
+        "centroid": {
+          "lat": 9.5916,
+          "lng": 76.5222
+        },
+        "bbox": [
+          76.35,
+          9.35,
+          76.95,
+          9.85
+        ],
+        "dominant_land_use": "Rubber, Cocoa, Pepper & Wetland Paddy",
+        "soil_type": "Red Laterite & Wetland Alluvium",
+        "terrain_category": "Meenachil Basin to High Range Base Slopes",
+        "taluks": [
+          "Kottayam",
+          "Changanassery",
+          "Vaikom",
+          "Meenachil",
+          "Kanjirappally"
+        ],
+        "rusle": {
+          "R": 3100,
+          "K": 0.023,
+          "LS": 3.4,
+          "C": 0.17,
+          "P": 0.74,
+          "A": 9.0
+        },
+        "risk_category": "Moderate",
+        "time_series": {
+          "2018": 13.1,
+          "2019": 11.0,
+          "2020": 8.7,
+          "2021": 9.8,
+          "2022": 8.5,
+          "2023": 7.1,
+          "2024": 9.0
+        },
+        "conservation": [
+          "Silt-trap pit installation along rubber terrace contours",
+          "Meenachil river flood-plain vegetative reinforcement",
+          "Low-tillage practices in highland vegetable patches"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "alappuzha",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.53981,
+              9.4981
+            ],
+            [
+              76.4995,
+              9.54057
+            ],
+            [
+              76.55263,
+              9.61986
+            ],
+            [
+              76.43146,
+              9.58949
+            ],
+            [
+              76.45869,
+              9.70292
+            ],
+            [
+              76.38529,
+              9.66923
+            ],
+            [
+              76.3388,
+              9.67893
+            ],
+            [
+              76.28468,
+              9.6973
+            ],
+            [
+              76.24626,
+              9.65619
+            ],
+            [
+              76.19485,
+              9.64007
+            ],
+            [
+              76.19524,
+              9.57985
+            ],
+            [
+              76.10094,
+              9.56096
+            ],
+            [
+              76.20675,
+              9.4981
+            ],
+            [
+              76.10836,
+              9.4372
+            ],
+            [
+              76.18145,
+              9.4085
+            ],
+            [
+              76.2116,
+              9.37264
+            ],
+            [
+              76.23203,
+              9.3157
+            ],
+            [
+              76.29196,
+              9.32568
+            ],
+            [
+              76.3388,
+              9.29495
+            ],
+            [
+              76.38162,
+              9.3405
+            ],
+            [
+              76.46143,
+              9.2886
+            ],
+            [
+              76.43313,
+              9.40506
+            ],
+            [
+              76.54412,
+              9.38118
+            ],
+            [
+              76.51642,
+              9.45116
+            ],
+            [
+              76.53981,
+              9.4981
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "alappuzha",
+        "district_name": "Alappuzha",
+        "malayalam_name": "ആലപ്പുഴ",
+        "headquarters": "Alappuzha",
+        "area_sq_km": 1414,
+        "centroid": {
+          "lat": 9.4981,
+          "lng": 76.3388
+        },
+        "bbox": [
+          76.25,
+          9.05,
+          76.6,
+          9.8
+        ],
+        "dominant_land_use": "Below-Sea-Level Paddy Farming & Coconut Lagoons",
+        "soil_type": "Hydromorphic Coastal Sands & River Alluvium",
+        "terrain_category": "Flat Coastal Lowlands & Kuttanad Delta",
+        "taluks": [
+          "Ambalappuzha",
+          "Kuttanad",
+          "Cherthala",
+          "Karthikappally",
+          "Chengannur",
+          "Mavelikkara"
+        ],
+        "rusle": {
+          "R": 2300,
+          "K": 0.019,
+          "LS": 1.4,
+          "C": 0.14,
+          "P": 0.76,
+          "A": 4.0
+        },
+        "risk_category": "Low",
+        "time_series": {
+          "2018": 6.8,
+          "2019": 5.4,
+          "2020": 4.0,
+          "2021": 4.5,
+          "2022": 3.8,
+          "2023": 3.2,
+          "2024": 4.0
+        },
+        "conservation": [
+          "Kuttanad polder outer bund strengthening with geotextiles",
+          "Mangrove planting along Vembanad lagoon margins",
+          "Sediment traps at Pamba and Achankovil river discharge heads"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pathanamthitta",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.00048,
+              9.2648
+            ],
+            [
+              77.06862,
+              9.33928
+            ],
+            [
+              76.99533,
+              9.38351
+            ],
+            [
+              76.99935,
+              9.47438
+            ],
+            [
+              76.90051,
+              9.45884
+            ],
+            [
+              76.8581,
+              9.5267
+            ],
+            [
+              76.787,
+              9.562
+            ],
+            [
+              76.7376,
+              9.44678
+            ],
+            [
+              76.61615,
+              9.55686
+            ],
+            [
+              76.63701,
+              9.41283
+            ],
+            [
+              76.53566,
+              9.40802
+            ],
+            [
+              76.55054,
+              9.32733
+            ],
+            [
+              76.49246,
+              9.2648
+            ],
+            [
+              76.56258,
+              9.20545
+            ],
+            [
+              76.55236,
+              9.1311
+            ],
+            [
+              76.57222,
+              9.05282
+            ],
+            [
+              76.69273,
+              9.10366
+            ],
+            [
+              76.69799,
+              8.93694
+            ],
+            [
+              76.787,
+              9.05641
+            ],
+            [
+              76.86169,
+              8.98969
+            ],
+            [
+              76.91164,
+              9.05173
+            ],
+            [
+              76.99106,
+              9.0634
+            ],
+            [
+              76.9929,
+              9.14747
+            ],
+            [
+              77.0451,
+              9.19654
+            ],
+            [
+              77.00048,
+              9.2648
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "pathanamthitta",
+        "district_name": "Pathanamthitta",
+        "malayalam_name": "പത്തനംതിട്ട",
+        "headquarters": "Pathanamthitta",
+        "area_sq_km": 2637,
+        "centroid": {
+          "lat": 9.2648,
+          "lng": 76.787
+        },
+        "bbox": [
+          76.5,
+          9.0,
+          77.25,
+          9.5
+        ],
+        "dominant_land_use": "Reserve Forests, Rubber, Tapioca & Spices",
+        "soil_type": "Deep Forest Loam & Gravelly Laterite",
+        "terrain_category": "Achankovil & Pamba River Basins to Ghat Ranges",
+        "taluks": [
+          "Kozhencherry",
+          "Adoor",
+          "Ranni",
+          "Konni",
+          "Mallappally",
+          "Thiruvalla"
+        ],
+        "rusle": {
+          "R": 4400,
+          "K": 0.028,
+          "LS": 7.8,
+          "C": 0.2,
+          "P": 0.69,
+          "A": 22.0
+        },
+        "risk_category": "Severe",
+        "time_series": {
+          "2018": 28.5,
+          "2019": 25.1,
+          "2020": 20.4,
+          "2021": 22.8,
+          "2022": 21.0,
+          "2023": 18.2,
+          "2024": 22.0
+        },
+        "conservation": [
+          "Afforestation in Sabarimala reserve catchment corridors",
+          "Contour trenching across Konni hill rubber estates",
+          "Stream bank protection along upper Pamba river reaches"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "kollam",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.94331,
+              8.8932
+            ],
+            [
+              76.80587,
+              8.94397
+            ],
+            [
+              76.86561,
+              9.03667
+            ],
+            [
+              76.77855,
+              9.05567
+            ],
+            [
+              76.75959,
+              9.14217
+            ],
+            [
+              76.66936,
+              9.09697
+            ],
+            [
+              76.6141,
+              9.17418
+            ],
+            [
+              76.54397,
+              9.15178
+            ],
+            [
+              76.5147,
+              9.06329
+            ],
+            [
+              76.37915,
+              9.12533
+            ],
+            [
+              76.44421,
+              8.99011
+            ],
+            [
+              76.33342,
+              8.9675
+            ],
+            [
+              76.37869,
+              8.8932
+            ],
+            [
+              76.3379,
+              8.82008
+            ],
+            [
+              76.42452,
+              8.78506
+            ],
+            [
+              76.41601,
+              8.69749
+            ],
+            [
+              76.47712,
+              8.65879
+            ],
+            [
+              76.56332,
+              8.70596
+            ],
+            [
+              76.6141,
+              8.56231
+            ],
+            [
+              76.66437,
+              8.70786
+            ],
+            [
+              76.7593,
+              8.64473
+            ],
+            [
+              76.78276,
+              8.72657
+            ],
+            [
+              76.85717,
+              8.75455
+            ],
+            [
+              76.83092,
+              8.8358
+            ],
+            [
+              76.94331,
+              8.8932
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "kollam",
+        "district_name": "Kollam",
+        "malayalam_name": "കൊല്ലം",
+        "headquarters": "Kollam",
+        "area_sq_km": 2491,
+        "centroid": {
+          "lat": 8.8932,
+          "lng": 76.6141
+        },
+        "bbox": [
+          76.45,
+          8.75,
+          77.2,
+          9.2
+        ],
+        "dominant_land_use": "Cashew, Rubber, Coconut & Mineral Sands",
+        "soil_type": "Laterite Soil & Coastal Beach Alluvium",
+        "terrain_category": "Ashtamudi Lake Plains to Aryankavu Pass Foothills",
+        "taluks": [
+          "Kollam",
+          "Karunagappally",
+          "Kunnathur",
+          "Kottarakkara",
+          "Pathanapuram",
+          "Punalur"
+        ],
+        "rusle": {
+          "R": 3300,
+          "K": 0.024,
+          "LS": 4.1,
+          "C": 0.17,
+          "P": 0.72,
+          "A": 11.0
+        },
+        "risk_category": "High",
+        "time_series": {
+          "2018": 15.2,
+          "2019": 13.0,
+          "2020": 10.4,
+          "2021": 11.8,
+          "2022": 10.1,
+          "2023": 8.9,
+          "2024": 11.0
+        },
+        "conservation": [
+          "Ashtamudi catchment sediment interception barriers",
+          "Cashew grove water absorption pits in Kottarakkara",
+          "Bio-engineering on Shencottah rail line embankment cuttings"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "thiruvananthapuram",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.13065,
+              8.5241
+            ],
+            [
+              77.21006,
+              8.59657
+            ],
+            [
+              77.12045,
+              8.62907
+            ],
+            [
+              77.12623,
+              8.71164
+            ],
+            [
+              77.03439,
+              8.69161
+            ],
+            [
+              77.01488,
+              8.81303
+            ],
+            [
+              76.9366,
+              8.7086
+            ],
+            [
+              76.86978,
+              8.77071
+            ],
+            [
+              76.80298,
+              8.75299
+            ],
+            [
+              76.80248,
+              8.65673
+            ],
+            [
+              76.68766,
+              8.66624
+            ],
+            [
+              76.73408,
+              8.57777
+            ],
+            [
+              76.66863,
+              8.5241
+            ],
+            [
+              76.74506,
+              8.47334
+            ],
+            [
+              76.6779,
+              8.37639
+            ],
+            [
+              76.80222,
+              8.3912
+            ],
+            [
+              76.80906,
+              8.30564
+            ],
+            [
+              76.86655,
+              8.26554
+            ],
+            [
+              76.9366,
+              8.34062
+            ],
+            [
+              77.01204,
+              8.24565
+            ],
+            [
+              77.04027,
+              8.34652
+            ],
+            [
+              77.12571,
+              8.33708
+            ],
+            [
+              77.11096,
+              8.42455
+            ],
+            [
+              77.22122,
+              8.44868
+            ],
+            [
+              77.13065,
+              8.5241
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "thiruvananthapuram",
+        "district_name": "Thiruvananthapuram",
+        "malayalam_name": "തിരുവനന്തപുരം",
+        "headquarters": "Thiruvananthapuram",
+        "area_sq_km": 2192,
+        "centroid": {
+          "lat": 8.5241,
+          "lng": 76.9366
+        },
+        "bbox": [
+          76.7,
+          8.25,
+          77.25,
+          8.85
+        ],
+        "dominant_land_use": "Coconut, Rubber, Tapioca & Agasthyamala Biosphere",
+        "soil_type": "Red Laterite, Hill Soils & Beach Sands",
+        "terrain_category": "South Coastal Ridge to Agasthyarkoodam Peak",
+        "taluks": [
+          "Thiruvananthapuram",
+          "Nedumangad",
+          "Neyyattinkara",
+          "Chirayinkeezhu",
+          "Varkala",
+          "Kattakada"
+        ],
+        "rusle": {
+          "R": 2700,
+          "K": 0.021,
+          "LS": 3.2,
+          "C": 0.16,
+          "P": 0.73,
+          "A": 8.0
+        },
+        "risk_category": "Moderate",
+        "time_series": {
+          "2018": 11.8,
+          "2019": 10.1,
+          "2020": 7.8,
+          "2021": 8.6,
+          "2022": 7.4,
+          "2023": 6.3,
+          "2024": 8.0
+        },
+        "conservation": [
+          "Karamana and Neyyar river source head catchment protection",
+          "Terrace stabilization along Nedumangad rubber plantations",
+          "Varkala cliff edge erosion control barrier systems"
+        ],
+        "is_sample_data": true,
+        "data_source": "Bundled GeoJSON (DEMO Mode)"
+      }
+    }
+  ]
+}
