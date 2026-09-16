@@ -1,4 +1,4 @@
-# 🌾 KisanMandi (किसानमंडी) — Indian Agricultural Price Discovery & Direct Trade Platform
+# KisanMandi (किसानमंडी) — Indian Agricultural Price Discovery & Direct Trade Platform
 
 <div align="center">
 
@@ -14,18 +14,18 @@
 [![Python 3.12](https://img.shields.io/badge/Python-3.12+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-[Architecture Overview](#-system-architecture) •
-[Key Features](#-key-features) •
-[Live Metrics](#-live-dataset--performance-metrics) •
-[Quickstart](#-quickstart--local-development) •
-[API Reference](#-api-reference) •
-[Testing](#-testing--quality-assurance)
+[Architecture Overview](#system-architecture) •
+[Key Features](#key-features) •
+[Live Metrics](#live-dataset--performance-metrics) •
+[Quickstart](#quickstart--local-development) •
+[API Reference](#api-reference) •
+[Testing](#testing--quality-assurance)
 
 </div>
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 In India's agricultural ecosystem, smallholder farmers lose **15% to 30% of crop value** due to market price opacity, reliance on local middlemen, and delayed price discovery across APMC (Agricultural Produce Market Committee) mandis.
 
@@ -33,34 +33,34 @@ In India's agricultural ecosystem, smallholder farmers lose **15% to 30% of crop
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 KisanMandi is designed with a decoupled architecture separating a high-performance **FastAPI backend** (with thread pool ingestion and in-memory TTL caching) from a responsive **React 19 single-page client**.
 
 ```mermaid
 flowchart TD
-    subgraph Client ["📱 Client & Access Layer"]
-        Mobile["📱 Mobile PWA (375px+ Viewport)"]
-        Desktop["💻 Desktop & APMC Admin Portal"]
+    subgraph Client ["Client & Access Layer"]
+        Mobile["Mobile PWA (375px+ Viewport)"]
+        Desktop["Desktop & APMC Admin Portal"]
     end
 
-    subgraph Frontend ["⚡ Frontend Layer (React 19 + Vite 6)"]
-        UI["🎨 Tailwind v4 + Lucide Icons"]
-        i18n["🌐 6-Language i18n Engine"]
-        Recharts["📈 Recharts Trend Analytics"]
-        SyncEngine["🔄 5s Background Polling Engine"]
+    subgraph Frontend ["Frontend Layer (React 19 + Vite 6)"]
+        UI["Tailwind v4 + Lucide Icons"]
+        i18n["6-Language i18n Engine"]
+        Recharts["Recharts Trend Analytics"]
+        SyncEngine["5s Background Polling Engine"]
     end
 
-    subgraph Backend ["🚀 Backend API Layer (FastAPI + Python 3.12)"]
-        APIGateway["⚡ FastAPI Router (Port 8000)"]
-        Routers["📡 REST Endpoints (/prices, /mandis, /trends, /buyers, /alerts, /sync)"]
-        TTLCache["⚡ In-Memory TTL Cache (5s)"]
-        WatcherDaemon["🔄 ThreadPool File Watcher Daemon"]
+    subgraph Backend ["Backend API Layer (FastAPI + Python 3.12)"]
+        APIGateway["FastAPI Router (Port 8000)"]
+        Routers["REST Endpoints (/prices, /mandis, /trends, /buyers, /alerts, /sync)"]
+        TTLCache["In-Memory TTL Cache (5s)"]
+        WatcherDaemon["ThreadPool File Watcher Daemon"]
     end
 
-    subgraph Data ["💾 Data & Storage Layer"]
-        SQLiteDB[("💾 SQLite DB (WAL Mode)<br/>• 819,895+ Price Records<br/>• 3,779 APMC Mandis")]
-        AgMarkNetCSV["🏛️ AgMarkNet CSV Reports<br/>(/data/*.csv)"]
+    subgraph Data ["Data & Storage Layer"]
+        SQLiteDB[("SQLite DB (WAL Mode)<br/>• 819,895+ Price Records<br/>• 3,779 APMC Mandis")]
+        AgMarkNetCSV["AgMarkNet CSV Reports<br/>(/data/*.csv)"]
     end
 
     Mobile --> UI
@@ -76,7 +76,7 @@ flowchart TD
     WatcherDaemon --> SQLiteDB
 ```
 
-### 💻 Technology Stack Breakdown
+### Technology Stack Breakdown
 
 | Layer | Technology | Purpose / Rationale |
 |---|---|---|
@@ -92,40 +92,40 @@ flowchart TD
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
-### 1. 🌾 Real-Time APMC Price & Arrival Discovery
+### 1. Real-Time APMC Price & Arrival Discovery
 - Live price tracking across **3,779 APMC Mandis** spanning all **28 Indian States and 8 Union Territories**.
 - Provides Min Price, Max Price, and **Modal Price** (₹/Quintal) alongside daily arrival volumes.
 - Multi-parameter filtering by crop, state, mandi, and date range.
 
-### 2. 📱 Mobile-First Farmer-Centric Design
+### 2. Mobile-First Farmer-Centric Design
 - Designed specifically for field conditions: sunny-readability, large 48px+ touch targets, and high-contrast color scheme.
 - Fixed bottom thumb navigation bar allowing seamless single-hand phone usage.
 
-### 3. 🇮🇳 6-Language Native Localization (i18n)
+### 3. 6-Language Native Localization (i18n)
 - Zero-latency language switcher covering **English, हिन्दी (Hindi), मराठी (Marathi), தமிழ் (Tamil), తెలుగు (Telugu), and മലയാളം (Malayalam)**.
 - Localized dynamic crop names, state designations, navigation labels, and metrics.
 
-### 4. 📈 Interactive Multi-Period Trend Analytics
+### 4. Interactive Multi-Period Trend Analytics
 - Historical price charts across **7 days, 30 days, 90 days, and 1 year**.
 - Displays price spread indicators, modal averages, percentage price changes, and volatility markers.
 
-### 5. 🤝 Direct Buyer Directory (Zero Middlemen)
+### 5. Direct Buyer Directory (Zero Middlemen)
 - Direct contact details for verified institutional aggregators, millers, and bulk buyers.
 - One-tap direct **Phone Calls (`tel:`)** and pre-filled **WhatsApp Chat (`https://wa.me/`)** trade negotiations.
 
-### 6. 🔔 Custom Threshold Price Alerts
+### 6. Custom Threshold Price Alerts
 - Instant price alert configuration (e.g. *"Alert when Wheat price in Punjab exceeds ₹2,450/Qtl"*).
 - Live target price matching engine indicating status (Triggered vs. Monitoring).
 
-### 7. ⚡ Multi-Threaded Daemon File Watcher
+### 7. Multi-Threaded Daemon File Watcher
 - Background watcher monitoring `/data` for official government AgMarkNet daily CSV reports.
 - Automatically processes, standardizes, deduplicates, and ingests new reports within **5 seconds** without server downtime.
 
 ---
 
-## 📊 Live Dataset & Performance Metrics
+## Live Dataset & Performance Metrics
 
 | Metric | Measurement / Specification |
 |---|---|
@@ -139,7 +139,7 @@ flowchart TD
 
 ---
 
-## 📁 Project Directory Structure
+## Project Directory Structure
 
 ```
 AJCE Hackathon/
@@ -194,7 +194,7 @@ AJCE Hackathon/
 
 ---
 
-## 🚀 Quickstart & Local Development
+## Quickstart & Local Development
 
 ### Prerequisites
 - **Python**: 3.12 or higher
@@ -247,7 +247,7 @@ npm run dev -- --host
 
 ---
 
-## 📡 API Reference
+## API Reference
 
 ### Core Endpoints Specification
 
@@ -296,7 +296,7 @@ curl -X POST "http://localhost:8000/api/v1/alerts" \
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 KisanMandi includes an automated end-to-end testing pipeline combining **Hurl** for HTTP integration assertions and **Pytest** for backend unit test verification.
 
@@ -320,19 +320,19 @@ cd frontend && npm run build
 
 ---
 
-## 🏛️ Data Attribution & Governance
+## Data Attribution & Governance
 
 - **Government AgMarkNet Portal**: Directorate of Marketing & Inspection (DMI), Ministry of Agriculture and Farmers Welfare, Government of India ([agmarknet.gov.in](https://agmarknet.gov.in)).
 - **Historical Market Dataset**: 2-year cleaned and standardized AgMarkNet dataset via Kaggle open agricultural data repository.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
-Built for Indian Farmers at AJCE Hackathon 🌾
+Built for Indian Farmers at AJCE Hackathon
 </div>
