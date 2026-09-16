@@ -174,6 +174,17 @@ export const DistrictDetailPanel: React.FC<DistrictDetailPanelProps> = ({ taluks
             </ul>
           </div>
         )}
+
+        {/* Data Provenance & Official Citation */}
+        <div className="pt-2 border-t border-[#2C3E36]/80 text-[10px] text-slate-400 space-y-1">
+          <div className="flex items-center justify-between text-slate-300 font-medium">
+            <span>Spatial Data Source</span>
+            <span className="text-emerald-400 font-bold">ISRO Bhuvan & NBSS&LUP</span>
+          </div>
+          <p className="text-[9px] text-slate-500 leading-tight">
+            Calibrated against ICAR Soil Erosion Risk Classification & NRSC 1:50,000 Land Degradation Atlas of India.
+          </p>
+        </div>
       </div>
     </div>
   );

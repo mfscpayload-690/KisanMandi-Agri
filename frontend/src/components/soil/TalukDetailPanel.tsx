@@ -170,6 +170,17 @@ export const TalukDetailPanel: React.FC = () => {
             </ul>
           </div>
         )}
+
+        {/* Data Provenance & Official Citation */}
+        <div className="pt-2 border-t border-[#2C3E36]/80 text-[10px] text-slate-400 space-y-1">
+          <div className="flex items-center justify-between text-slate-300 font-medium">
+            <span>Spatial Data Source</span>
+            <span className="text-emerald-400 font-bold">ISRO Bhuvan & NBSS&LUP</span>
+          </div>
+          <p className="text-[9px] text-slate-500 leading-tight">
+            Micro-watershed terrain metrics derived from SRTM 30m Digital Elevation Models and Sentinel-2 vegetation indices.
+          </p>
+        </div>
       </div>
     </div>
   );

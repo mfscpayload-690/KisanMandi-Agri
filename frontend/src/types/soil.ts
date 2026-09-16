@@ -101,4 +101,4 @@ export interface RusleSimulationResult {
 
 export type GranularityLevel = 'district' | 'taluk';
 export type DataSourceMode = 'bundled' | 'gee_proxy' | 'bhuvan_wms';
-export type BasemapType = 'esri_satellite' | 'carto_dark' | 'opentopomap' | 'osm';
+export type BasemapType = 'esri_satellite' | 'carto_dark' | 'opentopomap' | 'osm' | 'bhuvan_lulc';

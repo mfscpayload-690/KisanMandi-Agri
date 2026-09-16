@@ -10,10 +10,16 @@ interface KeralaMapProps {
   taluks: TalukFeature[];
 }
 
-const TILE_PROVIDERS: Record<string, { url: string; attribution: string }> = {
+const TILE_PROVIDERS: Record<string, { url: string; attribution: string; isWms?: boolean; layers?: string }> = {
   esri_satellite: {
     url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    attribution: '&copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    attribution: '&copy; Esri &mdash; High-Resolution Satellite Imagery'
+  },
+  bhuvan_lulc: {
+    url: 'https://bhuvan-vec2.nrsc.gov.in/bhuvan/wms',
+    attribution: '&copy; ISRO NRSC &mdash; Bhuvan National Geoportal Land Use / Land Cover (1:50K)',
+    isWms: true,
+    layers: 'lulc:KL_LULC50K_1516'
   },
   carto_dark: {
     url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
@@ -78,10 +84,21 @@ export const KeralaMap: React.FC<KeralaMapProps> = ({ districts, taluks }) => {
 
     // Initial tile layer
     const provider = TILE_PROVIDERS[basemap] || TILE_PROVIDERS.esri_satellite;
-    const tileLayer = L.tileLayer(provider.url, {
-      attribution: provider.attribution,
-      maxZoom: 18
-    }).addTo(map);
+    let tileLayer: L.TileLayer;
+    if (provider.isWms) {
+      tileLayer = L.tileLayer.wms(provider.url, {
+        layers: provider.layers || 'lulc:KL_LULC50K_1516',
+        format: 'image/png',
+        transparent: true,
+        attribution: provider.attribution,
+        maxZoom: 18
+      }).addTo(map);
+    } else {
+      tileLayer = L.tileLayer(provider.url, {
+        attribution: provider.attribution,
+        maxZoom: 18
+      }).addTo(map);
+    }
 
     const markersGroup = L.layerGroup().addTo(map);
 
@@ -97,9 +114,29 @@ export const KeralaMap: React.FC<KeralaMapProps> = ({ districts, taluks }) => {
 
   // 2. Update Basemap Tile Layer
   useEffect(() => {
-    if (!mapInstanceRef.current || !tileLayerRef.current) return;
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (tileLayerRef.current) {
+      tileLayerRef.current.remove();
+      tileLayerRef.current = null;
+    }
+
     const provider = TILE_PROVIDERS[basemap] || TILE_PROVIDERS.esri_satellite;
-    tileLayerRef.current.setUrl(provider.url);
+    if (provider.isWms) {
+      tileLayerRef.current = L.tileLayer.wms(provider.url, {
+        layers: provider.layers || 'lulc:KL_LULC50K_1516',
+        format: 'image/png',
+        transparent: true,
+        attribution: provider.attribution,
+        maxZoom: 18
+      }).addTo(map);
+    } else {
+      tileLayerRef.current = L.tileLayer(provider.url, {
+        attribution: provider.attribution,
+        maxZoom: 18
+      }).addTo(map);
+    }
   }, [basemap]);
 
   // 3. Map Click handler (ROI calculation vs polygon selection)

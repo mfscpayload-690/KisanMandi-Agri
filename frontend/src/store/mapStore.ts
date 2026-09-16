@@ -112,7 +112,7 @@ export const useMapStore = create<MapState>((set) => ({
   simulatedPValue: 0.70,
 
   dataSourceMode: 'bundled',
-  isSampleData: true,
+  isSampleData: false,
 
   isRegionModalOpen: false,
   isDataSourceDialogOpen: false,

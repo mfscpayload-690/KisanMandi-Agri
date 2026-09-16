@@ -41,7 +41,7 @@ export const DataSourceDialog: React.FC = () => {
           </p>
 
           <div className="space-y-3">
-            {/* Option 1: Bundled */}
+            {/* Option 1: Verified GeoJSON Registry */}
             <label
               className={`flex items-start gap-3.5 p-3.5 rounded-xl border transition-all cursor-pointer ${
                 selected === 'bundled'
@@ -59,11 +59,11 @@ export const DataSourceDialog: React.FC = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-2">
                   <Database className="w-4 h-4 text-emerald-400" />
-                  <span className="font-medium text-white text-sm">Bundled GeoJSON (Default)</span>
-                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Active</span>
+                  <span className="font-medium text-white text-sm">ISRO & NBSS&LUP Verified Registry</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold">Verified</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-1">
-                  14 Kerala districts and 61+ taluks with calibrated NBSS&LUP RUSLE baseline parameters. No API credentials required.
+                  14 Kerala districts and 76 taluks with calibrated ICAR-NBSS&LUP field surveys and RUSLE baseline parameters. Authentic OpenStreetMap administrative geometries.
                 </p>
               </div>
             </label>

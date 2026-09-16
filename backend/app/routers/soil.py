@@ -127,17 +127,49 @@ async def proxy_bhuvan_wms(
     service: str = "WMS",
     version: str = "1.1.1",
     request: str = "GetMap",
-    layers: str = "bhuvan:soil_erosion_kerala",
+    layers: str = "lulc:KL_LULC50K_1516",
+    styles: str = "",
     bbox: str = "",
     width: int = 256,
     height: int = 256,
     srs: str = "EPSG:3857",
-    format: str = "image/png"
+    format: str = "image/png",
+    transparent: str = "true"
 ):
     """
-    Proxies requests to ISRO Bhuvan WMS service or provides placeholder transparent tile
-    when live satellite credentials are not configured.
+    Proxies live raster requests to official ISRO Bhuvan NRSC Web Map Service (WMS).
+    Connects to Natural Resources Census layers (e.g. Kerala Land Use & Land Cover KL_LULC50K_1516).
     """
-    # 1x1 transparent PNG fallback if Bhuvan token is unconfigured
-    transparent_png_bytes = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15c4\x00\x00\x00\rIDATx\x9cc`\x00\x00\x00\x02\x00\x01H\xaf\xa4q\x00\x00\x00\x00IEND\xaeB`\x82"
-    return Response(content=transparent_png_bytes, media_type="image/png")
+    import urllib.request
+    from urllib.parse import urlencode
+
+    query_params = {
+        "SERVICE": service,
+        "VERSION": version,
+        "REQUEST": request,
+        "LAYERS": layers or "lulc:KL_LULC50K_1516",
+        "STYLES": styles,
+        "BBOX": bbox,
+        "WIDTH": width,
+        "HEIGHT": height,
+        "SRS": srs,
+        "FORMAT": format,
+        "TRANSPARENT": transparent
+    }
+    bhuvan_target_url = f"https://bhuvan-vec2.nrsc.gov.in/bhuvan/wms?{urlencode(query_params)}"
+
+    try:
+        req = urllib.request.Request(
+            bhuvan_target_url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) KisanMandi-Agri/1.0",
+                "Accept": "image/png,image/*;q=0.8"
+            }
+        )
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            tile_bytes = resp.read()
+            return Response(content=tile_bytes, media_type="image/png")
+    except Exception as e:
+        # Fallback 1x1 transparent PNG if network latency or Bhuvan rate limit occurs
+        transparent_png_bytes = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15c4\x00\x00\x00\rIDATx\x9cc`\x00\x00\x00\x02\x00\x01H\xaf\xa4q\x00\x00\x00\x00IEND\xaeB`\x82"
+        return Response(content=transparent_png_bytes, media_type="image/png")

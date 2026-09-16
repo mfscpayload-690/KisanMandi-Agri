@@ -5,6 +5,7 @@ import type { BasemapType } from '../../types/soil';
 
 const BASEMAP_OPTIONS: { id: BasemapType; label: string; desc: string }[] = [
   { id: 'esri_satellite', label: 'ESRI World Imagery', desc: 'High-res satellite vegetation & terrain' },
+  { id: 'bhuvan_lulc', label: 'ISRO Bhuvan LULC (Live)', desc: 'Official NRSC 1:50K Land Use & Vegetative Cover' },
   { id: 'carto_dark', label: 'Carto Dark Matter', desc: 'Sleek dark contrast for risk choropleth' },
   { id: 'opentopomap', label: 'OpenTopoMap', desc: 'Contour lines & Western Ghats relief' },
   { id: 'osm', label: 'OpenStreetMap', desc: 'Standard street & administrative grid' },
