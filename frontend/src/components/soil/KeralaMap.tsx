@@ -185,10 +185,10 @@ export const KeralaMap: React.FC<KeralaMapProps> = ({ districts, taluks }) => {
 
         return {
           fillColor: colorForScore(score),
-          fillOpacity: isSelected ? Math.min(0.95, overlayOpacity + 0.15) : overlayOpacity,
-          color: isSelected ? '#FFFFFF' : '#1F2B26',
-          weight: isSelected ? 3.0 : 1.2,
-          dashArray: isSelected ? '' : undefined,
+          fillOpacity: isSelected ? Math.min(0.92, overlayOpacity + 0.2) : overlayOpacity,
+          color: isSelected ? '#FFFFFF' : '#0F1713',
+          weight: isSelected ? 3.5 : (granularity === 'district' ? 1.8 : 1.2),
+          opacity: 0.85,
         };
       },
       onEachFeature: (feature: any, layer: L.Layer) => {
