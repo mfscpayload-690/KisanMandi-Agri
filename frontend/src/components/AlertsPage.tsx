@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Bell, Plus, Trash2, CheckCircle2, ArrowUp, ArrowDown } from 'lucide-react';
 import { api, type PriceAlert } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
+import { CustomSelect } from './CustomSelect';
 
 interface AlertsPageProps {
   initialCrop?: string;
@@ -110,17 +111,16 @@ export const AlertsPage: React.FC<AlertsPageProps> = ({
             {/* Select Crop */}
             <div>
               <label className="block text-xs font-semibold text-slate-600 mb-1">{t('selectCrop')}</label>
-              <select
+              <CustomSelect
                 value={crop}
-                onChange={(e) => setCrop(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 bg-white focus:ring-2 focus:ring-emerald-500"
-              >
-                {cropsList.map((c) => (
-                  <option key={c} value={c}>
-                    {translateCrop(c)} ({c})
-                  </option>
-                ))}
-              </select>
+                onChange={(val) => setCrop(val)}
+                options={cropsList.map((c) => ({
+                  value: c,
+                  label: translateCrop(c),
+                  sublabel: c,
+                }))}
+                placeholder={t('selectCrop')}
+              />
             </div>
 
             {/* Target Price */}
