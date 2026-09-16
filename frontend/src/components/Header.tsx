@@ -1,39 +1,18 @@
-import React, { useState } from 'react';
-import { Sprout, RefreshCw, Globe, CheckCircle2, TrendingUp, LineChart, Users, Bell } from 'lucide-react';
+import React from 'react';
+import { Sprout, Globe, TrendingUp, LineChart, Users, Bell } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import type { SupportedLanguage } from '../i18n/translations';
-import { api } from '../api/client';
 
 interface HeaderProps {
   activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts';
   setActiveTab: (tab: 'dashboard' | 'trends' | 'buyers' | 'alerts') => void;
-  lastUpdatedSeconds: number;
-  onRefresh: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   activeTab,
   setActiveTab,
-  lastUpdatedSeconds,
-  onRefresh,
 }) => {
   const { language, setLanguage, t, languages } = useLanguage();
-  const [isSyncing, setIsSyncing] = useState(false);
-  const [syncSuccessMessage, setSyncSuccessMessage] = useState<string | null>(null);
-
-  const handleSync = async () => {
-    try {
-      setIsSyncing(true);
-      await api.triggerSync();
-      onRefresh();
-      setSyncSuccessMessage(t('syncSuccess'));
-      setTimeout(() => setSyncSuccessMessage(null), 3000);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsSyncing(false);
-    }
-  };
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-xs">
@@ -109,25 +88,11 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Right Controls: Live Sync & Language Switcher */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            
-            {/* Live refresh indicator & sync button */}
-            <button
-              onClick={handleSync}
-              disabled={isSyncing}
-              title={t('syncGovtData')}
-              className="flex items-center gap-1.5 px-3 py-1.5 sm:py-2 rounded-lg text-xs font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 active:scale-95 transition-all"
-            >
-              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-emerald-600' : ''}`} />
-              <span className="hidden sm:inline">
-                {isSyncing ? 'Syncing...' : `${lastUpdatedSeconds}${t('secondsAgo')}`}
-              </span>
-            </button>
-
+          {/* Right Controls: Language Switcher */}
+          <div className="flex items-center">
             {/* Language Switcher Dropdown */}
             <div className="relative flex items-center">
-              <div className="flex items-center gap-1 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs sm:text-sm font-medium text-slate-700 hover:border-emerald-400 transition-colors">
+              <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 hover:border-emerald-400 rounded-xl px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 transition-colors shadow-2xs">
                 <Globe className="w-4 h-4 text-emerald-600 shrink-0" />
                 <select
                   value={language}
@@ -142,19 +107,10 @@ export const Header: React.FC<HeaderProps> = ({
                 </select>
               </div>
             </div>
-
           </div>
 
         </div>
       </div>
-
-      {/* Sync notification banner */}
-      {syncSuccessMessage && (
-        <div className="bg-emerald-600 text-white text-xs sm:text-sm py-1.5 px-4 text-center flex items-center justify-center gap-2 animate-in fade-in slide-in-from-top-2">
-          <CheckCircle2 className="w-4 h-4" />
-          <span>{syncSuccessMessage}</span>
-        </div>
-      )}
     </header>
   );
 };
