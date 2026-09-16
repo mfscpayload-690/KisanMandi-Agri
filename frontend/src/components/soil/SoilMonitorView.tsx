@@ -12,14 +12,27 @@ import { RegionSelectorModal } from './RegionSelectorModal';
 import { LayerSwitcher } from './LayerSwitcher';
 import { soilApi } from '../../api/soil';
 import { useMapStore } from '../../store/mapStore';
+import { parseDeepLinkParams, syncUrlToHistory } from '../../utils/deepLinks';
 import type { DistrictFeature, TalukFeature } from '../../types/soil';
 
 export const SoilMonitorView: React.FC = () => {
   const [districts, setDistricts] = useState<DistrictFeature[]>([]);
   const [taluks, setTaluks] = useState<TalukFeature[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasProcessedInitialDeepLink, setHasProcessedInitialDeepLink] = useState(false);
 
-  const { activeYear, dataSourceMode, selectedDistrict, selectedTaluk } = useMapStore();
+  const {
+    activeYear,
+    setYear,
+    granularity,
+    setGranularity,
+    dataSourceMode,
+    selectedDistrict,
+    selectedTaluk,
+    selectDistrict,
+    selectTaluk,
+    flyTo
+  } = useMapStore();
 
   useEffect(() => {
     let isMounted = true;
@@ -34,6 +47,39 @@ export const SoilMonitorView: React.FC = () => {
           setDistricts(distData);
           setTaluks(talukData);
           setIsLoading(false);
+
+          // Process initial deep link region if present and not yet processed
+          if (!hasProcessedInitialDeepLink) {
+            const params = parseDeepLinkParams();
+            if (params.year && params.year !== activeYear) {
+              setYear(params.year);
+            }
+            if (params.granularity) {
+              setGranularity(params.granularity);
+            }
+            if (params.region) {
+              const regQuery = params.region.toLowerCase();
+              // Check taluks first if granularity is taluk
+              const talukMatch = talukData.find(
+                (t) => t.id.toLowerCase() === regQuery || t.properties.taluk_name.toLowerCase() === regQuery
+              );
+              if (talukMatch && (params.granularity === 'taluk' || !distData.some(d => d.id.toLowerCase() === regQuery))) {
+                setGranularity('taluk');
+                selectTaluk(talukMatch.properties);
+                flyTo(talukMatch.properties.centroid.lat, talukMatch.properties.centroid.lng, 11);
+              } else {
+                const distMatch = distData.find(
+                  (d) => d.id.toLowerCase() === regQuery || d.properties.district_name.toLowerCase() === regQuery
+                );
+                if (distMatch) {
+                  setGranularity('district');
+                  selectDistrict(distMatch.properties);
+                  flyTo(distMatch.properties.centroid.lat, distMatch.properties.centroid.lng, 9.5);
+                }
+              }
+            }
+            setHasProcessedInitialDeepLink(true);
+          }
         }
       })
       .catch((err) => {
@@ -44,7 +90,22 @@ export const SoilMonitorView: React.FC = () => {
     return () => {
       isMounted = false;
     };
-  }, [activeYear, dataSourceMode]);
+  }, [activeYear, dataSourceMode, hasProcessedInitialDeepLink]);
+
+  // Sync active soil view state to URL
+  useEffect(() => {
+    if (hasProcessedInitialDeepLink) {
+      syncUrlToHistory(
+        {
+          tab: 'soil',
+          granularity,
+          region: selectedTaluk?.id || selectedDistrict?.id || undefined,
+          year: activeYear,
+        },
+        true // replace state to avoid polluting history on every click
+      );
+    }
+  }, [granularity, selectedDistrict, selectedTaluk, activeYear, hasProcessedInitialDeepLink]);
 
   return (
     <div className="relative w-full h-[calc(100vh-4rem)] min-h-[600px] overflow-hidden bg-[#0F1411] font-sans">

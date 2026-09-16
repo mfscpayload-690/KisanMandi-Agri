@@ -4,6 +4,7 @@ import { useMapStore } from '../../store/mapStore';
 import { colorForScore } from '../../utils/rusle';
 import { RusleBreakdownBars } from './RusleBreakdownBars';
 import { ErosionTrendChart } from './ErosionTrendChart';
+import { ShareButton } from '../ShareButton';
 import type { TalukFeature } from '../../types/soil';
 
 interface DistrictDetailPanelProps {
@@ -58,12 +59,26 @@ export const DistrictDetailPanel: React.FC<DistrictDetailPanelProps> = ({ taluks
             </p>
           </div>
 
-          <button
-            onClick={() => selectDistrict(null)}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-1">
+            <ShareButton
+              variant="icon"
+              title={`${selectedDistrict.district_name} (${selectedDistrict.malayalam_name}) Soil Erosion Assessment`}
+              description={`Annual RUSLE Soil Loss: ${score} t/ha/yr (${riskCategory} Risk, Year ${activeYear}). HQ: ${selectedDistrict.headquarters}.`}
+              className="text-slate-400 hover:text-emerald-400 hover:bg-white/5"
+              params={{
+                tab: 'soil',
+                granularity: 'district',
+                region: selectedDistrict.id,
+                year: activeYear,
+              }}
+            />
+            <button
+              onClick={() => selectDistrict(null)}
+              className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Severity Banner */}

@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import type { SupportedLanguage } from '../i18n/translations';
 
 import { CustomSelect } from './CustomSelect';
+import { ShareButton } from './ShareButton';
 
 interface HeaderProps {
   activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts' | 'soil';
@@ -107,8 +108,19 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Right Controls: Custom CSS Language Dropdown */}
-          <div className="flex items-center">
+          {/* Right Controls: Share + Custom CSS Language Dropdown */}
+          <div className="flex items-center gap-2">
+            <ShareButton
+              variant="icon"
+              title="KisanMandi — Agricultural Market Price Discovery & Direct Trade"
+              description="Check live government APMC mandi prices, direct buyers, and soil erosion risk analytics."
+              params={{
+                tab: activeTab,
+                lang: language,
+              }}
+              className="bg-slate-50 hover:bg-emerald-50 border border-slate-200"
+            />
+
             <CustomSelect
               value={language}
               onChange={(val) => setLanguage(val as SupportedLanguage)}

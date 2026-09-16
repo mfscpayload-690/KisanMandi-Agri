@@ -3,6 +3,7 @@ import { X, Mountain, Compass, ShieldCheck, TreePine, Layers } from 'lucide-reac
 import { useMapStore } from '../../store/mapStore';
 import { colorForScore } from '../../utils/rusle';
 import { MiniBarChart } from './MiniBarChart';
+import { ShareButton } from '../ShareButton';
 
 export const TalukDetailPanel: React.FC = () => {
   const { selectedTaluk, selectTaluk, activeYear } = useMapStore();
@@ -32,12 +33,26 @@ export const TalukDetailPanel: React.FC = () => {
             </p>
           </div>
 
-          <button
-            onClick={() => selectTaluk(null)}
-            className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-1">
+            <ShareButton
+              variant="icon"
+              title={`${selectedTaluk.taluk_name} Taluk (${selectedTaluk.district_name}) Soil Erosion Report`}
+              description={`Annual RUSLE Loss: ${score} t/ha/yr (${riskCategory} Risk). Elevation: ${selectedTaluk.elevation_m}m, Slope: ${selectedTaluk.slope_degrees}°.`}
+              className="text-slate-400 hover:text-emerald-400 hover:bg-white/5"
+              params={{
+                tab: 'soil',
+                granularity: 'taluk',
+                region: selectedTaluk.id,
+                year: activeYear,
+              }}
+            />
+            <button
+              onClick={() => selectTaluk(null)}
+              className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Severity Banner */}
