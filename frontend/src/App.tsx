@@ -21,14 +21,10 @@ export const MainApp: React.FC = () => {
   const [alertCrop, setAlertCrop] = useState<string>('Wheat');
   const [alertPrice, setAlertPrice] = useState<number>(2500);
 
-  // Polling states
-  const [lastUpdatedSeconds, setLastUpdatedSeconds] = useState(0);
-
   const fetchStatsData = useCallback(() => {
     api.getStats()
       .then((res) => {
         setStats(res);
-        setLastUpdatedSeconds(0);
       })
       .catch((err) => console.error('Stats polling error:', err));
   }, []);
@@ -38,19 +34,23 @@ export const MainApp: React.FC = () => {
     fetchStatsData();
   }, [fetchStatsData]);
 
-  // 5-second polling interval as requested in Step 2.5
+  // Periodic background data polling (5s interval) and auto-sync task (30s interval)
   useEffect(() => {
+    // 5-second stats refresh
     const pollInterval = setInterval(() => {
       fetchStatsData();
     }, 5000);
 
-    const secondsTicker = setInterval(() => {
-      setLastUpdatedSeconds((prev) => prev + 1);
-    }, 1000);
+    // 30-second background government data sync check
+    const syncInterval = setInterval(() => {
+      api.triggerSync()
+        .then(() => fetchStatsData())
+        .catch((err) => console.debug('Periodic background sync:', err));
+    }, 30000);
 
     return () => {
       clearInterval(pollInterval);
-      clearInterval(secondsTicker);
+      clearInterval(syncInterval);
     };
   }, [fetchStatsData]);
 
@@ -74,8 +74,6 @@ export const MainApp: React.FC = () => {
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        lastUpdatedSeconds={lastUpdatedSeconds}
-        onRefresh={fetchStatsData}
       />
 
       {/* Main Content Area */}
