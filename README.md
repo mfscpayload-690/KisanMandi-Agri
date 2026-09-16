@@ -296,6 +296,31 @@ curl -X POST "http://localhost:8000/api/v1/alerts" \
 
 ---
 
+## Deep Linking & Farmer Navigation
+
+To make market intelligence and geospatial hazard data effortlessly shareable across rural WhatsApp groups, SMS, and bookmarks, KisanMandi includes **bidirectional deep linking** with browser history synchronization (`pushState` and `popstate`):
+
+### Supported Deep Link URL Parameters
+
+| Parameter | Type / Values | Description | Example URL |
+|---|---|---|---|
+| `tab` | `dashboard`, `trends`, `buyers`, `alerts`, `soil` | Active application module | `http://localhost:5173/?tab=trends` |
+| `lang` | `hi`, `en`, `pa`, `mr`, `te`, `ta`, `ml` | Preferred interface language | `http://localhost:5173/?lang=mr` |
+| `crop` | Crop name string | Pre-filter market dashboard, trends, or alerts | `http://localhost:5173/?tab=dashboard&crop=Wheat` |
+| `state` | State name string | Pre-filter by Indian State | `http://localhost:5173/?tab=dashboard&crop=Wheat&state=Madhya+Pradesh` |
+| `days` | `7`, `30`, `90`, `365` | Historical arrival timeline filter | `http://localhost:5173/?tab=dashboard&days=7` |
+| `q` | Search string | Pre-filtered APMC Mandi search | `http://localhost:5173/?tab=dashboard&q=Khanna` |
+| `region` | District or Taluk ID | Automatically flies to and opens Soil report | `http://localhost:5173/?tab=soil&region=vythiri` |
+| `granularity` | `district`, `taluk` | Switches choropleth boundary precision | `http://localhost:5173/?tab=soil&granularity=taluk` |
+| `year` | `2018` – `2024` | Active RUSLE assessment year | `http://localhost:5173/?tab=soil&region=idukki&year=2024` |
+
+### Farmer Share Experience
+- **One-Tap WhatsApp Share**: Automatically generates formatted WhatsApp preview messages with live APMC rates, spreads, and direct deep links.
+- **Copy Link**: Copies the exact current filter state to clipboard with visual confirmation.
+- **Browser History Integration**: Browser **Back** and **Forward** buttons smoothly transition through previously visited views without losing state or reloading.
+
+---
+
 ## Testing & Quality Assurance
 
 KisanMandi includes an automated end-to-end testing pipeline combining **Hurl** for HTTP integration assertions and **Pytest** for backend unit test verification.
