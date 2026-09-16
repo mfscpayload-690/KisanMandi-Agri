@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Users, Phone, MessageCircle, ShieldCheck, MapPin, Package } from 'lucide-react';
 import { api, type Buyer } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
+import { CustomSelect } from './CustomSelect';
 
 export const BuyersPage: React.FC = () => {
   const { t, translateCrop } = useLanguage();
@@ -55,34 +56,33 @@ export const BuyersPage: React.FC = () => {
       <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row gap-3">
         <div className="flex-1">
           <label className="block text-xs font-semibold text-slate-600 mb-1">{t('filterAllCrops')}</label>
-          <select
+          <CustomSelect
             value={selectedCrop}
-            onChange={(e) => setSelectedCrop(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 bg-white focus:ring-2 focus:ring-emerald-500"
-          >
-            <option value="">{t('filterAllCrops')}</option>
-            {cropsList.map((c) => (
-              <option key={c} value={c}>
-                {translateCrop(c)} ({c})
-              </option>
-            ))}
-          </select>
+            onChange={(val) => setSelectedCrop(val)}
+            options={[
+              { value: '', label: t('filterAllCrops') },
+              ...cropsList.map((c) => ({
+                value: c,
+                label: translateCrop(c),
+                sublabel: c,
+              })),
+            ]}
+            placeholder={t('filterAllCrops')}
+          />
         </div>
 
         <div className="flex-1">
           <label className="block text-xs font-semibold text-slate-600 mb-1">{t('location')}</label>
-          <select
+          <CustomSelect
             value={selectedLocation}
-            onChange={(e) => setSelectedLocation(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 bg-white focus:ring-2 focus:ring-emerald-500"
-          >
-            <option value="">{t('filterAllStates')}</option>
-            {locationsList.map((loc) => (
-              <option key={loc} value={loc}>
-                {loc}
-              </option>
-            ))}
-          </select>
+            onChange={(val) => setSelectedLocation(val)}
+            options={[
+              { value: '', label: t('filterAllStates') },
+              ...locationsList.map((loc) => ({ value: loc, label: loc })),
+            ]}
+            placeholder={t('filterAllStates')}
+            searchable={true}
+          />
         </div>
       </div>
 
