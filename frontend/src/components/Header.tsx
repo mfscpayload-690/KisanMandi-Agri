@@ -3,6 +3,8 @@ import { Sprout, Globe, TrendingUp, LineChart, Users, Bell } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext';
 import type { SupportedLanguage } from '../i18n/translations';
 
+import { CustomSelect } from './CustomSelect';
+
 interface HeaderProps {
   activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts';
   setActiveTab: (tab: 'dashboard' | 'trends' | 'buyers' | 'alerts') => void;
@@ -13,6 +15,12 @@ export const Header: React.FC<HeaderProps> = ({
   setActiveTab,
 }) => {
   const { language, setLanguage, t, languages } = useLanguage();
+
+  const languageOptions = languages.map((l) => ({
+    value: l.code,
+    label: l.nativeName,
+    sublabel: l.name,
+  }));
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-xs">
@@ -88,25 +96,17 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </nav>
 
-          {/* Right Controls: Language Switcher */}
+          {/* Right Controls: Custom CSS Language Dropdown */}
           <div className="flex items-center">
-            {/* Language Switcher Dropdown */}
-            <div className="relative flex items-center">
-              <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-200 hover:border-emerald-400 rounded-xl px-3 py-2 text-xs sm:text-sm font-medium text-slate-700 transition-colors shadow-2xs">
-                <Globe className="w-4 h-4 text-emerald-600 shrink-0" />
-                <select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value as SupportedLanguage)}
-                  className="bg-transparent border-none focus:outline-hidden font-medium text-slate-800 cursor-pointer pr-1"
-                >
-                  {languages.map((l) => (
-                    <option key={l.code} value={l.code}>
-                      {l.nativeName} ({l.name})
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
+            <CustomSelect
+              value={language}
+              onChange={(val) => setLanguage(val as SupportedLanguage)}
+              options={languageOptions}
+              icon={<Globe className="w-4 h-4 text-emerald-600 shrink-0" />}
+              align="right"
+              buttonClassName="py-1.5 sm:py-2 px-3 bg-slate-50 hover:bg-white border-slate-200 text-xs sm:text-sm font-medium rounded-xl"
+              dropdownClassName="w-60"
+            />
           </div>
 
         </div>
