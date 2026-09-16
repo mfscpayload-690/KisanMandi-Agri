@@ -133,33 +133,47 @@ export function buildDeepLinkUrl(params: DeepLinkParams): string {
   }
 
   const queryString = searchParams.toString();
-  const origin = (typeof window !== 'undefined' && 
-                  window.location.hostname !== 'localhost' && 
-                  window.location.hostname !== '127.0.0.1')
-    ? window.location.origin
-    : 'https://kisanmandi.in';
+  const searchPart = queryString ? `?${queryString}` : '';
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
 
-  const pathname = typeof window !== 'undefined' && origin === window.location.origin 
-    ? window.location.pathname 
-    : '/';
-
-  return `${origin}${pathname}${queryString ? `?${queryString}` : ''}`;
+  return `${pathname}${searchPart}`;
 }
 
 /**
- * Updates browser address bar using pushState or replaceState without reload
+ * Returns a fully-qualified public share link for WhatsApp, SMS, or copying.
+ * Replaces localhost / 127.0.0.1 with demo production domain https://kisanmandi.in
+ */
+export function getShareableDeepLinkUrl(params: DeepLinkParams): string {
+  const relativePath = buildDeepLinkUrl(params);
+  if (typeof window === 'undefined') {
+    return `https://kisanmandi.in${relativePath}`;
+  }
+
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const baseOrigin = isLocal ? 'https://kisanmandi.in' : window.location.origin;
+
+  return `${baseOrigin}${relativePath}`;
+}
+
+/**
+ * Updates browser address bar using pushState or replaceState without reload.
+ * Always operates safely within the active document's origin.
  */
 export function syncUrlToHistory(params: DeepLinkParams, replace: boolean = false): void {
   if (typeof window === 'undefined') return;
 
-  const newUrl = buildDeepLinkUrl(params);
-  const currentUrl = window.location.href;
+  const relativeUrl = buildDeepLinkUrl(params);
+  const currentPathWithSearch = `${window.location.pathname}${window.location.search}`;
 
-  if (newUrl !== currentUrl) {
-    if (replace) {
-      window.history.replaceState({ ...params }, '', newUrl);
-    } else {
-      window.history.pushState({ ...params }, '', newUrl);
+  if (relativeUrl !== currentPathWithSearch) {
+    try {
+      if (replace) {
+        window.history.replaceState({ ...params }, '', relativeUrl);
+      } else {
+        window.history.pushState({ ...params }, '', relativeUrl);
+      }
+    } catch (e) {
+      console.warn('Could not sync URL to browser history:', e);
     }
   }
 }
@@ -168,7 +182,7 @@ export function syncUrlToHistory(params: DeepLinkParams, replace: boolean = fals
  * Generates formatted WhatsApp and share messages for farmers
  */
 export function createSharePayload(title: string, description: string, params: DeepLinkParams) {
-  const url = buildDeepLinkUrl(params);
+  const url = getShareableDeepLinkUrl(params);
   const fullText = `🌾 *KisanMandi* — ${title}\n${description}\n\n👉 Open in App: ${url}`;
   const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(fullText)}`;
 
