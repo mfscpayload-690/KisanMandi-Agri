@@ -41,6 +41,37 @@ def normalize_crop(raw_name: str) -> str:
     key = cleaned.lower()
     return COMMODITY_MAP.get(key, cleaned.title())
 
+STATE_CANONICAL_MAP = {
+    "andaman and nicobar": "Andaman and Nicobar Islands",
+    "andaman and nicobar islands": "Andaman and Nicobar Islands",
+    "andaman & nicobar": "Andaman and Nicobar Islands",
+    "chattisgarh": "Chhattisgarh",
+    "chhattisgarh": "Chhattisgarh",
+    "delhi": "Delhi",
+    "nct of delhi": "Delhi",
+    "gao": "Goa",
+    "goa": "Goa",
+    "jammu & kashmir": "Jammu and Kashmir",
+    "jammu and kashmir": "Jammu and Kashmir",
+    "kerala": "Kerala",
+    "keralam": "Kerala",
+    "odisha": "Odisha",
+    "orissa": "Odisha",
+    "pondicherry": "Puducherry",
+    "puducherry": "Puducherry",
+    "tamil nadu": "Tamil Nadu",
+    "tamilnadu": "Tamil Nadu",
+    "uttarakhand": "Uttarakhand",
+    "uttrakhand": "Uttarakhand",
+}
+
+def normalize_state(raw_name: str) -> str:
+    if not raw_name:
+        return "Unknown"
+    cleaned = raw_name.strip()
+    key = cleaned.lower()
+    return STATE_CANONICAL_MAP.get(key, cleaned.title())
+
 def parse_report_file(filepath: Path) -> List[Tuple]:
     """Parse a single government AgMarkNet daily report CSV file."""
     records = []
@@ -61,7 +92,8 @@ def parse_report_file(filepath: Path) -> List[Tuple]:
                         dt = datetime.strptime(m.group(1), "%d-%b-%Y")
                         date_str = dt.strftime("%Y-%m-%d")
                 elif "State/UT Name :" in line:
-                    current_state = line.split("State/UT Name :")[1].strip().title()
+                    raw_st = line.split("State/UT Name :")[1].strip()
+                    current_state = normalize_state(raw_st)
                 elif "(MSP:" in line or "Commodity :" in line:
                     raw_c = line.split("(")[0].strip()
                     current_commodity = normalize_crop(raw_c)
