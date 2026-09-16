@@ -95,7 +95,7 @@ flowchart TD
 ## Key Features
 
 ### 1. Real-Time APMC Price & Arrival Discovery
-- Live price tracking across **3,779 APMC Mandis** spanning all **28 Indian States and 8 Union Territories**.
+- Live price tracking across **3,779 APMC Mandis** spanning **29 Indian States and Union Territories**.
 - Provides Min Price, Max Price, and **Modal Price** (₹/Quintal) alongside daily arrival volumes.
 - Multi-parameter filtering by crop, state, mandi, and date range.
 
@@ -132,7 +132,7 @@ flowchart TD
 | **Total Price Database Records** | **819,895+** records |
 | **Covered APMC Mandis** | **3,779 mandis** |
 | **Tracked Master Commodities** | **7 core crops** (Rice/Paddy, Wheat, Onion, Tomato, Potato, Maize, Tur/Arhar) |
-| **Geographic Coverage** | **36 States & UTs** (All 28 States + 8 Union Territories) |
+| **Geographic Coverage** | **29 States & UTs** across India |
 | **CSV Ingestion Speed** | **0.66 seconds** per 54,000+ row dataset (Multi-threaded Pandas engine) |
 | **API Response Latency** | **< 10 ms** average endpoint response time |
 | **Polling Interval** | **5 seconds** background automated sync |
