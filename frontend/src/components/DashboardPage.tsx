@@ -1,5 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, MapPin, Calendar, ArrowUpDown, ChevronLeft, ChevronRight, BellRing, TrendingUp } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import {
+  Search,
+  Filter,
+  MapPin,
+  Calendar,
+  ArrowUpDown,
+  ChevronDown,
+  Loader2,
+  ArrowUp,
+  BellRing,
+  TrendingUp,
+} from 'lucide-react';
 import { api, type PriceRecord } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -19,9 +30,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
 
   const [prices, setPrices] = useState<PriceRecord[]>([]);
   const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(1);
   const [limit] = useState(20);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
 
   // Filter states
   const [searchQuery, setSearchQuery] = useState('');
@@ -32,22 +43,24 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
 
   // Available states list
   const [statesList, setStatesList] = useState<string[]>([]);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
 
   // Load distinct states
   useEffect(() => {
-    api.getStats().then((res) => {
-      if (res && res.states_covered) {
-        setStatesList(res.states_covered);
-      }
-    }).catch(console.error);
+    api.getStats()
+      .then((res) => {
+        if (res && res.states_covered) {
+          setStatesList(res.states_covered);
+        }
+      })
+      .catch(console.error);
   }, []);
 
-  // Fetch prices with debouncing
+  // Fetch initial batch of prices whenever filters change
   useEffect(() => {
     let isMounted = true;
     setLoading(true);
 
-    const offset = (page - 1) * limit;
     const cropQuery = searchQuery.trim() || selectedCrop || undefined;
 
     api.getPrices({
@@ -55,7 +68,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
       state: selectedState || undefined,
       days: selectedDays,
       limit,
-      offset,
+      offset: 0,
       sort_by: sortBy,
       order: sortOrder,
     })
@@ -74,14 +87,41 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
     return () => {
       isMounted = false;
     };
-  }, [selectedCrop, searchQuery, selectedState, selectedDays, page, sortBy, sortOrder]);
+  }, [selectedCrop, searchQuery, selectedState, selectedDays, sortBy, sortOrder, limit]);
 
-  const totalPages = Math.ceil(total / limit) || 1;
+  // Append next batch of prices on Show More
+  const handleLoadMore = useCallback(async () => {
+    if (loadingMore || loading || prices.length >= total) return;
+    setLoadingMore(true);
+
+    try {
+      const cropQuery = searchQuery.trim() || selectedCrop || undefined;
+      const res = await api.getPrices({
+        crop: cropQuery,
+        state: selectedState || undefined,
+        days: selectedDays,
+        limit,
+        offset: prices.length,
+        sort_by: sortBy,
+        order: sortOrder,
+      });
+
+      setPrices((prev) => [...prev, ...res.data]);
+      setTotal(res.total);
+    } catch (err) {
+      console.error('Failed to load more prices:', err);
+    } finally {
+      setLoadingMore(false);
+    }
+  }, [loadingMore, loading, prices.length, total, searchQuery, selectedCrop, selectedState, selectedDays, limit, sortBy, sortOrder]);
+
+  const hasMore = prices.length < total;
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setPage(1);
   };
+
+  const percentLoaded = total > 0 ? Math.min(100, Math.round((prices.length / total) * 100)) : 0;
 
   return (
     <div>
@@ -95,10 +135,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                setPage(1);
-              }}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t('searchCropPlaceholder')}
               className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm font-medium focus:outline-hidden focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
             />
@@ -108,10 +145,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           <div className="md:col-span-3">
             <select
               value={selectedState}
-              onChange={(e) => {
-                setSelectedState(e.target.value);
-                setPage(1);
-              }}
+              onChange={(e) => setSelectedState(e.target.value)}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
             >
               <option value="">{t('filterAllStates')}</option>
@@ -130,7 +164,6 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
               onChange={(e) => {
                 const val = e.target.value;
                 setSelectedDays(val ? parseInt(val) : undefined);
-                setPage(1);
               }}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
             >
@@ -145,11 +178,8 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           <div className="md:col-span-2 flex gap-2">
             <button
               type="button"
-              onClick={() => {
-                setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc');
-                setPage(1);
-              }}
-              className="w-full flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 bg-slate-50 hover:bg-slate-100"
+              onClick={() => setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc')}
+              className="w-full flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 bg-slate-50 hover:bg-slate-100 transition-colors cursor-pointer"
             >
               <ArrowUpDown className="w-4 h-4 text-emerald-600" />
               <span>{sortOrder === 'desc' ? 'Newest' : 'Oldest'}</span>
@@ -163,13 +193,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
           <span>
             <strong className="text-slate-800 font-semibold">{total.toLocaleString()}</strong> {t('recordsFound')}
           </span>
-          <span>
-            Page {page} of {totalPages}
+          <span className="font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/50">
+            {t('showingCount')} {prices.length.toLocaleString()} {t('ofTotal')} {total.toLocaleString()}
           </span>
         </div>
       </div>
 
-      {/* Loading Skeleton */}
+      {/* Loading Skeleton for initial filter fetch */}
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[...Array(6)].map((_, i) => (
@@ -261,14 +291,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                   <div className="flex items-center gap-2 pt-2 border-t border-slate-100 text-xs">
                     <button
                       onClick={() => onNavigateToTrends(record.crop_name, record.state)}
-                      className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-emerald-800 font-semibold transition-colors"
+                      className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-50 hover:bg-emerald-50 text-slate-700 hover:text-emerald-800 font-semibold transition-colors cursor-pointer"
                     >
                       <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
                       <span>{t('trendsNav')}</span>
                     </button>
                     <button
                       onClick={() => onNavigateToAlerts(record.crop_name, modalPrice)}
-                      className="flex items-center justify-center gap-1 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-xs transition-colors"
+                      className="flex items-center justify-center gap-1 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-xs transition-colors cursor-pointer"
                     >
                       <BellRing className="w-3.5 h-3.5" />
                       <span>{t('alertsNav')}</span>
@@ -279,27 +309,63 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             })}
           </div>
 
-          {/* Pagination Bar */}
-          <div className="flex items-center justify-between mt-8 p-4 bg-white rounded-2xl border border-slate-200">
-            <button
-              onClick={() => setPage((p) => Math.max(1, p - 1))}
-              disabled={page === 1}
-              className="flex items-center gap-1 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              <span>Previous</span>
-            </button>
-            <div className="text-xs sm:text-sm font-medium text-slate-600">
-              Page <strong className="text-slate-900">{page}</strong> of <strong className="text-slate-900">{totalPages}</strong>
+          {/* Partial Loading & Show More Section */}
+          <div ref={sentinelRef} className="mt-8 mb-6 flex flex-col items-center justify-center gap-3">
+            {/* Progress Count & Percentage Pill */}
+            <div className="text-xs sm:text-sm font-medium text-slate-500 flex items-center gap-2">
+              <span>
+                {t('showingCount')} <strong className="text-slate-900 font-bold">{prices.length.toLocaleString()}</strong> {t('ofTotal')} <strong className="text-slate-900 font-bold">{total.toLocaleString()}</strong> {t('arrivals')}
+              </span>
+              <span className="text-slate-300">•</span>
+              <span className="text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full text-xs border border-emerald-200/60">
+                {percentLoaded}% {t('loaded')}
+              </span>
             </div>
-            <button
-              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-              disabled={page >= totalPages}
-              className="flex items-center gap-1 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
-            >
-              <span>Next</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
+
+            {/* Visual Progress Bar */}
+            <div className="w-full max-w-sm h-1.5 bg-slate-200 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-emerald-600 transition-all duration-300 rounded-full"
+                style={{ width: `${percentLoaded}%` }}
+              />
+            </div>
+
+            {/* Show More Button with Down Arrow */}
+            {hasMore ? (
+              <button
+                onClick={handleLoadMore}
+                disabled={loadingMore}
+                aria-label="Show more market arrivals"
+                className="w-full sm:w-auto min-w-[280px] mt-2 flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold text-sm sm:text-base shadow-md shadow-emerald-700/20 hover:shadow-lg transition-all cursor-pointer disabled:opacity-75 disabled:cursor-wait"
+              >
+                {loadingMore ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <span>{t('loadingMore')}</span>
+                  </>
+                ) : (
+                  <>
+                    <span>{t('loadMore')}</span>
+                    <ChevronDown className="w-5 h-5 animate-bounce" />
+                  </>
+                )}
+              </button>
+            ) : (
+              <div className="mt-2 py-2.5 px-5 rounded-xl bg-slate-100 text-slate-600 text-xs sm:text-sm font-semibold border border-slate-200/80">
+                ✓ {t('allLoaded')} ({total.toLocaleString()} {t('recordsFound')})
+              </div>
+            )}
+
+            {/* Back to Top button when list is long */}
+            {prices.length > 20 && (
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="text-xs font-semibold text-slate-400 hover:text-emerald-700 flex items-center gap-1.5 mt-2 transition-colors cursor-pointer"
+              >
+                <ArrowUp className="w-3.5 h-3.5" />
+                <span>{t('backToTop')}</span>
+              </button>
+            )}
           </div>
         </>
       )}
