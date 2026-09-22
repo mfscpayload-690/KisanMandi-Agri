@@ -12,21 +12,26 @@ import { TrendingUp, ArrowUpRight, ArrowDownRight, AlertCircle } from 'lucide-re
 import { api, type TrendResponse } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
 import { CustomSelect } from './CustomSelect';
+import { ShareButton } from './ShareButton';
 
 interface TrendsPageProps {
   initialCrop?: string;
   initialState?: string;
+  initialDays?: number;
+  onFilterChange?: (crop: string, state?: string, days?: number) => void;
 }
 
 export const TrendsPage: React.FC<TrendsPageProps> = ({
   initialCrop = 'Wheat',
   initialState = '',
+  initialDays = 30,
+  onFilterChange,
 }) => {
   const { t, translateCrop } = useLanguage();
 
   const [crop, setCrop] = useState(initialCrop);
   const [state, setState] = useState(initialState);
-  const [days, setDays] = useState(30);
+  const [days, setDays] = useState(initialDays);
   const [trendData, setTrendData] = useState<TrendResponse | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -67,6 +72,13 @@ export const TrendsPage: React.FC<TrendsPageProps> = ({
     };
   }, [crop, state, days]);
 
+  // Sync active filters to URL
+  useEffect(() => {
+    if (onFilterChange) {
+      onFilterChange(crop, state || undefined, days);
+    }
+  }, [crop, state, days, onFilterChange]);
+
   const isPositiveTrend = (trendData?.price_change_pct ?? 0) >= 0;
 
   return (
@@ -74,10 +86,24 @@ export const TrendsPage: React.FC<TrendsPageProps> = ({
       
       {/* Top Filter Controls */}
       <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs">
-        <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-          <TrendingUp className="w-5 h-5 text-emerald-600" />
-          <span>{t('trendAnalysis')}</span>
-        </h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <TrendingUp className="w-5 h-5 text-emerald-600" />
+            <span>{t('trendAnalysis')}</span>
+          </h2>
+          <ShareButton
+            variant="badge"
+            label="Share Trend"
+            title={`${crop} Price Trend (${days} Days)${state ? ` in ${state}` : ''}`}
+            description={`Current avg price ₹${Math.round(trendData?.latest_price ?? trendData?.overall_avg ?? 0)}/Qtl (${trendData?.price_change_pct ?? 0}% change) on KisanMandi.`}
+            params={{
+              tab: 'trends',
+              trendCrop: crop,
+              trendState: state || undefined,
+              trendDays: days,
+            }}
+          />
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {/* Crop Selector */}

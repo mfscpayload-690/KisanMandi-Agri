@@ -3,14 +3,25 @@ import { Users, Phone, MessageCircle, ShieldCheck, MapPin, Package } from 'lucid
 import { api, type Buyer } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
 import { CustomSelect } from './CustomSelect';
+import { ShareButton } from './ShareButton';
 
-export const BuyersPage: React.FC = () => {
+interface BuyersPageProps {
+  initialCrop?: string;
+  initialLocation?: string;
+  onFilterChange?: (crop?: string, location?: string) => void;
+}
+
+export const BuyersPage: React.FC<BuyersPageProps> = ({
+  initialCrop = '',
+  initialLocation = '',
+  onFilterChange,
+}) => {
   const { t, translateCrop } = useLanguage();
 
   const [buyers, setBuyers] = useState<Buyer[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedCrop, setSelectedCrop] = useState('');
-  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedCrop, setSelectedCrop] = useState(initialCrop);
+  const [selectedLocation, setSelectedLocation] = useState(initialLocation);
 
   const [cropsList, setCropsList] = useState<string[]>([]);
   const [locationsList, setLocationsList] = useState<string[]>([]);
@@ -34,11 +45,18 @@ export const BuyersPage: React.FC = () => {
       });
   }, [selectedCrop, selectedLocation]);
 
+  // Sync filters to URL
+  useEffect(() => {
+    if (onFilterChange) {
+      onFilterChange(selectedCrop || undefined, selectedLocation || undefined);
+    }
+  }, [selectedCrop, selectedLocation, onFilterChange]);
+
   return (
     <div className="space-y-6">
       
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-emerald-800 to-teal-800 text-white p-6 rounded-2xl shadow-sm">
+      <div className="bg-gradient-to-r from-emerald-800 to-teal-800 text-white p-6 rounded-2xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="p-3 bg-white/10 rounded-xl backdrop-blur-xs">
             <Users className="w-6 h-6 text-emerald-300" />
@@ -50,6 +68,18 @@ export const BuyersPage: React.FC = () => {
             </p>
           </div>
         </div>
+        <ShareButton
+          variant="button"
+          label="Share Directory"
+          className="bg-white/10 hover:bg-white/20 text-white border-white/20 self-start sm:self-auto"
+          title={`Verified Crop Buyers ${selectedCrop ? `for ${selectedCrop}` : ''} ${selectedLocation ? `in ${selectedLocation}` : ''}`}
+          description={`Browse direct corporate buyers, food processors and institutional traders on KisanMandi.`}
+          params={{
+            tab: 'buyers',
+            buyerCrop: selectedCrop || undefined,
+            buyerLocation: selectedLocation || undefined,
+          }}
+        />
       </div>
 
       {/* Filter Bar */}
@@ -142,10 +172,10 @@ export const BuyersPage: React.FC = () => {
                 </div>
 
                 {/* Direct Action Buttons */}
-                <div className="mt-5 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2">
+                <div className="mt-5 pt-3 border-t border-slate-100 flex items-center gap-2">
                   <a
                     href={`tel:${cleanPhone}`}
-                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all active:scale-95"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-all active:scale-95"
                   >
                     <Phone className="w-3.5 h-3.5 text-emerald-700" />
                     <span>{t('callBuyer')}</span>
@@ -154,11 +184,21 @@ export const BuyersPage: React.FC = () => {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs transition-all active:scale-95"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs transition-all active:scale-95"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>{t('whatsappBuyer')}</span>
                   </a>
+                  <ShareButton
+                    variant="icon"
+                    title={`Verified Buyer: ${buyer.name}`}
+                    description={`Buying ${buyer.crop} in ${buyer.location} (Min: ${buyer.min_quantity} Qtl). Find on KisanMandi.`}
+                    params={{
+                      tab: 'buyers',
+                      buyerCrop: buyer.crop,
+                      buyerLocation: buyer.location,
+                    }}
+                  />
                 </div>
               </div>
             );

@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 
 from backend.app.database import engine, Base
-from backend.app.routers import prices, mandis, trends, buyers, alerts, stats, sync
+from backend.app.routers import prices, mandis, trends, buyers, alerts, stats, sync, soil
 from backend.app.services.ingestion import start_background_file_watcher, IngestionManager
 
 # Configure structured logging
@@ -103,6 +103,7 @@ app.include_router(buyers.router)
 app.include_router(alerts.router)
 app.include_router(stats.router)
 app.include_router(sync.router)
+app.include_router(soil.router)
 
 @app.get("/", tags=["Health & Info"])
 def root_info():

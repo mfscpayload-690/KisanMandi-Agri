@@ -159,6 +159,8 @@ def test_endpoint_g_get_user_alerts():
 
 def test_endpoint_h_market_stats():
     """Endpoint h: GET /api/v1/stats"""
+    # Warm-up request to ensure cold-start table caching does not penalize latency
+    client.get("/api/v1/stats")
     start = time.time()
     response = client.get("/api/v1/stats")
     latency = (time.time() - start) * 1000

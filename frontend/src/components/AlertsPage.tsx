@@ -3,15 +3,18 @@ import { Bell, Plus, Trash2, CheckCircle2, ArrowUp, ArrowDown } from 'lucide-rea
 import { api, type PriceAlert } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
 import { CustomSelect } from './CustomSelect';
+import { ShareButton } from './ShareButton';
 
 interface AlertsPageProps {
   initialCrop?: string;
   initialPrice?: number;
+  onFilterChange?: (crop: string, price?: number) => void;
 }
 
 export const AlertsPage: React.FC<AlertsPageProps> = ({
   initialCrop = 'Wheat',
   initialPrice = 2500,
+  onFilterChange,
 }) => {
   const { t, translateCrop } = useLanguage();
 
@@ -79,22 +82,41 @@ export const AlertsPage: React.FC<AlertsPageProps> = ({
     }
   };
 
+  // Sync active alert parameters to URL
+  useEffect(() => {
+    if (onFilterChange) {
+      onFilterChange(crop, thresholdPrice);
+    }
+  }, [crop, thresholdPrice, onFilterChange]);
+
   return (
     <div className="space-y-6">
       
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-amber-700 to-emerald-800 text-white p-6 rounded-2xl shadow-sm">
+      <div className="bg-gradient-to-r from-amber-700 to-emerald-800 text-white p-6 rounded-2xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="p-3 bg-white/10 rounded-xl backdrop-blur-xs">
             <Bell className="w-6 h-6 text-amber-300" />
           </div>
           <div>
             <h2 className="text-xl font-bold">{t('priceAlertsTitle')}</h2>
-            <p className="text-xs sm:text-sm text-emerald-100 mt-0.5">
-              {t('priceAlertsSubtitle')}
+            <p className="text-xs sm:text-sm text-amber-100 mt-0.5">
+              {t('alertSubtitle')}
             </p>
           </div>
         </div>
+        <ShareButton
+          variant="button"
+          label="Share Alert Preset"
+          className="bg-white/10 hover:bg-white/20 text-white border-white/20 self-start sm:self-auto"
+          title={`Price Alert for ${crop}: ₹${thresholdPrice}/Qtl`}
+          description={`Track when ${crop} price goes above ₹${thresholdPrice}/Qtl on KisanMandi.`}
+          params={{
+            tab: 'alerts',
+            alertCrop: crop,
+            alertPrice: thresholdPrice,
+          }}
+        />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">

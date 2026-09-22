@@ -14,16 +14,25 @@ import {
 import { api, type PriceRecord } from '../api/client';
 import { useLanguage } from '../context/LanguageContext';
 import { CustomSelect } from './CustomSelect';
+import { ShareButton } from './ShareButton';
 
 interface DashboardPageProps {
   selectedCrop: string;
+  initialState?: string;
+  initialDays?: number;
+  initialSearchQuery?: string;
   onSelectCrop?: (crop: string) => void;
+  onFilterChange?: (filters: { crop?: string; state?: string; days?: number; query?: string }) => void;
   onNavigateToTrends: (crop: string, state?: string) => void;
   onNavigateToAlerts: (crop: string, currentPrice?: number) => void;
 }
 
 export const DashboardPage: React.FC<DashboardPageProps> = ({
   selectedCrop,
+  initialState = '',
+  initialDays,
+  initialSearchQuery = '',
+  onFilterChange,
   onNavigateToTrends,
   onNavigateToAlerts,
 }) => {
@@ -35,10 +44,10 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
 
-  // Filter states
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedState, setSelectedState] = useState('');
-  const [selectedDays, setSelectedDays] = useState<number | undefined>(undefined);
+  // Filter states initialized from deep link params
+  const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
+  const [selectedState, setSelectedState] = useState(initialState);
+  const [selectedDays, setSelectedDays] = useState<number | undefined>(initialDays);
   const sortBy = 'date';
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
 
@@ -89,6 +98,18 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
       isMounted = false;
     };
   }, [selectedCrop, searchQuery, selectedState, selectedDays, sortBy, sortOrder, limit]);
+
+  // Sync active filters back to App deep linking router
+  useEffect(() => {
+    if (onFilterChange) {
+      onFilterChange({
+        crop: selectedCrop || undefined,
+        state: selectedState || undefined,
+        days: selectedDays,
+        query: searchQuery.trim() || undefined,
+      });
+    }
+  }, [selectedCrop, selectedState, selectedDays, searchQuery, onFilterChange]);
 
   // Append next batch of prices on Show More
   const handleLoadMore = useCallback(async () => {
@@ -186,13 +207,28 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         </form>
 
         {/* Results count header */}
-        <div className="flex items-center justify-between mt-3 pt-3 border-t border-slate-100 text-xs text-slate-500">
+        <div className="flex flex-wrap items-center justify-between gap-2 mt-3 pt-3 border-t border-slate-100 text-xs text-slate-500">
           <span>
             <strong className="text-slate-800 font-semibold">{total.toLocaleString()}</strong> {t('recordsFound')}
           </span>
-          <span className="font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/50">
-            {t('showingCount')} {prices.length.toLocaleString()} {t('ofTotal')} {total.toLocaleString()}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/50">
+              {t('showingCount')} {prices.length.toLocaleString()} {t('ofTotal')} {total.toLocaleString()}
+            </span>
+            <ShareButton
+              variant="badge"
+              label="Share Results"
+              title={`Mandi Prices for ${selectedCrop || searchQuery || 'All Crops'} ${selectedState ? `in ${selectedState}` : 'across India'}`}
+              description={`Viewing ${total} real-time APMC mandi price arrivals on KisanMandi.`}
+              params={{
+                tab: 'dashboard',
+                crop: selectedCrop || undefined,
+                state: selectedState || undefined,
+                days: selectedDays,
+                q: searchQuery.trim() || undefined,
+              }}
+            />
+          </div>
         </div>
       </div>
 
@@ -300,6 +336,17 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                       <BellRing className="w-3.5 h-3.5" />
                       <span>{t('alertsNav')}</span>
                     </button>
+                    <ShareButton
+                      variant="icon"
+                      title={`${record.crop_name} @ ${record.mandi_name}, ${record.state}`}
+                      description={`Live APMC Modal Price: ₹${Math.round(modalPrice).toLocaleString('en-IN')}/Qtl on ${record.date}.`}
+                      params={{
+                        tab: 'dashboard',
+                        crop: record.crop_name,
+                        state: record.state,
+                        q: record.mandi_name,
+                      }}
+                    />
                   </div>
                 </div>
               );

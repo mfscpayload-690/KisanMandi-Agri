@@ -13,6 +13,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<SupportedLanguage>(() => {
+    if (typeof window !== 'undefined') {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      if (urlLang && ['hi', 'en', 'pa', 'mr', 'te', 'ta', 'ml'].includes(urlLang)) {
+        return urlLang as SupportedLanguage;
+      }
+    }
     const saved = localStorage.getItem('kisan_lang');
     return (saved as SupportedLanguage) || 'hi'; // Default to Hindi for farmer friendliness
   });

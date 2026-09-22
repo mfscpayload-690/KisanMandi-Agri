@@ -1,10 +1,10 @@
 import React from 'react';
-import { TrendingUp, LineChart, Users, Bell } from 'lucide-react';
+import { TrendingUp, LineChart, Users, Bell, Mountain } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface BottomNavProps {
-  activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts';
-  setActiveTab: (tab: 'dashboard' | 'trends' | 'buyers' | 'alerts') => void;
+  activeTab: 'dashboard' | 'trends' | 'buyers' | 'alerts' | 'soil';
+  setActiveTab: (tab: 'dashboard' | 'trends' | 'buyers' | 'alerts' | 'soil') => void;
 }
 
 export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, setActiveTab }) => {
@@ -15,6 +15,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, setActiveTab })
     { id: 'trends', label: t('trendsNav'), icon: LineChart },
     { id: 'buyers', label: t('buyersNav'), icon: Users },
     { id: 'alerts', label: t('alertsNav'), icon: Bell },
+    { id: 'soil', label: 'Soil & Eco', icon: Mountain },
   ] as const;
 
   return (
